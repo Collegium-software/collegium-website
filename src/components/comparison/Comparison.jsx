@@ -16,7 +16,7 @@ const Comparison = () => {
             diam. Quisque tincidunt.
           </p>
           <div className="comparisonButton">
-            <Button label="CONTACT US" />
+            <Button label="Contact Us" />
           </div>
         </div>
       </div>

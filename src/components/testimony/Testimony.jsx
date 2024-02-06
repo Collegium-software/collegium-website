@@ -15,7 +15,7 @@ const Testimony = () => (
       </div>
       <div className="testimonyText">
         <p>From the very first meeting, the team at Collegium embraced my vision with enthusiasm. Their collaborative spirit turned my ideas into detailed plans, weaving innovation and functionality into every aspect of the project.</p>
-        <div className="testimonyButton"><Button label="READ MORE" /></div>
+        <div className="testimonyButton"><Button label="Read More" /></div>
       </div>
     </div>
     <div className="testimonyImageContainer">
