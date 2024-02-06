@@ -11,6 +11,7 @@ import Owners from "./pages/owners/Owners";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";
 import Navbar from "./components/navbar/Navbar";
+import ContactUs from "./components/contactUs/ContactUs";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ const Home = () => (
     <Blog />
     <Testimony />
     <Footer />
+    <ContactUs/>
   </>
 );
 
