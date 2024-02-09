@@ -1,17 +1,17 @@
 import React from "react";
-import "../contactUs/contactUs.css"
-import Button from "../button/Button";
+import "./contactUsForm.css"
+import Button from "../../components/button/Button";
 
 import Image3 from "../../images/contactUs/Rectangle 1.png"
-import BackgroundImage from "../../images/contactUs/Looper BG1.png"
 
-const ContactUs = () => {
+
+const ContactUsForm = () => {
   return (
 
 
     
     <div className="contact-us-container" >
-      <div className="white-nav-container"></div>
+      
       <div className="contact-us-image-container">
         <h1>CONTACT US</h1>
          <img className="contact-us-image" src={Image3} alt="Contact Us"/>
@@ -76,7 +76,9 @@ const ContactUs = () => {
 </div> 
 </form>
     </div>
-<div className="graphics-container"> <img src={BackgroundImage} alt="" /></div>
+<div className="graphics-container">
+   {/* <img src={BackgroundImage} alt="" /> */}
+   </div>
 
   </div>
    );
@@ -85,4 +87,4 @@ const ContactUs = () => {
    
 }
  
-export default ContactUs;
+export default ContactUsForm;
