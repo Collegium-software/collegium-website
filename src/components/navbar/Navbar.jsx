@@ -266,6 +266,12 @@ const Navbar = (props) => {
                 >
                   <li className="nav-link-submenu">Partners</li>
                 </a>
+                <a
+                  href="/contactus"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Contact Us</li>
+                </a>
               </ul>
             )}
           </li>
