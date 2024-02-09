@@ -21,11 +21,11 @@
   flex-direction: column;
 }
 
-.testimonyContainer h1 {
+/* .testimonyContainer h1 {
   font-size: 3vw;
   font-weight: bold;
   margin-bottom: 0;
-}
+} */
 
 .clientImage {
   height: 20vh;
@@ -59,6 +59,7 @@
   border: 0.3vw solid;
   border-image: linear-gradient(to right, #1882FF, #36EBCA);
   border-image-slice: 1; 
+
   text-align: left;
   padding: 2vw 2vw 1vw;
   height: 30vh;
@@ -79,8 +80,28 @@
   }
 
 
+@media only screen and (max-width: 768px) { 
 
-@media screen and (max-width: 768px) {
+  .testimony{
+  flex-direction:column;
+
+}
+
+.testimonyContainer{
+width:fit-content ;
+height: auto;
+margin: 5%;
+
+}
+
+.testimonyImageContainer {
+  width:fit-content;
+  height: auto;
+  margin: 5%;
+}
+}
+
+/* @media screen and (max-width: 768px) {
  
   .testimony {
     display: flex;
@@ -113,7 +134,7 @@
   .testimonyContainer p {
         font-size: 12px;
   }
-
+ */
   /* .testimonyButton {
     margin-left: initial;
     justify-content: right;

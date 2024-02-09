@@ -1,0 +1,164 @@
+.contact-us-container{
+  min-height: 100vh;
+  background-color:  #0A253B;
+   color:white;
+   position: relative;
+}
+
+.contact-us-container h1{
+  color: white;
+  padding: 5%;
+  position: absolute;
+
+}
+
+.contact-us-form{
+  justify-items: center;
+  background-color: #0A253B;
+}
+
+
+.main-form input{
+  border-width: 0.2vw;
+  border-image:  linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
+}
+
+.checkbox-container input{
+  margin: 3%;
+}
+
+
+.contact-us-form textarea{
+
+background-color: white;
+border: solid;
+  border-width: 0.2vw;
+  border-image:  linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
+}
+
+.checkbox-container{
+
+  z-index: 1;
+  display: grid;
+  padding-left: 10%;
+
+  text-align: left;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1%;
+  background-image: url("../../images/contactUs/backgroundContact.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+.checkbox-container p{
+  margin-top: 4%;
+}
+
+
+.contact-us-image{
+
+  width:100%;
+  height:40vh;
+  margin-bottom: 4vh;
+}
+
+
+.contact-us-image-container{
+  position: relative; /*not active checkboxes*/
+} 
+
+.contact-us-h1{
+  position:absolute;
+    /* font-size: 3vw; */
+    font-style: normal;
+    font-weight: 300;
+ 
+
+}
+
+.contact-us-submit-btn{
+ display: flex;
+ margin-top:30%
+}
+
+
+
+.graphics-container{
+  margin-left:0;
+  margin-right: 0;
+ 
+
+}
+
+.graphics-container img{
+
+  width: 100%;
+  /* border: solid red; */
+}
+
+
+.main-form1{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2vw;
+margin-left: 20%;
+margin-right: 20%;
+}
+
+
+.main-form1 input{
+ padding:2%;
+ margin-bottom: 2%;
+}
+
+ input.company-name{
+  grid-column: span 2;
+
+} 
+
+.main-form1 textarea{
+  grid-column: span 2;
+ }
+
+
+@media only screen and (max-width: 768px) {
+ 
+.checkbox-container{
+   display: block;
+   /* margin-left: 10%; */
+   }
+
+.contact-us-image{
+    height:10%;
+}
+
+  .main-form1 {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+
+  
+  .main-form1 input,
+  .main-form1 textarea {
+      width: initial;
+      margin-bottom: 10px;
+  }
+
+  .contact-us-container{
+    height: 150vh;
+
+}
+}
+
+
+ .contact-us-footer{
+position: absolute;
+
+} 

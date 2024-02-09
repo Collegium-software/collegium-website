@@ -1,13 +1,13 @@
 import React from "react";
-import '../testimony/testimony.css';
+import '../testimony1/testimony1.css';
 import Button from '../button/Button';
 import testimonyPic from "../../images/TestimonyPicture.png";
 import CustomerPic from "../../images/CustomerPic.png";
 
-const Testimony = () => (
+const Testimony1 = () => (
   <div className="testimony">
     <div className="testimonyContainer">
-      <h1>CUSTOMER STORY</h1>
+      <h1>Customer Story</h1>
       <div className="client">
         <img className="clientImage" src={CustomerPic} alt="Customer" />
         <h3>Alan Main</h3>
@@ -24,6 +24,6 @@ const Testimony = () => (
   </div>
 );
 
-export default Testimony;
+export default Testimony1;
 
 
