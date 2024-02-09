@@ -129,7 +129,7 @@ const Navbar = (props) => {
     setisNavListVisible(false);
   };
   return (
-    <nav class="navbar" style={navStyle}>
+    <nav className="navbar" style={navStyle}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <a href="/">
