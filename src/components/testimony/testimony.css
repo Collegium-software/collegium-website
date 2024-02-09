@@ -1,9 +1,10 @@
+
 .testimony {
   display: flex;
   flex-direction: row; 
   align-items: center; 
   color: black;
-  padding: 2%;
+  padding: 5vw;
   text-align: center;
   background: #F6FCFC;
 }
@@ -16,7 +17,6 @@
 
 .testimonyContainer{
   width: 35vw;
-  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -35,40 +35,49 @@
 }
 
 .testimonyImageContainer{
-  height: 75vh;
+  height: 70vh;
   width:50vw;
-  margin:auto;
+  margin-left:auto;
 }
 
 .testimonyImageContainer img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border: 0.5vh solid;
-  border-image: linear-gradient(to bottom, darkblue, teal);
+  border-image: linear-gradient(to right, #1882FF, #36EBCA);
   border-image-slice: 1;
 }
 
 .testimonyText {
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: right;
   color: white;
   background-color: #0A253B;
   border: 0.3vw solid;
   border-image: linear-gradient(to right, #1882FF, #36EBCA);
   border-image-slice: 1; 
-  /* font-size: 1.15vw; */
+
   text-align: left;
-  margin: 2vh;
-  padding: 5vh;
-  height: 30%;
+  padding: 2vw 2vw 1vw;
+  height: 30vh;
   position: relative;
+  margin-top:2vw;
 } 
+.testimonyText p{
+  padding-bottom:1vw;
+  font-size: 1.2vw;}
+
 
 .testimonyButton {
-  display: flex;
-  margin-top: 3vw;
-  margin-left: auto;
-  justify-items: center;
-  justify-content: right;
-} 
+    display: flex;
+    margin-top: 3vw;
+    margin-left: auto;
+    justify-items: center;
+    justify-content: center;
+  }
 
 
 @media only screen and (max-width: 768px) { 
@@ -91,7 +100,49 @@ margin: 5%;
   margin: 5%;
 }
 }
+
+/* @media screen and (max-width: 768px) {
+ 
+  .testimony {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap:3vw;
+    height:auto;
+  }
+
+  .testimonyContainer{
+    width:80%;
+  }
+  .testimonyImageContainer{
+    width:80%;
+    margin:auto;
+    height:30vw;
+  }
+  .testimonyText{
+    height:30%;
+  }
+  .testimonyContainer h1 {
+      font-size: 25px;
+  }
+  .testimonyContainer h3{
+    font-size: 18px;
+  }
+  .testimonyContainer h4 {
+    font-size: 15px;
+  }
+  .testimonyContainer p {
+        font-size: 12px;
+  }
+ */
+  /* .testimonyButton {
+    margin-left: initial;
+    justify-content: right;
+    align-items: right;
+  } */
   
-  
-  
+  };
+    
+
+
 

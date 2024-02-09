@@ -1,3 +1,4 @@
+
 .comparison-container{
   /* height: 100vh; */
   width: auto;
@@ -114,6 +115,9 @@
  }
 
 
+}
+
+
 
 .text-container-why-different{
   padding-top: 2%;
@@ -141,6 +145,7 @@
 
   margin: 0 8% 8% 8%;
  
+
 }
 
 .white-dark-container{
@@ -152,6 +157,7 @@
 
 
 .comparisonButton {
+
 
  margin-top: 10%;
   

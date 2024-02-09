@@ -3,17 +3,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     width: 28vw;
     height: 8vw;
     position: relative;
     z-index: 2;
 }
-.contact-card-container {
-    background-color: white;
-    color: black;
-    padding: 2vw 3vw 2vw 3vw;
+.contact-card-mask {
+    background-color: white; 
     width: 101%;
     height: 100%;
     border: 0;
@@ -25,19 +23,33 @@
     justify-content: left;
     align-items: left;
     position: absolute;
+
+
 }
-.contact-title {
-    font-size: 0.8vw;
+.contact-card-mask .contactCard-container {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-left: 3vw;
+    margin-top: 0.3vw;
+    margin-bottom: 2vw;
+}
+.contactCard-container .contact-title {
+    font-size: 1vw;
     font-weight: bold;
     margin-bottom: 0;
 }
-.contact-number {
+.contactCard-container .contact-number {
+    font-size: 1.2vw;
     color: #00215B;
     font-weight: bolder;
     margin-bottom: 0;
     letter-spacing: 1px;
 }
-.contact-email {
+.contactCard-container .contact-email {
+    font-size: 1.2vw;
     color: #00215B;
     font-weight: bolder;
     margin-top: 0;
@@ -51,17 +63,25 @@
         height: 40px;
         position: relative;
         box-shadow:none;
+        /* border: solid red; */
     }
-    .contact-card-container {
-        width: 101%;
-        height: 40px;
+    .contact-card-mask {
+        margin-top: 3px;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    
+    .contact-card-mask .contactCard-container {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 0;
-        margin-bottom: 2px;
+        gap: 15px;
+        
+        
     }
-    .contact-title, .contact-number, .contact-email {
+    .contactCard-container .contact-title, .contactCard-container .contact-number, .contactCard-container .contact-email {
         font-size: 9px;
         margin: auto;
         letter-spacing: 0;  

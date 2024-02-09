@@ -22,32 +22,35 @@
     align-items: left;
     justify-content: center;
     padding-left: 10vw;
+    box-sizing: border-box;
     
 }
-.blogs-route{
+.blogs-route p{
     font-size: 1vw;
+    margin-bottom: 0.2vw;
 }
-.blogs-title {
-font-size: 2vw;
-font-weight: bolder;
+.blogs-title h2 {
+    font-size: 3vw;
+    font-weight: bolder;
 }
-.blogs-subtitle {
+.blogs-subtitle p{
     font-size: 1.5vw;
+    margin-top: 0.2vw;
 }
 
 
 @media screen and (max-width: 768px){
     .blogs-hero {
-        height: 200px;
+        height: 160px;
     }
-    .blogs-route{
+    .blogs-route p{
         font-size: 10px;
     }
-    .blogs-title {
-    font-size: 16px;
+    .blogs-title h2{
+    font-size: 20px;
 
     }
-    .blogs-subtitle {
+    .blogs-subtitle p {
         font-size: 12px;
     }
 }

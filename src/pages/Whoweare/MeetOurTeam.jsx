@@ -38,7 +38,9 @@ const Team = ({ person }) => {
             </div>
           </div>
         </div>
-        <p className="person-description">{person.description}</p>
+        <div className="person-description">
+          <p>{person.description}</p>
+        </div>
       </div>
     </div>
   );

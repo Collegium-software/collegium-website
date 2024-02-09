@@ -39,7 +39,7 @@
 }
 
 .innov-sustain h2 {
-    font-size: 1.7vw;
+    font-size: 2vw;
     margin-bottom: 2vw;
 }
 .innov-sustain p {
@@ -75,7 +75,7 @@
         text-align: center;
     }
     .innov-sustain h2 {
-        font-size: 20px;
+        font-size: 16px;
     }
     .innov-sustain p {
         font-size: 12px;
@@ -88,13 +88,9 @@
         margin-top: 1px;
     }
     .sustain-button {
- 
         margin-left: initial;
         justify-content: center;
         align-items: center;
-        
-        
-    
     }
 };
     

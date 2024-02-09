@@ -11,7 +11,15 @@ import Owners from "./pages/owners/Owners";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";
 import Navbar from "./components/navbar/Navbar";
+
 import ContactUs from "./pages/contactUs/ContactUs";
+
+import BlogOneDetails from "./pages/blogs/BlogOneDetails";
+import BlogTwoDetails from "./pages/blogs/BlogTwoDetails";
+import BlogThreeDetails from "./pages/blogs/BlogThreeDetails";
+import BlogFourDetails from "./pages/blogs/BlogFourDetails";
+import BlogFiveDetails from "./pages/blogs/BlogFiveDetails";
+
 
 function App() {
   return (
@@ -27,6 +35,11 @@ function App() {
         <Route path="/owners" element={<Owners />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="blogs/blog1" element={<BlogOneDetails />} />
+        <Route path="blogs/blog2" element={<BlogTwoDetails />} />
+        <Route path="blogs/blog3" element={<BlogThreeDetails />} />
+        <Route path="blogs/blog4" element={<BlogFourDetails />} />
+        <Route path="blogs/blog5" element={<BlogFiveDetails />} />
         {/* <Route path="/vendors" element={<Vendors />} />
         <Route path="/project-team" element={<ProjectTeam />} /> */}
       </Routes>
@@ -36,7 +49,7 @@ function App() {
 
 const Home = () => (
   <>
-    <Navbar background="transparent" />
+    <Navbar background="transparent" color="white" />
     <Carousel />
     <Solutions />
     <Comparison />

@@ -1,38 +1,43 @@
 import "./navbar.css";
-import logo from "./logo.png";
+
 import { useState, useEffect, useCallback } from "react";
 
 const Navbar = (props) => {
-  const { background } = props;
+  const { background, color } = props;
   const navStyle = {
-    backgroundColor: background || "",
+    backgroundColor: background || "black",
+    color: color || "white",
   };
+  const navStyleMobile = {
+    color: "white",
+  };
+
   //Hook for menu arrow:
-  const [isServicesArrowChanged, setIsServicesArrowChanged] = useState("⋁");
+  const [isServicesArrowChanged, setIsServicesArrowChanged] = useState("▼");
   const servicesArrowDocumentClick = () => {
-    setIsServicesArrowChanged("⋁");
+    setIsServicesArrowChanged("▼");
   };
-  const [isResourcesArrowChanged, setIsResourcesArrowChanged] = useState("⋁");
+  const [isResourcesArrowChanged, setIsResourcesArrowChanged] = useState("▼");
   const resourcesArrowDocumentClick = () => {
-    setIsResourcesArrowChanged("⋁");
+    setIsResourcesArrowChanged("▼");
   };
-  const [isAboutUsArrowChanged, setIsAboutUsArrowChanged] = useState("⋁");
+  const [isAboutUsArrowChanged, setIsAboutUsArrowChanged] = useState("▼");
   const aboutusArrowDocumentClick = () => {
-    setIsAboutUsArrowChanged("⋁");
+    setIsAboutUsArrowChanged("▼");
   };
   //Hook for Services:
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   const toggleServicesMenu = () => {
     if (isServicesVisible) {
       setIsServicesVisible(false);
-      setIsServicesArrowChanged("⋁");
+      setIsServicesArrowChanged("▼");
     } else {
       setIsServicesVisible(true);
       setIsResourcesVisible(false);
       setIsAboutUsVisible(false);
-      setIsServicesArrowChanged("⋀");
-      setIsResourcesArrowChanged("⋁");
-      setIsAboutUsArrowChanged("⋁");
+      setIsServicesArrowChanged("▲");
+      setIsResourcesArrowChanged("▼");
+      setIsAboutUsArrowChanged("▼");
     }
   };
   const servicesDocumentClick = () => {
@@ -43,14 +48,14 @@ const Navbar = (props) => {
   const toggleResourcesMenu = () => {
     if (isResourcesVisible) {
       setIsResourcesVisible(false);
-      setIsResourcesArrowChanged("⋁");
+      setIsResourcesArrowChanged("▼");
     } else {
       setIsResourcesVisible(true);
       setIsServicesVisible(false);
       setIsAboutUsVisible(false);
-      setIsResourcesArrowChanged("⋀");
-      setIsServicesArrowChanged("⋁");
-      setIsAboutUsArrowChanged("⋁");
+      setIsResourcesArrowChanged("▲");
+      setIsServicesArrowChanged("▼");
+      setIsAboutUsArrowChanged("▼");
     }
   };
   const resourcesDocumentClick = () => {
@@ -61,14 +66,14 @@ const Navbar = (props) => {
   const toggleAboutUsMenu = () => {
     if (isAboutUsVisible) {
       setIsAboutUsVisible(false);
-      setIsAboutUsArrowChanged("⋁");
+      setIsAboutUsArrowChanged("▼");
     } else {
       setIsAboutUsVisible(true);
       setIsServicesVisible(false);
       setIsResourcesVisible(false);
-      setIsAboutUsArrowChanged("⋀");
-      setIsServicesArrowChanged("⋁");
-      setIsResourcesArrowChanged("⋁");
+      setIsAboutUsArrowChanged("▲");
+      setIsServicesArrowChanged("▼");
+      setIsResourcesArrowChanged("▼");
     }
   };
   const aboutUsDocumentClick = () => {
@@ -102,6 +107,15 @@ const Navbar = (props) => {
   };
 
   useEffect(() => {
+    // if (
+    //   navStyle.backgroundColor === "transparent" ||
+    //   navStyle.backgroundColor === "white"
+    // ) {
+    //   setIsLogoBlack(false);
+    // } else {
+    //   setIsLogoBlack(true);
+    // }
+
     document.addEventListener("click", handleDocumentClick);
     window.addEventListener("resize", handleResize);
 
@@ -115,112 +129,161 @@ const Navbar = (props) => {
     setisNavListVisible(false);
   };
   return (
-    <nav class="navbar" style={navStyle}>
+    <nav className="navbar" style={navStyle}>
       <div className="navbar-container">
-        <div className="logo">
-          <img src={logo} alt="logo" />
+        <div className="navbar-logo">
+          <a href="/">
+            <h2 style={navStyle}>collegium</h2>
+          </a>
         </div>
-        <div className="menu-icon" onClick={handleHamburgerClick}>
+        <div
+          className="menu-icon"
+          onClick={handleHamburgerClick}
+          style={navStyle}
+        >
           &#9776;
         </div>
 
         <ul
-          className={`nav-list ${isNavListVisible ? "show" : ""} `}
+          className={`nav-list ${isNavListVisible ? "show" : ""}`}
           onClick={(e) => e.stopPropagation()}
+          // style={navStyleMobile}
         >
           <li className="close-button" onClick={closeMenu}>
-            ❌
+            &#10006;
           </li>
-          <li>
-            <a className="nav-link" href="/">
-              Home
-            </a>
-          </li>
-          <li>
-            <div className="nav-link" onClick={toggleServicesMenu}>
-              Services&nbsp;&nbsp;&nbsp;
-              <span className="arrow">{isServicesArrowChanged}</span>
-            </div>
+          <a href="/" style={isNavListVisible ? navStyleMobile : navStyle}>
+            <li className="nav-link-menu">Home</li>
+          </a>
+          <li
+            className="nav-link-menu"
+            onClick={toggleServicesMenu}
+            style={isNavListVisible ? navStyleMobile : navStyle}
+          >
+            Services<span className="service-tab-space">&emsp;</span>
+            <span
+              className="dropdown-arrow"
+              style={isNavListVisible ? navStyleMobile : navStyle}
+            >
+              {isServicesArrowChanged}
+            </span>
             {isServicesVisible && (
-              <ul className="sub-menu">
-                <li>
-                  <a className="nav-link" href="/owners">
-                    Owners
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="/developers">
-                    Developers
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="/projectteam">
-                    Project Team
-                  </a>
-                </li>
+              <ul
+                className="sub-menu"
+                style={isNavListVisible ? navStyleMobile : navStyle}
+              >
+                <a
+                  href="/owners"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Owners</li>
+                </a>
+                <a
+                  href="/vendors"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Vendors</li>
+                </a>
+                <a
+                  href="/projectteam"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Project Team</li>
+                </a>
               </ul>
             )}
           </li>
-          <li>
-            <div className="nav-link" onClick={toggleResourcesMenu}>
-              Resources&nbsp;&nbsp;&nbsp;
-              <span className="arrow">{isResourcesArrowChanged}</span>
-            </div>
+          <li
+            className="nav-link-menu"
+            onClick={toggleResourcesMenu}
+            style={isNavListVisible ? navStyleMobile : navStyle}
+          >
+            Resources<span className="resources-tab-space">&emsp;</span>
+            <span
+              className="dropdown-arrow"
+              style={isNavListVisible ? navStyleMobile : navStyle}
+            >
+              {isResourcesArrowChanged}
+            </span>
             {isResourcesVisible && (
-              <ul className="sub-menu">
-                <li>
-                  <a className="nav-link" href="/community">
-                    Community
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="/blogs">
-                    Blogs
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="/userstories">
-                    User Stories
-                  </a>
-                </li>
+              <ul
+                className="sub-menu"
+                style={isNavListVisible ? navStyleMobile : navStyle}
+              >
+                <a
+                  href="/community"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Community</li>
+                </a>
+                <a
+                  href="/blogs"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Blogs</li>
+                </a>
+                <a
+                  href="/userstories"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">User Stories</li>
+                </a>
               </ul>
             )}
           </li>
-          <li>
-            <div className="nav-link" onClick={toggleAboutUsMenu}>
-              About Us&nbsp;&nbsp;&nbsp;
-              <span className="arrow">{isAboutUsArrowChanged}</span>
-            </div>
+          <li
+            className="nav-link-menu"
+            onClick={toggleAboutUsMenu}
+            style={isNavListVisible ? navStyleMobile : navStyle}
+          >
+            About Us<span className="aboutus-tab-space">&emsp;</span>
+            <span
+              className="dropdown-arrow"
+              style={isNavListVisible ? navStyleMobile : navStyle}
+            >
+              {isAboutUsArrowChanged}
+            </span>
             {isAboutUsVisible && (
-              <ul className="sub-menu">
-                <li>
-                  <a className="nav-link" href="/who-we-are">
-                    Who We Are
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="/projects">
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="/partners">
-                    Partners
-                  </a>
-                </li>
+              <ul
+                className="sub-menu"
+                style={isNavListVisible ? navStyleMobile : navStyle}
+              >
+                <a
+                  href="/who-we-are"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Who We Are</li>
+                </a>
+                <a
+                  href="/projects"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Projects</li>
+                </a>
+                <a
+                  href="/partners"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Partners</li>
+                </a>
+                <a
+                  href="/contactus"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Contact Us</li>
+                </a>
               </ul>
             )}
           </li>
-          <li>
-            <a className="nav-link" href="/careers">
-              Careers
-            </a>
-          </li>
-          <li>
-            <a className="nav-link" href="/faqs">
-              FAQs
-            </a>
-          </li>
+          <a
+            href="/careers"
+            style={isNavListVisible ? navStyleMobile : navStyle}
+          >
+            <li className="nav-link-menu">Careers</li>
+          </a>
+          <a href="/faqs" style={isNavListVisible ? navStyleMobile : navStyle}>
+            <li className="nav-link-menu">FAQs</li>
+          </a>
         </ul>
       </div>
     </nav>

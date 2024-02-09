@@ -1,60 +1,66 @@
-
-.ownerServicesPage {
-  height: 100vh;
-  width: 100vw;
+/* .ownerServicesPage {
   display: flex;
   flex-direction: column;
   background-color: #0a253b;
+  gap:2vw;
+  padding: 0vw 5vw 0vw 5vw;
 }
 
+/* Header */
 .servicesHeader {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 10vh;
-  width: 100vw;
-  margin-top: 4vh;
-  position: relative;
+  padding-top: 5vh;
 }
 
-.servicesHeader h1 {
-  margin-left: 3vw;
-}
 
+/* Main-container */
 .servicesContainer {
   display: flex;
+  align-items: flex-start;
   flex-direction: row;
-  padding: 5vh;
+  justify-content: space-between;
 }
 
+/* Content-container */
 .contentContainer {
   display: flex;
   flex-direction: column;
-  width: 65vw;
-  height: 70vh;
-  position: relative;
+  width: 60vw; 
+  padding-bottom: 10vh;
+  margin:auto;
 }
 
-h3 {
+.contentContainer h3 {
+  margin-top: 0.9vw;
+  font-size: 1.5vw;
+}
+
+.contentContainer p {
+  margin: 0;
+  font-size: 1.3vw;
+}
+
+/* Sidebar-services-container */
+.services {
+  width: 25vw; 
+  display: flex;
+  flex-direction: column;
   margin-top: 0;
 }
 
-p {
-  margin: 0;
-}
-
-.services {
-  margin-right: 10vh;
-}
-
 .services p {
-  margin-bottom: 15%;
+  margin-bottom: 1vw;
+  font-size: 1.3vw;
 }
 
 .serviceImageContainer {
-  height: 60vh;
-  width: auto;
-  margin-top: 3vh;
+  margin-top: 3vw;
+  width: 95%; 
+  border: 0.5vh solid;
+  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
 }
 
 .serviceImageContainer img {
@@ -63,8 +69,58 @@ p {
   object-fit: cover;
 }
 
+/* ServicesButton */
 .ServicesButton {
   display: flex;
-  margin-left: 60vw;
-}
+  margin-left: auto;}
+  
 
+@media (max-width: 768px) {
+  .ownerServicesPage{
+    display: flex;
+    align-items: center;
+  }
+  .servicesHeader{
+    width:80%;
+  }
+
+  .servicesHeader h1{
+    font-size:20px;
+  }
+  .servicesContainer{
+    display: flex;
+    flex-direction: column; 
+    gap:3vw;
+    width:80%;
+  }
+  .services{
+    /* display:flex;
+    flex-direction: row; */
+    width:80%;
+    height:20%;
+    margin:0;
+  }
+  .services p{
+    font-size:12px;
+    margin-bottom:0;
+  }
+
+  .contentContainer{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    width:auto;
+
+  }
+  .contentContainer p{
+    font-size:12px;
+  }
+
+  .contentContainer h3{
+    font-size:18px;
+  }
+  
+
+  
+  };
+    

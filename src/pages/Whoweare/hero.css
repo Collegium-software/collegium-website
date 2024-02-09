@@ -7,7 +7,7 @@
     justify-content: left;
     align-items: center;
     color: white;
-    margin-top: 5vw;
+    margin-top: 3vw;
     padding-top: 4vw;
     padding-bottom: 4vw;
     padding-left: 16vw;
@@ -23,21 +23,23 @@
 
 
 }
-.route {
+.hs-main-container .route {
     font-size: 1vw;
 }
-.hero-title {
+.hs-main-container .hero-title {
     font-size: 4vw;
     font-weight: bolder;
     margin-bottom: 0;
+    margin-top: 0;
 }
-.hero-subtitle {
+.hs-main-container .hero-subtitle {
     margin-top: 0;
     margin-bottom: 1.5vw;
     font-size: 1.5vw;
 }
-.hero-description {
+.hs-main-container .hero-description {
     line-height: 2vw;
+    font-size: 1.2vw;
 }
 
 .herobutton {
@@ -54,16 +56,16 @@
     .hs-main-container{
         width: 70%;
     }
-    .route {
+    .hs-main-container .route {
         font-size: 10px;
     }
-    .hero-title {
+    .hs-main-container .hero-title {
         font-size: 24px;
     }
-    .hero-subtitle {
+    .hs-main-container .hero-subtitle {
         font-size: 15px;
     }
-    .hero-description {
+    .hs-main-container .hero-description {
         font-size: 12px;
         line-height: 16px;
         

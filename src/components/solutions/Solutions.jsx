@@ -8,13 +8,17 @@ import Owners from "../../images/owners/Owners.jpeg";
 
 const Card = ({ imageUrl, label, description, to }) => {
   console.log('Rendering Card:', label);
+  const cardStyle = {
+    backgroundImage: `url(${imageUrl})`,
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center',
+  };
   return (
-    <div className="card">
-      <img src={imageUrl} className="cardsImage" alt={label} />
+    <div className="card" style={cardStyle}>
       <div className="cardContent">
         <div className="labelText"><p>{description}</p></div>
         <div className="solutionButton">
-        <Button width="300px" label={label} to={to} />
+          <Button width="300px"  label={label} to={to} />
         </div>
       </div>
     </div>

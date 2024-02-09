@@ -1,53 +1,54 @@
 
- .owners-benefits-Page {
+
+.owners-benefits-Page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #0a253b;
-  height: 100vh;
-  width: 100vw;
 }
 
 .owners-benefits-Container {
   display: flex;
   justify-content: space-evenly;
-  height: 60vh;
-  margin-top: 5vh;
+  flex-direction: row;
+  padding-top: 10vw;
+  padding-bottom: 5vw;
 }
 
 .benefitsContainer,
 .imageContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center; 
   width: 21vw;
 }
 
 .benefitsContainer p {
-  margin-top: 10%;
   font-size: 2vh;
-  height: 10vh;
+  padding-top:2vh;
+  margin-bottom:5vh;
 }
 
 .imageContainer {
-  height: 50vh;
   position: relative;
+  border: 0.5vh solid;
+  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
 }
 
-.benefitsImage {
+.imageContainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 0.5vh solid;
-  border-image: linear-gradient(to bottom, darkblue, teal);
-  border-image-slice: 1;
 }
 
 .image-label {
   position: absolute;
-  bottom: 1%;
-  left: 0.6%;
+  bottom: 0%;
+  left: 0%;
   right: 0%;
-  width: 101%;
+  width: 100%;
   height: 30%;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
@@ -56,3 +57,30 @@
   justify-content: center;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .owners-benefits-Container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vw;
+    padding-bottom: 5vw; 
+  }
+
+  .benefitsContainer{
+    width: 300px;  
+    max-width: none; 
+
+  }
+  .imageContainer {
+    width:  300px;  
+    max-width: none; 
+  }
+
+  .benefitsContainer p  {
+    width: 300px;
+    font-size: 12px;
+    margin-bottom:30px;
+}
+}
+ 
+

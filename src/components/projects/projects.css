@@ -1,73 +1,113 @@
-
 .projectsHeader {
-    color: black;
-    text-align: center;
-    height: 30vh;
-    background-color:#F6FCFC;
-    margin-top:5vh;
-  }
-  
-  h2{
-    margin: 0;
-  }
-  
-  .ProjectPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #F6FCFC;
-    color:black;
-    margin:auto;
-  }
-  
-  .projectsContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding:5vh; 
-    height:70vh;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    max-width: 20vw;
-    border:none;
-    position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  background-color: #F6FCFC;
+  margin-top: 5vh;
+}
+
+h2 {
+  margin: 0;
+}
+
+.ProjectPage {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6FCFC;
+  color: black;
+  margin: auto;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; 
+  justify-content: space-evenly;
+  height: 60vh;
+  padding: 5vw 0vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  width: 18vw;
+  border: none;
+  position: relative;
+}
+
+.container p {
+  font-size: 1.3vw;
+}
+
+.image-Container {
+  position: relative;
+  width: 18vw;
+  border: none;
+  margin: 0;
+}
+
+.projectImages {
+  width: 100%; 
+  height: auto; 
+  max-height: 100%;
+  object-fit: cover;
+  border: 0.4vh solid;
+  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
+}
+
+.projectButton {
+  display: flex;
+  padding-top: 3vw; 
+  justify-content: center;
+}
+
+
+
+
+
+  @media (max-width: 768px) {
+    .projectsHeader {
+      display: flex;
+      width: 100%;
+      text-align: center;}
+
+    .projectsHeader h1 {
+        font-size: 25px;
+    }
+    .projectsHeader h2{
+        font-size: 18px;
     }
 
-  .container p{
-    height: 8vh;
-    margin-top:5%;
-  }
-
-  .image-Container{
-    position: relative;
-    height:35vh;
-    width:20vw;
-    border:none;
-  }
-  
-   .projectImages {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 0.4vh solid;
-    border-image: linear-gradient(to bottom, darkblue, teal);
-    border-image-slice: 1;
-  } 
-
-  p {
-    margin-top: 5%;
-  }
-
-  .projectButton {
+    .projectsContainer {
       display: flex;
-      margin-top: 3vw;
-      margin-left: auto;
-      justify-items: center;
+      flex-direction: column;
+      align-items: center;
+      height: 70%;
+    }
+  
+    .container {
+      width: 70%; 
+    }
+  
+    .image-Container {
+      width: auto;
+    }
+  
+    .container p {
+      font-size: 12px;
+      margin-bottom: 35px;
+    }
+  
+    .projectButton {
+      margin-left: initial;
       justify-content: center;
-  }
+      align-items: center;
+    }
+
+}
+
   

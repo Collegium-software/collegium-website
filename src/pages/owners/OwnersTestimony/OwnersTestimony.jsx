@@ -5,29 +5,31 @@ import OwnersPic2 from '../../../images/owners/ownersPic2.png';
 import OwnersPic3 from '../../../images/owners/ownersPic3.png';
 import Line from '../../../components/Line';
 
-const ClientsTestimony = () => {
+const OwnersTestimonyHeader = () => {
 return(
-  <div className="clientTestimony">
-    <h1>R. Buckminster Fuller</h1>
+  <div className="ownersTestimonyHeader">
+    <h1>"R. Buckminster Fuller"</h1>
     <Line blackLine />
     <p>“This is the placeholder for the testimonial. A great testimonial can boost your brand’s image.”</p>
   </div>
 )};
 
-const OwnersPartners= ({ imageUrl, title }) => {
-  return(
-    <div className="ownersPartners">
-      <div className="PartnersImage"><img src={imageUrl} alt={title} /></div> 
-      <p>{title}</p>
-    </div>
-)};
+
+const OwnersPartners = ({ imageUrl, title }) => {
+  return (
+      <div className="ownersPartners">
+        <div className="PartnersImage"><img src={imageUrl} alt={title} /></div> 
+        <p>{title}</p>
+      </div>
+  );
+};
 
 const OwnersTestimony = () => {
   return (
     <div className="owners-Testimony-Page">
-      <ClientsTestimony />
+      <OwnersTestimonyHeader />
       <h2>Owners Trust Us</h2>
-      <div className="owners-Testimony-Container ">
+      <div className="owners-Partners-Container ">
         <OwnersPartners
           imageUrl={OwnersPic1}
           title="Partner 1"
@@ -39,11 +41,11 @@ const OwnersTestimony = () => {
         <OwnersPartners
           imageUrl={OwnersPic3}
           title="Partner 3"
-      />
-      <OwnersPartners
+        />
+        <OwnersPartners
           imageUrl={OwnersPic3}
           title="Partner 4"
-      />
+        />
       </div>
     </div>
   );

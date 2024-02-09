@@ -1,18 +1,20 @@
 .footer{
-  height: 50vh;
-  width:100vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   background: #0a253b;
+  padding:2vw 0vw 1vw 0vw; 
 } 
+
 .footer-container {
-  height:40vh;
   display: flex;
   flex-direction: row; 
   color: white;
-  align-items:left;
+  align-items:top;
   background: #0a253b;
-  justify-content: space-evenly; 
+  gap: 10vw;
+  padding-left:3vw;
 } 
 
 .footer-section1,.footer-section2, .footer-section3{
@@ -22,45 +24,33 @@
 }
 .footer-section1{
   width:30vw;
-  margin-right:20vh;
-}
-.footer-section1 h2 {
-font-size: 3vw ;
-margin-top:3vh;
-margin-bottom:5vh;
-}
-
+  gap:10%;
+  margin-right:10vw;
+} 
 .footer-section1 p{
-  height:25vh;
+  font-size:1.3vw;
+  margin-top:0;
 }
 
-p{
 
-  margin-bottom:10vh;
+.footer-section1 h2 {
+  font-size: 3vw ;
+}
+.footer-section2 p{
+  font-size:1.3vw;
+  margin-top:0vw;
+}
+
+.footer-section3 p{
+  font-size: 1.1vw;
 }
 
 .icons{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
-  width:30vh;
+  gap:2vw;
 }
-
-.footer-section2, .footer-section3{
-  width:15vw;
-  margin-top:5vh;
-}
-
-.footer-section2 p{
-  margin-bottom:0.5vh;
-}
-
-.section-divider{
-  color:white;
-  background-color: white;
-}
-
 
 .copyrightText{
   text-align: center;
@@ -69,8 +59,54 @@ p{
   align-items:center;
   justify-content: center;
 }
+
 a{
   color:white;
 }
 
+
+@media (max-width: 768px) {
+    
+  .footer-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    gap:1vw;
+    /* height:50%; */
+    width: 60%;
+  }
+  .footer-section1,.footer-section2, .footer-section3 {
+    width: 80%;
+    margin:0%;
+    height:auto;
+  }
+  
+  .footer-section1 h2 {
+    font-size: 25px;
+    margin-bottom: 5%;
+  }
+  .footer-section1 {
+    font-display: flex;
+    /* gap:3vw; */
+  }
+  .footer-section2, .footer-section3,
+  h3 {
+    font-size: 18px;
+  }
+  .footer-section1
+  p {
+    font-size: 12px;
+  }
+  
+  .footer-section2
+  p {
+    font-size: 12px;
+  }
+  
+  .footer-section3
+  p {
+    font-size: 12px;
+  }
+  
+}
 

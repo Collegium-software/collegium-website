@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 4vw;
-    padding-bottom: 4vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
     box-sizing: border-box;
 }
 .team-main-container {
@@ -13,9 +13,10 @@
     align-items: center;
 
 }
-.team-title {
-    font-size: 1.7vw;
+.team-title h2{
+    font-size: 2vw;
     margin-bottom: 2.5vw;
+    color: black;
 }
 .team-details {
     display: flex;
@@ -62,16 +63,21 @@
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 4vw;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    transition: font-size 10ms ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.person-description {
-    margin-top: 2vw;
+.person-name p{
+    color: white;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: bold;
+    transition: font-size 10ms ease-in-out;
+}
+
+.person-description p{
+    font-size: 1.2vw;
+    color: black;
 }
 .team-gradient-div:hover .person-name{
     background-color: rgba(54, 235, 202, 0.7);
@@ -83,8 +89,10 @@
         flex-direction: column;
     }
     .team-title {
-        margin-top: 10px;
-        font-size: 16px;
+        margin-top: 10px;        
+    }
+    .team-title h2 {
+        font-size: 16px; 
     }
     .team-gradient-div {
         width: 300px;
@@ -96,10 +104,15 @@
     .person-name{
         height: 50px;
     }
+    .person-name p{
+        font-size: 16px;
+    }
     
     .person-description {
-        font-size: 16px;
         margin-bottom: 10px;
+    }
+    .person-description p{
+        font-size: 14px;
     }
     .team-gradient-div:hover .person-name{
         font-size: 16px;

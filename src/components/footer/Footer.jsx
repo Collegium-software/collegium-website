@@ -55,13 +55,22 @@ const Container = () => {
           <p>Careers</p>
           <p>Blog</p>
           <p>Partners</p>
-        
       </div>
 
       <div className="footer-section3">
         <h3>Offices</h3>
-        <p>123 Main Street</p>
-        <p>City, State, Zip</p>
+          <p>
+            <strong>Headquarter:</strong>
+              <br />
+              123 ABC Ave, SW <br />
+              Calgary, AB, Canada
+            </p>
+            <p>
+            <strong>USA:</strong>
+              <br />
+              123 ABC Ave, SW <br />
+              Los Angeles, CA, USA
+          </p>
       </div>
     </div>
   );
