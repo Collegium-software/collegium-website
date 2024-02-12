@@ -1,7 +1,6 @@
 import "./blogpagedetails.css";
 import blog4 from "../../images/blogs/blog3.jpg";
 import Navbar from "../../components/navbar/Navbar";
-import BlogsList from "./BlogsList";
 import SFooter from "../../components/footer/SFooter";
 const BlogTwoDetails = () => {
   return (
@@ -130,7 +129,6 @@ const BlogTwoDetails = () => {
       </div>
       <div className="recent-posts">
         <h1>RECENT POSTS</h1>
-        <BlogsList />
       </div>
       <SFooter />
     </div>
