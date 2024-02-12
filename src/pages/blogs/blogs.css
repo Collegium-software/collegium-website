@@ -1,0 +1,22 @@
+.myBlogsList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    gap: 3vw;
+    width: 90%;
+    margin: auto;
+    margin-top: 5vw;
+}
+.cover-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .myBlogsList {
+        flex-direction: column;
+    }
+
+}
