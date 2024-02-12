@@ -5,9 +5,9 @@ import Footer from "../../components/footer/Footer";
 const ContactUs = () => {
   return (
     <div>
-    <Navbar />
+    <Navbar background="white" color="black" />
     <ContactUsForm/>
-    {/* <div className="contact-us-footer" ><Footer /></div> */}
+    <div className="contact-us-footer" ><Footer /></div>
     </div>
     );
 }

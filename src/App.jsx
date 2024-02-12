@@ -34,6 +34,7 @@ function App() {
         <Route path="/footer" element={<Footer />} />
         <Route path="/owners" element={<Owners />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
+        <Route path="/contactus" element={<ContactUs />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="blogs/blog1" element={<BlogOneDetails />} />
         <Route path="blogs/blog2" element={<BlogTwoDetails />} />
@@ -57,7 +58,7 @@ const Home = () => (
     <Blog />
     <Testimony1 />
     <Footer />
-    <ContactUs/>
+    
   </>
 );
 
