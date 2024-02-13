@@ -6,7 +6,7 @@ import Blog from "./components/blog/Blog";
 import Comparison from "./components/comparison/Comparison";
 import Testimony from "./components/testimony/Testimony";
 import Projects from "./components/projects/Projects";
-import Footer from "./components/footer/Footer";
+import SFooter from "./components/footer/SFooter";
 import Owners from "./pages/owners/Owners";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";
@@ -27,7 +27,7 @@ function App() {
         <Route path="/comparison" element={<Comparison />} />
         <Route path="/testimony" element={<Testimony />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/footer" element={<Footer />} />
+        <Route path="/footer" element={<SFooter />} />
         <Route path="/owners" element={<Owners />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/blogs" element={<Blogs />} />
@@ -52,7 +52,7 @@ const Home = () => (
     <Projects />
     <Blog />
     <Testimony />
-    <Footer />
+    <SFooter />
   </>
 );
 
