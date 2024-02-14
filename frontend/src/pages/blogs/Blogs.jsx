@@ -12,7 +12,9 @@ const Blogs = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/blogs");
+        const response = await fetch(
+          "https://collegium.onrender.com/api/blogs"
+        );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
