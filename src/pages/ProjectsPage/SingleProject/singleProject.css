@@ -1,0 +1,53 @@
+.sng-project-container{
+  color: black;
+}
+
+.sp-subtitle-container{
+  display: grid;
+  grid-template-columns: 40% 50%;
+  color: black;
+  margin: 4vw;
+  gap:4%;
+  justify-content: center;
+  /* padding:2% */
+  /* padding: 4vw;  */
+}
+
+
+
+
+.sp-subtitle-container img{
+  max-width: 100%;
+  height: auto; 
+
+}
+
+
+.project-subtitle-text{
+  padding: 3%;
+}
+
+.project-subtitle-text h2, p{
+  padding-bottom: 2%;
+}
+
+.sp-main-text-container{
+
+padding: 4vw;
+text-align: justify;
+padding-top: 0;
+
+} 
+
+@media screen and (max-width: 768px){
+  .sp-subtitle-container {
+    display: block;
+    text-align: justify;
+    align-items: center;
+  }
+
+  .sp-subtitle-container-img{
+   
+
+  }
+}
