@@ -7,7 +7,7 @@ const ContactUs = () => {
     <div>
     <Navbar />
     <ContactUsForm/>
-    <div className="contact-us-footer" ><SFooter /></div>
+    {/* <div className="contact-us-footer" ><SFooter /></div> */}
     </div>
     );
 }

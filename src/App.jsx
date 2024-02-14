@@ -58,8 +58,8 @@ const Home = () => (
     <Comparison />
     <Projects />
     <Blog />
-    <SFooter />
     <Testimony1 />
+    <SFooter />
     <ContactUs />
   </>
 );
