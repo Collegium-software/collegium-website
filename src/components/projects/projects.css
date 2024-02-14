@@ -7,8 +7,12 @@
   margin-top: 5vh;
 }
 
+h1 {
+  font-size: 2vw;
+}
 h2 {
   margin: 0;
+  font-size: 2vw;
 }
 
 .ProjectPage {
@@ -24,7 +28,7 @@ h2 {
   flex-direction: row;
   align-items: flex-start; 
   justify-content: space-evenly;
-  height: 60vh;
+  height: 35vw;
   padding: 5vw 0vw;
 }
 
@@ -33,19 +37,22 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  width: 18vw;
+  width: 25vw;
   border: none;
   position: relative;
+  margin-top: 0;
 }
 
 .container p {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
 }
 
 .image-Container {
   position: relative;
-  width: 18vw;
-  border: none;
+  width: 25vw;
+  border: 0.2vw solid;
+  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
   margin: 0;
 }
 
@@ -54,9 +61,8 @@ h2 {
   height: auto; 
   max-height: 100%;
   object-fit: cover;
-  border: 0.4vh solid;
-  border-image: linear-gradient(to right, #1882FF, #36EBCA);
-  border-image-slice: 1;
+  border: none; 
+  
 }
 
 .projectButton {
