@@ -7,13 +7,15 @@
   margin-top: 5vh;
 }
 
-h1 {
+.projectsHeader h1 {
   font-size: 2vw;
 }
-h2 {
+.projectsHeader h2 {
+  font-size: 2vw;
   margin: 0;
-  font-size: 2vw;
 }
+
+
 
 .ProjectPage {
   display: flex;
@@ -28,7 +30,6 @@ h2 {
   flex-direction: row;
   align-items: flex-start; 
   justify-content: space-evenly;
-  height: 35vw;
   padding: 5vw 0vw;
 }
 
