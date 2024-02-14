@@ -4,6 +4,8 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const MONGODB_URI = process.env.MONGODB_URI;
+const cors = require("cors");
+app.use(cors());
 
 const pathToBuild = path.join(__dirname, "../frontend/build");
 app.use(express.static(pathToBuild));
