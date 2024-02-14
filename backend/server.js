@@ -20,7 +20,7 @@ const client = new MongoClient(MONGODB_URI, {
   },
 });
 
-app.get("/blogs", async (req, res) => {
+app.get("/api/blogs", async (req, res) => {
   try {
     await client.connect();
     await client.db("admin").command({ ping: 1 });
@@ -40,7 +40,7 @@ app.get("/blogs", async (req, res) => {
     await client.close();
   }
 });
-app.post("/blogs", async (req, res) => {
+app.post("/api/blogs", async (req, res) => {
   try {
     await client.connect();
     const database = client.db();
@@ -73,7 +73,7 @@ app.post("/blogs", async (req, res) => {
   }
 });
 
-app.delete("/blogs/:id", async (req, res) => {
+app.delete("/api/blogs/:id", async (req, res) => {
   try {
     await client.connect();
     const database = client.db();
@@ -93,7 +93,7 @@ app.delete("/blogs/:id", async (req, res) => {
   }
 });
 
-app.patch("/blogs/:id", async (req, res) => {
+app.patch("/api/blogs/:id", async (req, res) => {
   try {
     await client.connect();
     const database = client.db();
