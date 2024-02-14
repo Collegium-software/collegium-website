@@ -65,7 +65,7 @@ const BlogsForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/blogs", {
+      const response = await fetch("/api/blogs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
