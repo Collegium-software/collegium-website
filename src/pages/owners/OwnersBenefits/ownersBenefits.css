@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: #0a253b;
+  color:white;
 }
 
 .owners-benefits-Container {
@@ -25,7 +26,7 @@
 }
 
 .benefitsContainer p {
-  font-size: 2vh;
+  font-size: 1.2vw;
   padding-top:2vh;
   margin-bottom:5vh;
 }
@@ -56,6 +57,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  font-size: 1.2vw;
 }
 
 @media (max-width: 768px) {

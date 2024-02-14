@@ -23,12 +23,8 @@
   padding-left: 16vw;
 }
 
-.ownersHeader h4{
-  font-size: 1vw;
-  padding-bottom:1vw;
-}
 .ownersHeader h1 {
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: bolder;
   margin-bottom: 0;
 }
@@ -37,8 +33,14 @@
   margin-bottom: 2vw;
   font-size: 1.5vw;
 }
+
+.ownersHeader h4{
+  font-size: 1vw;
+  padding-bottom:1vw;
+}
 .ownersHeader p {
   line-height: 2vw;
+  font-size: 1.2vw;
 }
 
 .ownersHeaderButton {

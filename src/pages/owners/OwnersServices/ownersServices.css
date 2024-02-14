@@ -3,8 +3,8 @@
   flex-direction: column;
   background-color: #0a253b;
   color:white;
-  gap:2vw;
-  padding: 0vw 5vw 0vw 5vw;
+  gap:1vw;
+  padding: 0vw 4vw 0vw 4vw;
 }
 
 /* Header */
@@ -12,9 +12,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 5vh;
 }
-
+.servicesHeader h1{
+  font-size: 2vw;
+}
 
 /* Main-container */
 .servicesContainer {
@@ -29,18 +30,27 @@
   display: flex;
   flex-direction: column;
   width: 60vw; 
-  padding-bottom: 10vh;
+  height:40vw;
+  padding-bottom: 2vw;
   margin:auto;
 }
 
-.contentContainer h3 {
-  margin-top: 0.9vw;
-  font-size: 1.5vw;
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 63vw;
+  padding-bottom: 2vw;
+  margin-left: 5%;
+}
+
+.contentContainer h4 {
+  margin: 0.9vw 0vw;
+  font-size: 2vw;
 }
 
 .contentContainer p {
-  margin: 0;
-  font-size: 1.3vw;
+  margin: 0vw;
+  font-size: 1.2vw;
 }
 
 /* Sidebar-services-container */
@@ -57,18 +67,17 @@
 }
 
 .serviceImageContainer {
-  margin-top: 3vw;
-  width: 95%; 
-  border: 0.5vh solid;
+  margin-top: 1vw; /* Adjust the margin-top as needed */
+  width: 99%; 
+  height:95%;
+  border: 0.2vw solid;
   border-image: linear-gradient(to right, #1882FF, #36EBCA);
   border-image-slice: 1;
+  background-image: url('../../../images/owners/ownersGraph.png');
+  background-size: cover; 
+  background-position: center; /* This centers the background image */
 }
 
-.serviceImageContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* ServicesButton */
 .ServicesButton {
@@ -111,6 +120,7 @@
     align-items: center;
     text-align: center;
     width:auto;
+    margin-left:0;
 
   }
   .contentContainer p{

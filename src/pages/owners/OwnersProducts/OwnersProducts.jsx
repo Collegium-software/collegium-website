@@ -8,7 +8,7 @@ import OwnersPic3 from '../../../images/owners/ownersPic3.png';
 const Product = ({ id, imageUrl, title, description }) => (
   <div id={id} className="product">
     <div className="productImage"><img src={imageUrl} alt={title} /></div>
-    <h3>{title}</h3>
+    <h4>{title}</h4>
     <p>{description}</p>
   </div>
 );

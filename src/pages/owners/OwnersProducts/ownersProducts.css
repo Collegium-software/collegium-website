@@ -7,15 +7,15 @@
 
 .owners-Products-Page h1 {
   padding: 3vw;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 .products-Container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
   row-gap: 5vw; 
   column-gap: 10vw; 
-  padding: 1vw 5vw 8vw 5vw;
+  padding: 1vw 8vw 4vw 8vw;
 }
 
 .product{
@@ -23,15 +23,14 @@
   flex-direction: column;
   justify-items: center;
 } 
-
 .product
 p {
-  font-size: 1vw; 
-  margin-top:0vw;
+  font-size: 1.2vw;
+  margin:0vw;
 }
-.product
-h3 {
-  font-size: 1.5vw; 
+.product h4 {
+  font-size: 2vw; 
+  margin:0.5vw;
 }
  .productImage {
   height: 15vh;

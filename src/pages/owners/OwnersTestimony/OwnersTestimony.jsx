@@ -31,7 +31,7 @@ const OwnersTestimony = () => {
   return (
     <div className="owners-Testimony-Page">
       <OwnersTestimonyHeader />
-      <h2>Owners Trust Us</h2>
+      <h2 class="ownersSubheader">Owners Trust Us</h2>
       <div className="owners-Partners-Container ">
         <OwnersPartners
           imageUrl={Partner1}
