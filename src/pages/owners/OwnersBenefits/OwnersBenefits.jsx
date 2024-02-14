@@ -9,8 +9,9 @@ import OwnersPic3 from '../../../images/owners/ownersPic3.png';
 
 const BenefitsContainer = ({ imageUrl, label, description }) => (
   <div className="benefitsContainer">
-    <div className="imageContainer">
-      <img src={imageUrl} className="benefitsImage" alt={label} />
+    <div className="imageContainer" alt={label} style={{ backgroundImage: `url(${imageUrl})` }}>
+    {/* <div className="imageContainer"> */}
+      {/* <img src={imageUrl} className="benefitsImage" alt={label} /> */}
       <div className="image-label">{label}</div>
     </div>
     <p>{description}</p>
