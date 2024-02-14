@@ -1,5 +1,5 @@
 .sfooter-section {
-    background-image: url("../../images/footer/footer-bkgnd.png");
+    background-image: url("../../images/footer/footer-bkgnd2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,6 +43,7 @@
 .collegium-slogan p {
     font-size: 1.1vw;
     margin-top: 0;
+    line-height: 2vw;
 }
 .sfooter-logo img {
     object-fit: cover;
@@ -54,7 +55,8 @@
     justify-content: center;
     align-items: center;
     gap: 1.5vw;
-    margin-top: 3vw;
+    margin-top: 0vw;
+    margin-bottom: 2vw;
     /* box-sizing: border-box; */
 }
 .smdia-icons {
@@ -79,7 +81,7 @@
     list-style-type: none;
     font-size: 1.1vw;
     padding-bottom: 0vw;
-    margin-bottom: 0;
+    margin-bottom: 1vw;
     
 }
 .sfooter-about .sfooter-links a {
@@ -121,6 +123,7 @@
     }
     .collegium-slogan p {
         font-size: 12px;
+        line-height: 16px;
     }
     .sfooter-socialmedia {
         gap: 20px;

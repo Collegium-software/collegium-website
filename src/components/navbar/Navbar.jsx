@@ -179,10 +179,10 @@ const Navbar = (props) => {
                   <li className="nav-link-submenu">Owners</li>
                 </a>
                 <a
-                  href="/developers"
+                  href="/vendors"
                   style={isNavListVisible ? navStyleMobile : navStyle}
                 >
-                  <li className="nav-link-submenu">Developers</li>
+                  <li className="nav-link-submenu">Vendors</li>
                 </a>
                 <a
                   href="/projectteam"
@@ -261,10 +261,10 @@ const Navbar = (props) => {
                   <li className="nav-link-submenu">Projects</li>
                 </a>
                 <a
-                  href="/partners"
+                  href="/contactus"
                   style={isNavListVisible ? navStyleMobile : navStyle}
                 >
-                  <li className="nav-link-submenu">Partners</li>
+                  <li className="nav-link-submenu">Contact Us</li>
                 </a>
               </ul>
             )}

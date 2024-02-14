@@ -1,0 +1,112 @@
+
+.blogHorizontal-container {
+    background: linear-gradient(to bottom, #1882FF, #36EBCA); 
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5vw;
+}
+.blogHorizontal {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+.blogHorizontal-text {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 2vw 6vw 0vw 6vw;
+    box-sizing: border-box;
+    flex: 0.5;
+    text-align: left;
+}
+.blogHorizontal-title h2{
+    margin-bottom: 2vw;
+}
+.blogHorizontal-description{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    max-height: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.blogHorizontal-description p{
+    font-size: 1.2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    padding: 0.5vw;
+}
+
+.blogHorizontal-date-button {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    gap: 4vw;
+    width: 100%;
+    padding-top: 4vw;
+    box-sizing: border-box;
+}
+.blogHorizontal-date-button p {
+    font-size: 1.2vw;
+}
+.blogHorizontal-pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.5;
+    
+    height: 25vw;
+}
+.blogHorizontal-pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    image-rendering: auto;
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .blogHorizontal {
+        flex-direction: column;
+        margin: 0.9px;
+    }
+    .blogHorizontal-text {
+        padding: 10px;
+
+    }
+    .blogHorizontal-date-button p {
+        font-size: 12px;
+    }
+    .blogHorizontal-pic{
+        width: 100%;
+        /* margin-top: 30px; */
+    }
+    .blogHorizontal-pic img {
+        height: 200px;
+    }
+
+    .blogHorizontal-title h2{
+        font-size: 16px;
+        padding-top: 16px;
+        box-sizing: border-box;
+    }
+    .blogHorizontal-description p{
+        font-size: 12px;
+    }
+}

@@ -18,7 +18,7 @@ const Owners = () => {
   }, []);
   return (
     <>
-      <Navbar background="transparent" color="black" h3Color="black" />
+      <Navbar background="white" color="black" />
       <OwnerHeader />
       <div className="contact-card-div">
         <ContactCard />
