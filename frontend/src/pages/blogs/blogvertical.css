@@ -13,7 +13,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
 }
 .blogslist-gradient-mask {
     display: flex;
@@ -83,19 +82,19 @@
 @media screen and (max-width: 768px) {
     .blogslist-container {
         flex-direction: column;
-        /* width: 90%; */
+        width: 100%;
         
     }
  
     .blogslist-gradient {
-        width: 200px;
+        width: 100%;
     }
     .blogslist-pics img {
-        height: 200px;
+        width: 100%;
 
     }
     .blogslist-text {
-        height: 100px;
+        width: 100%;
         
     }
 

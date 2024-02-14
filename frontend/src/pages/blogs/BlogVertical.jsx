@@ -48,8 +48,7 @@ const BlogVertical = (props) => {
           </div>
           <div className="blogslist-date-button">
             <p>{blog.date}</p>
-            <div className="blogslist-boutton">
-              {" "}
+            <div className="blogslist-button">
               <Button
                 label={blog.button.label}
                 color={blog.button.color}

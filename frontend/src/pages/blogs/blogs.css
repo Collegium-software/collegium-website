@@ -13,6 +13,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+}
+.no-blog {
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 @media screen and (max-width: 768px) {
     .myBlogsList {

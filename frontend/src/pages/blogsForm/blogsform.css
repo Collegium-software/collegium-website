@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.blogform {
+
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 1.2vw;
+}
+.blogform label {
+    font-weight: bold;
+}
+.blogform span {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1vw;
+}
+.blogs-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20vw;
+    position: relative;
+    color: white;
+    border-radius: 20px;
+
+}
+.blogs-hero img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.blogs-hero-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(10, 37, 59, 0.9) 30%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0.3) 80%, transparent);
+    align-items: left;
+    justify-content: center;
+    padding-left: 6vw;
+    box-sizing: border-box;
+    
+}
+.blogs-route p{
+    font-size: 1vw;
+    margin-bottom: 0.2vw;
+}
+.blogs-title h2 {
+    font-size: 3vw;
+    font-weight: bolder;
+}
+.blogs-subtitle p{
+    font-size: 1.5vw;
+    margin-top: 0.2vw;
+}
+.selection-form {
+    margin-top: 3vw;
+    border: 1px solid rgb(176, 172, 172);
+    padding: 2vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    color: black;
+    margin: auto;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+.actionLabel-select, .actionLabel-select option {
+    font-size: 1.2vw;
+    padding: 0.2vw;
+    margin-top: 0.5vw;
+    width: 20vw;
+    height: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+}
+.next-button {
+    margin-left: 2vw;
+    font-size: 1.2vw;
+    height: 1.8vw;
+    width: 7vw;
+    height: 2vw;
+    background-color: white;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.create-update-form {
+    margin-top: 1vw;
+    border: 1px solid rgb(176, 172, 172);
+    padding: 2vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    width: 35%;
+    color: black;
+    margin: auto;
+}
+
+.create-update-form input{
+    margin-bottom: 15px;
+    width: 30vw;
+    height: 2vw;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    font-size: 1.2vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.create-update-form textarea {
+    resize: none;
+    margin-bottom: 15px;
+    width: 30vw;
+    height: 10vw;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    font-size: 1.2vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.create-update-form .cr-updt-button {
+    width: 7vw;
+    height: 2vw;
+    font-size: 1.2vw;
+    background-color: white;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.create-update-form .cr-updt-button:hover, .next-button:hover {
+    background-color:beige;
+}
+.confirm-window {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 50%;
+    margin: auto;
+    background-color: beige;
+    color: black;
+    z-index: 200;
+    animation: fadeOut 5s forwards;
+}
+@keyframes fadeOut {
+    to {
+      visibility: hidden;
+      display: none;
+    }
+  }
+@media screen and (max-width: 768px){
+    .blogs-hero {
+        height: 160px;
+    }
+    .blogs-route p{
+        font-size: 10px;
+    }
+    .blogs-title h2{
+        font-size: 20px;
+    }
+    .blogs-subtitle p {
+        font-size: 12px;
+    }
+}

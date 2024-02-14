@@ -1,11 +1,12 @@
 const express = require("express");
 require("dotenv").config();
-
+const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const MONGODB_URI = process.env.MONGODB_URI;
-const cors = require("cors");
-app.use(cors());
+
+const pathToBuild = path.join(__dirname, "../frontend/build");
+app.use(express.static(pathToBuild));
 app.use(express.json());
 //from mongodb:
 const { MongoClient, ServerApiVersion } = require("mongodb");
@@ -46,10 +47,24 @@ app.post("/blogs", async (req, res) => {
     const blogsCollection = database.collection("blogsData");
 
     const newBlog = req.body;
-
+    console.log("My data from form (a): ", newBlog);
+    const inputDate = new Date(newBlog.date + "T00:00:00-07:00");
+    const formattedDate = inputDate.toLocaleDateString("en-us", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      timeZone: "America/Edmonton",
+    });
+    newBlog.date = formattedDate;
+    console.log("My data from form (b): ", newBlog);
     const result = await blogsCollection.insertOne(newBlog);
 
-    res.status(201).json(result.ops[0]);
+    if (result.acknowledged) {
+      res.status(201).send("Blog inserted successfully!");
+    } else {
+      // Handle the case where result.ops is undefined or empty
+      res.status(500).json({ error: "Unexpected result from the database" });
+    }
   } catch (error) {
     console.error("Error creating new blog:", error);
     res.status(500).json({ error: "Internal Server Error" });
@@ -95,6 +110,10 @@ app.patch("/blogs/:id", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
   }
+});
+
+app.use("*", (req, res) => {
+  res.sendFile(path.join(pathToBuild, "index.html"));
 });
 app.listen(PORT, () => {
   console.log("Server is listening to the port ", PORT);
