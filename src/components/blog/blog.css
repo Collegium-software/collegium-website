@@ -54,7 +54,7 @@
     width: 45vw;
     margin-left: 3vw;
     height:60vh;
-    border: 0.5vh solid;
+    border: 0.2vw solid;
     border-image: linear-gradient(to right, #1882FF, #36EBCA);
     border-image-slice: 1;
   }

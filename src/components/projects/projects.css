@@ -8,10 +8,11 @@
 }
 
 .projectsHeader h1 {
-  font-size: 2vw;
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
 }
 .projectsHeader h2 {
-  font-size: 2vw;
+  font-size: 1.8vw;
   margin: 0;
 }
 
@@ -30,7 +31,7 @@
   flex-direction: row;
   align-items: flex-start; 
   justify-content: space-evenly;
-  padding: 5vw 0vw;
+  padding: 4vw 0vw  5vw 0vw ;
 }
 
 .container {
@@ -40,12 +41,12 @@
   align-items: center; 
   width: 25vw;
   border: none;
-  position: relative;
   margin-top: 0;
 }
 
-.container p {
-  font-size: 1.2vw;
+.container h4 {
+  font-size: 1.5vw;
+  text-align:center;
 }
 
 .image-Container {
@@ -54,26 +55,19 @@
   border: 0.2vw solid;
   border-image: linear-gradient(to right, #1882FF, #36EBCA);
   border-image-slice: 1;
+  background-size: cover;
+  background-position: center;
+  height: 25vw;
   margin: 0;
 }
 
-.projectImages {
-  width: 100%; 
-  height: auto; 
-  max-height: 100%;
-  object-fit: cover;
-  border: none; 
-  
-}
+
 
 .projectButton {
   display: flex;
-  padding-top: 3vw; 
+  padding-top: 2.5vw; 
   justify-content: center;
 }
-
-
-
 
 
   @media (max-width: 768px) {
@@ -104,7 +98,7 @@
       width: auto;
     }
   
-    .container p {
+    .container h4 {
       font-size: 12px;
       margin-bottom: 35px;
     }
