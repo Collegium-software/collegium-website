@@ -31,7 +31,7 @@ const Owners = () => {
         <BenefitsContainer
           imageUrl={OwnersPic2}
           label="Streamlined Scheduling"
-          description="Efficiency Boost: Accelerating project timelines, streamlining scheduling processes, and ensuring resource optimization."
+          description="Accelerating project timelines, streamlining scheduling processes, and ensuring resource optimization."
         />
         <BenefitsContainer
           imageUrl={OwnersPic3}

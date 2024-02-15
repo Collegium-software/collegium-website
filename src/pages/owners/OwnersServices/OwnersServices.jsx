@@ -2,7 +2,7 @@
 import React from 'react';
 import './ownersServices.css';
 import Button from "../../../components/button/Button";
-import OwnersGraph from '../../../images/owners/ownersGraph.png';
+import ownersGraph from '../../../images/owners/ownersGraph.png';
 
 const ServicesHeader = ({ title, label }) => (
   <header className="servicesHeader">
@@ -29,7 +29,7 @@ const ServicesContainer = ({ imageUrl, label }) => (
 const OwnerServices = () => (
   <div className="ownerServicesPage">
     <ServicesHeader title="What We Can Do" label="Contact Us" />
-    <ServicesContainer imageUrl={OwnersGraph} label="Contact" />
+    <ServicesContainer imageUrl={ownersGraph} label="Contact" />
   </div>
 );
 

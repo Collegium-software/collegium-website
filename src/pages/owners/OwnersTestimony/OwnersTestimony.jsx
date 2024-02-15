@@ -11,9 +11,9 @@ import Line from '../../../components/Line';
 const OwnersTestimonyHeader = () => {
 return(
   <div className="ownersTestimonyHeader">
-    <h1>"R. Buckminster Fuller"</h1>
+    <h1>"Andrew Bowerbank"</h1>
     <Line blackLine />
-    <p>“This is the placeholder for the testimonial. A great testimonial can boost your brand’s image.”</p>
+    <p>“We are thrilled with our partnership with Collegium." - CEO OF CETANA</p>
   </div>
 )};
 
@@ -47,7 +47,7 @@ const OwnersTestimony = () => {
         />
         <OwnersPartners
           imageUrl={Partner4}
-          title="Smoky Lake "
+          title="SMOKY LAKE"
         />
       </div>
     </div>
