@@ -148,16 +148,20 @@
  
 }
 
-
 .comparisonButton {
-
  margin-top: 10%;
-  
-}
+ }
 
  .title-why-different {
     margin-top: 5%;
     margin-bottom: 5%;
+  }
+  h1.title-why-different {
+    margin: 0;
+  }
+  .text-container{
+    margin-left: 8%;
+    margin-right: 8%;
   }
 
   }

@@ -6,7 +6,7 @@ const SingleProjectHero = () => {
 <div>
       <div className="la-sng-heroSection">
         <div className="la-hs-main-container">
-          <p className="la-route">Home/Our Projects/Project Name</p>
+          <p className="la-route">Home/Our Projects/Castle Crest Condos</p>
           <h1 className="la-hero-title">Castle Crest Condos</h1>
           
           <div className="la-herobutton">

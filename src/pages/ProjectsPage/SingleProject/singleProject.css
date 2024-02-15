@@ -27,7 +27,8 @@
   padding: 3%;
 }
 
-.project-subtitle-text h2, p{
+.project-subtitle-text h2, 
+.project-subtitle-text p{
   padding-bottom: 2%;
 }
 

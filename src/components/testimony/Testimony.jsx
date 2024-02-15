@@ -2,6 +2,7 @@ import React from "react";
 import '../testimony/testimony.css';
 import Button from '../button/Button';
 import testimonyPic from "../../images/TestimonyPicture.png";
+
 import CustomerPic from "../../images/CustomerPic.png";
 
 const Testimony = () => (
