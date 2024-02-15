@@ -30,6 +30,7 @@
     box-sizing: border-box;
     flex: 0.5;
     text-align: left;
+    width: 100%;
 }
 .blogHorizontal-title h2{
     margin-bottom: 2vw;

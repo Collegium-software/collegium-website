@@ -38,12 +38,18 @@ const Blogs = () => {
   let bottomBlog = true;
   let blogAvailable = true;
   let zeroBlog = false;
+  let vToH = false;
+  let vBlog = true;
   if (sortedBlogs.length < 5) {
     bottomBlog = false;
   }
   if (sortedBlogs.length === 0) {
     blogAvailable = false;
     zeroBlog = true;
+  }
+  if (sortedBlogs.length === 2) {
+    vToH = true;
+    vBlog = false;
   }
   return (
     <div>
@@ -52,7 +58,7 @@ const Blogs = () => {
       {zeroBlog && (
         <div className="no-blog">
           <h4>
-            Sorry, no blog to display at the moment. Please visit the page
+            Sorry! no blog to display at the moment. Please visit the page
             later.
           </h4>
         </div>
@@ -72,7 +78,7 @@ const Blogs = () => {
       <div className="myBlogsList">
         {sortedBlogs.slice(1, 4).map((blog, index) => (
           <div key={index} className="cover-container">
-            {blogAvailable && (
+            {blogAvailable && vBlog && (
               <BlogVertical
                 id={blog.id}
                 image={blog.image}
@@ -87,6 +93,18 @@ const Blogs = () => {
           </div>
         ))}
       </div>
+      {blogAvailable && vToH && (
+        <BlogHorizontal
+          id={sortedBlogs[1].id}
+          image={sortedBlogs[1].image}
+          title={sortedBlogs[1].title}
+          description={sortedBlogs[1].description}
+          date={sortedBlogs[1].date}
+          bttnLabel={sortedBlogs[1].button.label}
+          bttnColor={sortedBlogs[1].button.color}
+          bttnTo={sortedBlogs[1].button.to}
+        />
+      )}
       {bottomBlog && blogAvailable && (
         <BlogHorizontal
           id={sortedBlogs[4].id}
