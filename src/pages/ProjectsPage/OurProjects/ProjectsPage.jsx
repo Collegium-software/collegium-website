@@ -2,13 +2,14 @@ import Navbar from "../../../components/navbar/Navbar";
 import OurProjectsHero from "./OurProjectsHero";
 import ContactCard from "../../../components/contactCard/SadiqContactCard";
 
-import Footer from "../../../components/footer/Footer";
+
 import "./projectsPage.css"
 
 
 
 
 import AllProjects from "./AllProjects";
+import SFooter from "../../../components/footer/SFooter";
 
 
 
@@ -22,7 +23,7 @@ const ProjectsPage = () => {
         <ContactCard/>
       </div>
       <AllProjects/>
-      <Footer/>
+      <SFooter/>
 
      
       
