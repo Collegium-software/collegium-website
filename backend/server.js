@@ -100,18 +100,31 @@ app.delete("/api/blogs/:id", async (req, res) => {
   }
 });
 
-app.patch("/api/blogs/:id", async (req, res) => {
+app.patch("/api/blogs/:title", async (req, res) => {
   try {
     await client.connect();
     const database = client.db();
     const blogCollection = database.collection("blogsData");
-    const blogId = parseInt(req.params.id, 10);
-    const existingBlog = await blogCollection.findOne({ id: blogId });
+    const blogTitle = req.params.title;
+
+    const existingBlog = await blogCollection.findOne({
+      title: blogTitle,
+    });
     if (!existingBlog) {
       return res.status(404).json({ error: "blog not found" });
     }
+
     const updatedBlog = { ...existingBlog, ...req.body };
-    await blogCollection.updateOne({ id: blogId }, { $set: updatedBlog });
+
+    const inputDate = new Date(updatedBlog.date + "T00:00:00-07:00");
+    const formattedDate = inputDate.toLocaleDateString("en-us", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      timeZone: "America/Edmonton",
+    });
+    updatedBlog.date = formattedDate;
+    await blogCollection.updateOne({ title: blogTitle }, { $set: updatedBlog });
 
     return res.status(200).json(updatedBlog);
   } catch (error) {

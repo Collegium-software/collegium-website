@@ -124,7 +124,6 @@ const BlogsForm = () => {
   };
   const handleUpdate = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(`/api/blogs/${blogTitleValue}`, {
         method: "PATCH",
@@ -133,10 +132,11 @@ const BlogsForm = () => {
         },
         body: JSON.stringify(formData),
       });
+
       console.log("my updated form data: ", formData);
       if (response.ok) {
         // Handle success, e.g., redirect or show a success message
-        console.log("Blog submitted successfully!");
+        console.log("Blog updated successfully!");
         setPatchResponseOk(true);
         setDisplayUpdateForm(false);
       } else {
