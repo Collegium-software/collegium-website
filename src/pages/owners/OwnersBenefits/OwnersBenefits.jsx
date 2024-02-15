@@ -9,8 +9,9 @@ import OwnersPic3 from '../../../images/owners/ownersPic3.png';
 
 const BenefitsContainer = ({ imageUrl, label, description }) => (
   <div className="benefitsContainer">
-    <div className="imageContainer">
-      <img src={imageUrl} className="benefitsImage" alt={label} />
+    <div className="imageContainer" alt={label} style={{ backgroundImage: `url(${imageUrl})` }}>
+    {/* <div className="imageContainer"> */}
+      {/* <img src={imageUrl} className="benefitsImage" alt={label} /> */}
       <div className="image-label">{label}</div>
     </div>
     <p>{description}</p>
@@ -30,7 +31,7 @@ const Owners = () => {
         <BenefitsContainer
           imageUrl={OwnersPic2}
           label="Streamlined Scheduling"
-          description="Efficiency Boost: Accelerating project timelines, streamlining scheduling processes, and ensuring resource optimization."
+          description="Accelerating project timelines, streamlining scheduling processes, and ensuring resource optimization."
         />
         <BenefitsContainer
           imageUrl={OwnersPic3}

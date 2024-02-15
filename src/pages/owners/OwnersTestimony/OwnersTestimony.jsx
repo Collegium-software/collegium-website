@@ -1,16 +1,19 @@
 import React from 'react';
 import './ownersTestimony.css';
-import OwnersPic1 from '../../../images/owners/ownersPic1.png';
-import OwnersPic2 from '../../../images/owners/ownersPic2.png';
-import OwnersPic3 from '../../../images/owners/ownersPic3.png';
+
+import Partner1 from '../../../images/owners/Cetana.png';
+import Partner2 from '../../../images/owners/nextArch.png';
+import Partner3 from '../../../images/owners/MCWLogo.png';
+import Partner4 from '../../../images/owners/Smoky Lake .png';
 import Line from '../../../components/Line';
+
 
 const OwnersTestimonyHeader = () => {
 return(
   <div className="ownersTestimonyHeader">
-    <h1>"R. Buckminster Fuller"</h1>
+    <h1>"Andrew Bowerbank"</h1>
     <Line blackLine />
-    <p>“This is the placeholder for the testimonial. A great testimonial can boost your brand’s image.”</p>
+    <p>“We are thrilled with our partnership with Collegium." - CEO OF CETANA</p>
   </div>
 )};
 
@@ -28,23 +31,23 @@ const OwnersTestimony = () => {
   return (
     <div className="owners-Testimony-Page">
       <OwnersTestimonyHeader />
-      <h2>Owners Trust Us</h2>
+      <h2 class="ownersSubheader">Owners Trust Us</h2>
       <div className="owners-Partners-Container ">
         <OwnersPartners
-          imageUrl={OwnersPic1}
-          title="Partner 1"
+          imageUrl={Partner1}
+          title="CETANA GROUP"
         />
         <OwnersPartners
-          imageUrl={OwnersPic2}
-          title="Partner 2"
+          imageUrl={Partner2}
+          title="NEXT ARCHITECTURE"
         />
         <OwnersPartners
-          imageUrl={OwnersPic3}
-          title="Partner 3"
+          imageUrl={Partner3}
+          title="MCW ENGINEERING"
         />
         <OwnersPartners
-          imageUrl={OwnersPic3}
-          title="Partner 4"
+          imageUrl={Partner4}
+          title="SMOKY LAKE"
         />
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import OwnersBenefits from "./OwnersBenefits/OwnersBenefits";
-import Footer from "../../components/footer/Footer";
+import SFooter from "../../components/footer/SFooter";
 import OwnersServices from "./OwnersServices/OwnersServices";
 import OwnersTestimony from "./OwnersTestimony/OwnersTestimony";
 import OwnersProducts from "./OwnersProducts/OwnersProducts";
@@ -18,7 +18,7 @@ const Owners = () => {
   }, []);
   return (
     <>
-      <Navbar background="transparent" color="black" h3Color="black" />
+      <Navbar background="white" color="black" />
       <OwnerHeader />
       <div className="contact-card-div">
         <ContactCard />
@@ -27,7 +27,7 @@ const Owners = () => {
       <OwnersTestimony />
       <OwnersServices />
       <OwnersProducts />
-      <Footer />
+      <SFooter />
     </>
   );
 };
