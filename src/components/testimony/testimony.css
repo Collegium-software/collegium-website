@@ -1,4 +1,4 @@
-
+/* 
 .testimony {
   display: flex;
   flex-direction: row; 
@@ -99,7 +99,7 @@ margin: 5%;
   height: auto;
   margin: 5%;
 }
-}
+} 
 
 /* @media screen and (max-width: 768px) {
  
@@ -134,14 +134,14 @@ margin: 5%;
   .testimonyContainer p {
         font-size: 12px;
   }
- */
+ 
   /* .testimonyButton {
     margin-left: initial;
     justify-content: right;
     align-items: right;
-  } */
+  } 
   
-  };
+  
     
 
 

@@ -1,9 +1,8 @@
-
 .comparison-container{
   /* height: 100vh; */
   width: auto;
   display:grid;
-  text-align: center;
+  text-align: justify;
  
   grid-template-columns:  1fr 1fr 1fr;
   gap:1vw;
@@ -114,11 +113,6 @@
  width: auto;
  }
 
-
-}
-
-
-
 .text-container-why-different{
   padding-top: 2%;
   padding-bottom: 10%;
@@ -145,7 +139,6 @@
 
   margin: 0 8% 8% 8%;
  
-
 }
 
 .white-dark-container{
@@ -155,19 +148,21 @@
  
 }
 
-
 .comparisonButton {
-
-
  margin-top: 10%;
-  
-}
+ }
 
  .title-why-different {
     margin-top: 5%;
     margin-bottom: 5%;
   }
-
+  h1.title-why-different {
+    margin: 0;
   }
-    
+  .text-container{
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  
  

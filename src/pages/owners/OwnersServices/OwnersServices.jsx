@@ -2,7 +2,7 @@
 import React from 'react';
 import './ownersServices.css';
 import Button from "../../../components/button/Button";
-import OwnersGraph from '../../../images/owners/ownersGraph.png';
+import ownersGraph from '../../../images/owners/ownersGraph.png';
 
 const ServicesHeader = ({ title, label }) => (
   <header className="servicesHeader">
@@ -19,9 +19,9 @@ const ServicesContainer = ({ imageUrl, label }) => (
       ))}
     </div>
     <div className="contentContainer">
-      <h3>Track and manage every dollar.</h3>
+      <h4>Track and manage every dollar.</h4>
       <p>Standardize the collection and reporting of financial data gathered in the field—giving you real-time visibility into your financial position across your entire portfolio.</p>
-      <div className="serviceImageContainer"><img src={imageUrl} className="Graph" alt={label} /></div>
+      <div className="serviceImageContainer"></div>
     </div>
   </section>
 );
@@ -29,7 +29,7 @@ const ServicesContainer = ({ imageUrl, label }) => (
 const OwnerServices = () => (
   <div className="ownerServicesPage">
     <ServicesHeader title="What We Can Do" label="Contact Us" />
-    <ServicesContainer imageUrl={OwnersGraph} label="Contact" />
+    <ServicesContainer imageUrl={ownersGraph} label="Contact" />
   </div>
 );
 

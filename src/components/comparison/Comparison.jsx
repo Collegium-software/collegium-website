@@ -28,16 +28,17 @@ const Comparison = () => {
       <div className="text-container">
 
         <div className="title-container-why-different">
-          <h1 className="title-why-different">Why We Are Different?</h1>
+          <h1 className="title-why-different">Why Are We Different?</h1>
         
 
         </div>
         <div className="comparisonMainText">
           <p className="text-why-different">
-            Lorem ipsum dolor sit amet consectetur.ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Vitae elit lacus lobortis
-            aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean
-            diam.  Quisque tincidunt. Vitae elit lacus lobortis aenean
-            diam.
+          We bring emergent technologies of Artificial Intelligence, Machine Learning, and IoT to a new digital process of Making Buildings that makes traditional design & construction practice obsolete in comparison.  
+
+​
+
+That's Collegium.
           </p>
           <div className="comparisonButton">
             <Button label="Contact Us" />

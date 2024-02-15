@@ -1,13 +1,15 @@
 import Navbar from "../../components/navbar/Navbar";
 import ContactUsForm from "./ContactUsForm";
-import Footer from "../../components/footer/Footer";
+import SFooter from "../../components/footer/SFooter";
 
 const ContactUs = () => {
   return (
     <div>
-    <Navbar />
+    <Navbar background="white" color="black" />
     <ContactUsForm/>
-    {/* <div className="contact-us-footer" ><Footer /></div> */}
+
+     <div className="contact-us-footer" ><SFooter /></div> 
+
     </div>
     );
 }

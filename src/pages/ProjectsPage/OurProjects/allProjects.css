@@ -1,0 +1,51 @@
+
+.projects-gallery-container{
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+
+.projects-gallery{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  height: 70vh;
+  color: black;
+}
+
+.projects-page-title{
+  color: black;
+  text-align: center;
+}
+
+
+
+.projects-gallery a{
+  color: blue;
+}
+.projects-gallery a:hover {
+  background: linear-gradient(to bottom, #ffffff, #36EBCA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.no-underline {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .projects-gallery{
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .projects-gallery img{
+    width: 300px;
+ 
+  }
+
+} 
