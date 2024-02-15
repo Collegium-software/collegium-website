@@ -5,12 +5,14 @@
   justify-content: center;
   background-color: #F6FCFC;
   color:black;
-  padding:5vw 0vw 4vw 0vw;
+  padding:5vw 0vw 8vw 0vw;
 }
 
 .owners-Testimony-Page h2 {
-  padding-bottom:5vw;
-}
+  padding: 6vw 0vw 3vw 0vw;
+  font-size: 2vw;
+  }
+
 
 .owners-Partners-Container {
   display: flex;
@@ -28,21 +30,15 @@
   justify-content: center;
 }
 
-.ownersTestimonyHeader{
-  padding:vw;
-}
-
 .ownersTestimonyHeader h1{
   margin-bottom:0vw;
   font-size: 3vw;
   font-weight: bolder;
 }
-.ownersSubheader{
-  font-size: 2vw;
-}
+
 .ownersTestimonyHeader p{
-  margin-top:5vh;
-  font-size: 1.2vw;
+  margin-top:3vw;
+  font-size: 1.5vw;
 }
 
 .ownersPartners{
@@ -59,7 +55,7 @@
 
 .PartnersImage{
   width:100%;
-  height:8vw;
+  height:6vw;
   margin-bottom:1vh;
 }
 

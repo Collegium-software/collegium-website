@@ -1,9 +1,15 @@
 
 import React from 'react';
 import './ownersProducts.css';
-import OwnersPic1 from '../../../images/owners/ownersPic1.png';
-import OwnersPic2 from '../../../images/owners/ownersPic2.png';
-import OwnersPic3 from '../../../images/owners/ownersPic3.png';
+
+
+import TenderManagement from '../../../images/owners/TenderManagement.png';
+import InvoiceManagement from '../../../images/owners/InvoiceManagement.png';
+import ProjectManagement from '../../../images/owners/ProjectManagement.png';
+import ProjectFinancials from '../../../images/owners/ProjectFinancial.png';
+import QualitySafety from '../../../images/owners/QualitySafety.png';
+import Analytics from '../../../images/owners/Analytics.png';
+
 
 const Product = ({ id, imageUrl, title, description }) => (
   <div id={id} className="product">
@@ -17,37 +23,37 @@ const OwnersProducts = () => {
   const productsData = [
     {
       id: 1,
-      imageUrl: OwnersPic1,
+      imageUrl: TenderManagement,
       title: "Tender Management",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 2,
-      imageUrl: OwnersPic2,
+      imageUrl: InvoiceManagement,
       title: "Invoice Management",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 3,
-      imageUrl: OwnersPic3,
-      title: "Project Financials",
+      imageUrl: ProjectFinancials,
+      title: "Project Financial",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 4,
-      imageUrl: OwnersPic1,
+      imageUrl:ProjectManagement,
       title: " Project Management",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 5,
-      imageUrl: OwnersPic2,
+      imageUrl: QualitySafety,
       title: "Quality & Safety",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 6,
-      imageUrl: OwnersPic3,
+      imageUrl: Analytics,
       title: "Analytics",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     }
