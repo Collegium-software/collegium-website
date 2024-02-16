@@ -3,6 +3,7 @@ import blogsHero from "../../images/blogs/blogs-hero.jpg";
 import { useState } from "react";
 
 import SFooter from "../../components/footer/SFooter";
+import Navbar from "../../components/navbar/Navbar";
 
 const BlogsForm = () => {
   const [displayCreateForm, setDisplayCreateForm] = useState(false);
@@ -22,6 +23,7 @@ const BlogsForm = () => {
       setDisplayCreateForm(true);
       setDisplayUpdateForm(false);
       setDisplayDeleteForm(false);
+      setTitleEntryUpdateForm(false);
     } else if (selectedOption === "update") {
       setTitleEntryUpdateForm(true);
       setDisplayCreateForm(false);
@@ -30,7 +32,14 @@ const BlogsForm = () => {
       setDisplayDeleteForm(true);
       setDisplayCreateForm(false);
       setDisplayUpdateForm(false);
+      setTitleEntryUpdateForm(false);
+    } else {
+      setDisplayCreateForm(false);
+      setDisplayUpdateForm(false);
+      setDisplayDeleteForm(false);
+      setTitleEntryUpdateForm(false);
     }
+
     setPostResponseOk(false);
     setPatchResponseOk(false);
     setPostResponseNotOk(false);
@@ -39,6 +48,8 @@ const BlogsForm = () => {
     setDeleteResponseNotOk(false);
     setDeleteOperationAborted(false);
     setYesNoWindow(false);
+    setBlogTitleToUpdate("");
+    setBlogTitleValueForDelete("");
   };
   const [formData, setFormData] = useState({
     id: "",
@@ -238,6 +249,7 @@ const BlogsForm = () => {
   };
   return (
     <div className="blogform">
+      <Navbar background="#0a253b" color="white" />
       <div className="blogs-hero">
         <img src={blogsHero} alt="blogs-hero" />
         <div className="blogs-hero-text">
@@ -252,286 +264,294 @@ const BlogsForm = () => {
           </div>
         </div>
       </div>
-      {/* CRUD Operation selection form: */}
-      <form className="selection-form" id="selection-form">
-        <label htmlFor="mySelect">
-          Choose the action from the list below:
-          <br />
-          <select id="mySelect" className="actionLabel-select">
-            <option value=""></option>
-            <option value="create">Create new blog</option>
-            <option value="update">Update an existing blog</option>
-            <option value="delete">Delete an existing blog</option>
-          </select>
+      <div className="allmyblogforms">
+        {/* CRUD Operation selection form: */}
+        <form className="selection-form" id="selection-form">
+          <label htmlFor="mySelect">
+            Choose the action from the list below:
+            <br />
+            <select id="mySelect" className="actionLabel-select">
+              <option value=""></option>
+              <option value="create">Create new blog</option>
+              <option value="update">Update an existing blog</option>
+              <option value="delete">Delete an existing blog</option>
+            </select>
+          </label>
           <button className="next-button" onClick={getData}>
             Next
           </button>
-        </label>
-      </form>
-      {/* creating-blog form: */}
-      {displayCreateForm && (
-        <form
-          onSubmit={handleCreate}
-          className="create-update-form"
-          id="create-update-form"
-        >
-          <label htmlFor="blog-id">
-            Blog ID (number):
-            <br />
-            <input
-              type="number"
-              id="blog-id"
-              value={formData.id}
-              onChange={handleChange}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-image-url">
-            Blog Image URL (4x3 aspect ratio):
-            <br />
-            <input
-              type="text"
-              id="blog-image-url"
-              onChange={handleChange}
-              value={formData.image}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-title">
-            Blog Title:
-            <br />
-            <input
-              type="text"
-              id="blog-title"
-              onChange={handleChange}
-              value={formData.title}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-description">
-            Blog Description: <br />
-            <span>(add "&lt;br /&gt;" where you need a line break )</span>
-            <br />
-            <textarea
-              id="blog-description"
-              onChange={handleChange}
-              value={formData.description}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-date">
-            Date:
-            <br />
-            <input
-              type="date"
-              id="blog-date"
-              onChange={handleChange}
-              value={formData.date}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-button-label">
-            Button Label:
-            <br />
-            <input
-              type="text"
-              id="blog-button-label"
-              onChange={handleChange}
-              value={formData.button.label}
-              required
-            />
-          </label>
-
-          <button className="cr-updt-button" type="submit">
-            Create
-          </button>
         </form>
-      )}
-      {/* Confirmation message that blog added */}
-      {postResponseOk && (
-        <div className="confirm-window-success">
-          <p>Blog created successfully!</p>
-        </div>
-      )}
-      {postResponseNotOk && (
-        <div className="confirm-window-failure">
-          <p>Blog creation failed, try again later.</p>
-        </div>
-      )}
-      {/* updating-blog form: */}
-      {titleEntryUpdateForm && (
-        <form className="getTitle-form" id="getTitle-form">
-          <label htmlFor="blog-title-old">
-            Type the title of the blog you wish to update:
-            <br />
-            <input
-              type="text"
-              id="blog-title-old"
-              onChange={handleChangeForTitle}
-              value={blogTitleToUpdate}
-              required
-            />
-          </label>
-          <button className="next-button-update" onClick={getTitleData}>
-            Next
-          </button>
-        </form>
-      )}
-      {displayUpdateForm && (
-        <form
-          onSubmit={handleUpdate}
-          className="create-update-form"
-          id="create-update-form"
-        >
-          <div className="update-guideline">
-            <p>Update the field(s) with new values: </p>
+        {/* creating-blog form: */}
+        {displayCreateForm && (
+          <form
+            onSubmit={handleCreate}
+            className="create-update-form"
+            id="create-update-form"
+          >
+            <label htmlFor="blog-id">
+              Blog ID (number):
+              <br />
+              <input
+                type="number"
+                id="blog-id"
+                value={formData.id}
+                onChange={handleChange}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-image-url">
+              Blog Image URL:
+              <br />
+              <input
+                type="text"
+                id="blog-image-url"
+                onChange={handleChange}
+                value={formData.image}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-title">
+              Blog Title:
+              <br />
+              <input
+                type="text"
+                id="blog-title"
+                onChange={handleChange}
+                value={formData.title}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-description">
+              Blog Description: <br />
+              <span>
+                (add "&lt;br /&gt;" where you need a line break. To make titles
+                bold, surround them with "&lt;strong&gt;" and "&lt;strong/&gt;"
+                )
+              </span>
+              <textarea
+                id="blog-description"
+                onChange={handleChange}
+                value={formData.description}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-date">
+              Date:
+              <br />
+              <input
+                type="date"
+                id="blog-date"
+                onChange={handleChange}
+                value={formData.date}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-button-label">
+              Button Label:
+              <br />
+              <input
+                type="text"
+                id="blog-button-label"
+                onChange={handleChange}
+                value={formData.button.label}
+                required
+              />
+            </label>
+
+            <button className="cr-updt-button" type="submit">
+              Create
+            </button>
+          </form>
+        )}
+        {/* Confirmation message that blog added */}
+        {postResponseOk && (
+          <div className="confirm-window-success">
+            <p>Blog created successfully!</p>
           </div>
-          <label htmlFor="blog-id">
-            Blog ID (number):
-            <br />
-            <input
-              type="number"
-              id="blog-id"
-              value={formData.id}
-              onChange={handleChange}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-image-url">
-            Blog Image URL (4x3 aspect ratio):
-            <br />
-            <input
-              type="text"
-              id="blog-image-url"
-              onChange={handleChange}
-              value={formData.image}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-title">
-            Blog Title:
-            <br />
-            <input
-              type="text"
-              id="blog-title"
-              onChange={handleChange}
-              value={formData.title}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-description">
-            Blog Description: <br />
-            <span>(add "&lt;br /&gt;" where you need a line break )</span>
-            <br />
-            <textarea
-              id="blog-description"
-              onChange={handleChange}
-              value={formData.description}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-date">
-            Date:
-            <br />
-            <input
-              type="date"
-              id="blog-date"
-              onChange={handleChange}
-              value={formData.date}
-              required
-            />
-          </label>
-
-          <label htmlFor="blog-button-label">
-            Button Label:
-            <br />
-            <input
-              type="text"
-              id="blog-button-label"
-              onChange={handleChange}
-              value={formData.button.label}
-              required
-            />
-          </label>
-
-          <button className="cr-updt-button" type="submit">
-            Update
-          </button>
-        </form>
-      )}
-      {/* Confirmation message that blog updated */}
-      {patchResponseOk && (
-        <div className="confirm-window-success">
-          <p>Blog updated successfully!</p>
-        </div>
-      )}
-      {patchResponseNotOk && (
-        <div className="confirm-window-failure">
-          <p>Blog update failed. A blog with such title not found.</p>
-        </div>
-      )}
-      {/* deleting-blog form: */}
-      {displayDeleteForm && (
-        <form className="getTitle-form-delete" id="getTitle-form-delete">
-          <label htmlFor="blog-title-old-delete">
-            Type the title of the blog you wish to delete:
-            <br />
-            <input
-              type="text"
-              id="blog-title-old-delete"
-              onChange={handleChangeForTitleToDelete}
-              value={blogTitleValueForDelete}
-              required
-            />
-          </label>
-          <button className="next-button" onClick={getTitleDataDelete}>
-            Next
-          </button>
-        </form>
-      )}
-      {yesNoWindow && (
-        <form className="yes-no-form" id="getTitle-form-delete">
-          <label htmlFor="blog-title-old-delete">
-            The blog will be deleted permanently, are you sure you want to
-            delete this blog?
-            <br />
-            <br />
-            <div className="yes-no-buttons">
-              <button className="yes-button" onClick={handleDelete}>
-                Yes
-              </button>
-              <button className="no-button" onClick={handleNoDelete}>
-                No
-              </button>
+        )}
+        {postResponseNotOk && (
+          <div className="confirm-window-failure">
+            <p>Blog creation failed, try again later.</p>
+          </div>
+        )}
+        {/* updating-blog form: */}
+        {titleEntryUpdateForm && (
+          <form className="getTitle-form" id="getTitle-form">
+            <label htmlFor="blog-title-old">
+              Type the title of the blog you wish to update:
+              <br />
+              <input
+                type="text"
+                id="blog-title-old"
+                onChange={handleChangeForTitle}
+                value={blogTitleToUpdate}
+                required
+              />
+            </label>
+            <button className="next-button-update" onClick={getTitleData}>
+              Next
+            </button>
+          </form>
+        )}
+        {displayUpdateForm && (
+          <form
+            onSubmit={handleUpdate}
+            className="create-update-form"
+            id="create-update-form"
+          >
+            <div className="update-guideline">
+              <p>Update the field(s) with new values: </p>
             </div>
-          </label>
-        </form>
-      )}
-      {/* Confirmation message that blog deleted */}
-      {deleteResponseOk && (
-        <div className="confirm-window-success">
-          <p>Blog deleted successfully!</p>
-        </div>
-      )}
-      {deleteResponseNotOk && (
-        <div className="confirm-window-failure">
-          <p>A blog with such a title not found.</p>
-        </div>
-      )}
-      {deleteOperationAborted && (
-        <div className="confirm-window-failure">
-          <p>Delete operation aborted.</p>
-        </div>
-      )}
+            <label htmlFor="blog-id">
+              Blog ID (number):
+              <br />
+              <input
+                type="number"
+                id="blog-id"
+                value={formData.id}
+                onChange={handleChange}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-image-url">
+              Blog Image URL (4x3 aspect ratio):
+              <br />
+              <input
+                type="text"
+                id="blog-image-url"
+                onChange={handleChange}
+                value={formData.image}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-title">
+              Blog Title:
+              <br />
+              <input
+                type="text"
+                id="blog-title"
+                onChange={handleChange}
+                value={formData.title}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-description">
+              Blog Description: <br />
+              <span>
+                (add "&lt;br /&gt;" where you need a line break. To make titles
+                bold, surround them with "&lt;strong&gt;" and "&lt;strong/&gt;"
+                )
+              </span>
+              <textarea
+                id="blog-description"
+                onChange={handleChange}
+                value={formData.description}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-date">
+              Date:
+              <br />
+              <input
+                type="date"
+                id="blog-date"
+                onChange={handleChange}
+                value={formData.date}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-button-label">
+              Button Label:
+              <br />
+              <input
+                type="text"
+                id="blog-button-label"
+                onChange={handleChange}
+                value={formData.button.label}
+                required
+              />
+            </label>
+
+            <button className="cr-updt-button" type="submit">
+              Update
+            </button>
+          </form>
+        )}
+        {/* Confirmation message that blog updated */}
+        {patchResponseOk && (
+          <div className="confirm-window-success">
+            <p>Blog updated successfully!</p>
+          </div>
+        )}
+        {patchResponseNotOk && (
+          <div className="confirm-window-failure">
+            <p>Blog update failed. A blog with such title not found.</p>
+          </div>
+        )}
+        {/* deleting-blog form: */}
+        {displayDeleteForm && (
+          <form className="getTitle-form-delete" id="getTitle-form-delete">
+            <label htmlFor="blog-title-old-delete">
+              Type the title of the blog you wish to delete:
+              <br />
+              <input
+                type="text"
+                id="blog-title-old-delete"
+                onChange={handleChangeForTitleToDelete}
+                value={blogTitleValueForDelete}
+                required
+              />
+            </label>
+            <button className="next-button" onClick={getTitleDataDelete}>
+              Next
+            </button>
+          </form>
+        )}
+        {yesNoWindow && (
+          <form className="yes-no-form" id="getTitle-form-delete">
+            <label htmlFor="blog-title-old-delete">
+              The blog will be deleted permanently, are you sure you want to
+              delete this blog?
+              <br />
+              <br />
+              <div className="yes-no-buttons">
+                <button className="yes-button" onClick={handleDelete}>
+                  Yes
+                </button>
+                <button className="no-button" onClick={handleNoDelete}>
+                  No
+                </button>
+              </div>
+            </label>
+          </form>
+        )}
+        {/* Confirmation message that blog deleted */}
+        {deleteResponseOk && (
+          <div className="confirm-window-success">
+            <p>Blog deleted successfully!</p>
+          </div>
+        )}
+        {deleteResponseNotOk && (
+          <div className="confirm-window-failure">
+            <p>A blog with such a title not found.</p>
+          </div>
+        )}
+        {deleteOperationAborted && (
+          <div className="confirm-window-failure">
+            <p>Delete operation aborted.</p>
+          </div>
+        )}
+      </div>
       <SFooter />
     </div>
   );

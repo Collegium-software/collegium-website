@@ -1,20 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .blogform {
-
     width: 100%;
     margin: auto;
     border-radius: 20px;
     font-size: 1.2vw;
+
 }
-.blogform label {
-    font-weight: bold;
-}
-.blogform span {
-    font-weight: normal;
-    font-style: italic;
-    font-size: 1vw;
-}
+
 .blogs-hero {
     display: flex;
     flex-direction: column;
@@ -55,12 +48,29 @@
     font-size: 1.5vw;
     margin-top: 0.2vw;
 }
+.allmyblogforms {
+    min-height: 65vh;
+}
+.allmyblogforms label {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+.allmyblogforms span {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1vw;
+    width: 30vw;
+}
 .selection-form {
     margin-top: 3vw;
     border: 1px solid rgb(176, 172, 172);
     padding: 2vw;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 35%;
@@ -68,6 +78,12 @@
     margin: auto;
     margin-top: 3vw;
     margin-bottom: 1vw;
+    gap: 1vw;
+}
+
+.selection-form select {
+    width: 30vw;
+    height: 2vw;
 }
 .actionLabel-select, .actionLabel-select option {
     font-size: 1.2vw;
@@ -86,21 +102,20 @@
     gap: 4vw;
 }
 .next-button, .next-button-update, .next-button-delete, .yes-button, .no-button {
-    margin-left: 2vw;
     font-size: 1.2vw;
-    height: 1.8vw;
     width: 7vw;
     height: 2vw;
     background-color: white;
     border: 1px solid rgb(192, 178, 178);
     border-radius: 10px;
     cursor: pointer;
+    
 }
 .yes-button, .no-button {
     margin: 0;
 }
 .create-update-form, .getTitle-form, .getTitle-form-delete, .yes-no-form{
-    margin-top: 1vw;
+
     border: 1px solid rgb(176, 172, 172);
     padding: 2vw;
     border-radius: 10px;
@@ -111,6 +126,7 @@
     width: 35%;
     color: black;
     margin: auto;
+    margin-top: 1vw;
 }
 .yes-no-form {
     background-color: rgba(255, 0, 0, 0.2);
@@ -163,11 +179,15 @@
     justify-content: left;
     background-color: transparent;
 }
+.update-guideline p {
+    margin-top: 0;
+}
 .confirm-window-failure {
     color: red;
 }
 
 @media screen and (max-width: 768px){
+
     .blogs-hero {
         height: 160px;
     }
@@ -179,5 +199,53 @@
     }
     .blogs-subtitle p {
         font-size: 12px;
+    }
+    .allmyblogforms label {
+        font-size: 12px;
+    }
+    .allmyblogforms span {
+        font-size: 10px;
+        width: 250px;
+    }
+    .allmyblogforms form {
+        width: 90%;
+    }
+    .selection-form select {
+        width: 100%;
+        height: 20px;
+    }
+    .actionLabel-select, .actionLabel-select option {
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .next-button, .next-button-update, .next-button-delete, .yes-button, .no-button {
+        font-size: 12px;
+        width: 80px;
+        height: 20px;
+    }
+    .create-update-form input, .getTitle-form input, .getTitle-form-delete input{
+        margin-bottom: 15px;
+        width: 250px;
+        height: 20px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+    .create-update-form textarea {
+        width: 250px;
+        height: 200px;
+        border-radius: 5px;
+        font-size: 12px;
+       
+    }
+    .create-update-form .cr-updt-button {
+        font-size: 12px;
+        width: 80px;
+        height: 20px;
+    }
+
+    .confirm-window-success, .update-guideline, .confirm-window-failure {
+        width: 90%;
     }
 }
