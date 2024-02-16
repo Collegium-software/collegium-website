@@ -80,17 +80,17 @@ app.post("/api/blogs", async (req, res) => {
   }
 });
 
-app.delete("/api/blogs/:id", async (req, res) => {
+app.delete("/api/blogs/:title", async (req, res) => {
   try {
     await client.connect();
     const database = client.db();
     const blogCollection = database.collection("blogsData");
-    const blogId = parseInt(req.params.id, 10);
-    const result = await blogCollection.deleteOne({ id: blogId });
+    const blogTitle = req.params.title;
+    const result = await blogCollection.deleteOne({ title: blogTitle });
     if (result.deletedCount === 1) {
       res.status(204).send();
     } else {
-      res.status(204).json({ error: "Blog not found" });
+      res.status(404).json({ error: "Blog not found" });
     }
   } catch (error) {
     console.error("Error deleting blog", error);

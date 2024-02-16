@@ -10,7 +10,9 @@ const BlogsForm = () => {
   const [displayUpdateForm, setDisplayUpdateForm] = useState(false);
   const [displayDeleteForm, setDisplayDeleteForm] = useState(false);
   const [postResponseOk, setPostResponseOk] = useState(false);
+  const [postResponseNotOk, setPostResponseNotOk] = useState(false);
   const [patchResponseOk, setPatchResponseOk] = useState(false);
+  const [patchResponseNotOk, setPatchResponseNotOk] = useState(false);
   const getData = (e) => {
     e.preventDefault();
     let selectElement = document.getElementById("mySelect");
@@ -31,6 +33,12 @@ const BlogsForm = () => {
     }
     setPostResponseOk(false);
     setPatchResponseOk(false);
+    setPostResponseNotOk(false);
+    setPatchResponseNotOk(false);
+    setDeleteResponseOk(false);
+    setDeleteResponseNotOk(false);
+    setDeleteOperationAborted(false);
+    setYesNoWindow(false);
   };
   const [formData, setFormData] = useState({
     id: "",
@@ -84,7 +92,7 @@ const BlogsForm = () => {
       } else {
         // Handle error
         console.error("Error submitting blog");
-        alert("Error creating blog, try again later!");
+        setPostResponseNotOk(true);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -113,6 +121,7 @@ const BlogsForm = () => {
     setBlogTitleToUpdate(e.target.value);
   };
 
+  //getting the title entry form data for update:
   const getTitleData = (e) => {
     e.preventDefault();
     let blogTitle = document.getElementById("blog-title-old").value;
@@ -141,8 +150,8 @@ const BlogsForm = () => {
         setDisplayUpdateForm(false);
       } else {
         // Handle error
-        console.error("Error submitting blog");
-        alert("Error creating blog, try again later!");
+        console.error("Error updating blog");
+        setPatchResponseNotOk(true);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -164,6 +173,68 @@ const BlogsForm = () => {
     const form = document.getElementById("selection-form");
     form.reset();
     setBlogTitleToUpdate("");
+  };
+
+  //getting the title entry form data for delete:
+
+  const [blogTitleValueForDelete, setBlogTitleValueForDelete] = useState("");
+  const [yesNoWindow, setYesNoWindow] = useState(false);
+  const handleChangeForTitleToDelete = (e) => {
+    setBlogTitleValueForDelete(e.target.value);
+  };
+
+  const getTitleDataDelete = (e) => {
+    e.preventDefault();
+    let blogTitle = document.getElementById("blog-title-old-delete").value;
+    console.log("my blogTitle value (a):  ", blogTitle);
+    // encodedBlogTitle = encodeURIComponent(blogTitle);
+    // console.log("This is my encoded blog title: ", encodedBlogTitle);
+    setBlogTitleValueForDelete(blogTitle);
+    setDisplayDeleteForm(false);
+    setYesNoWindow(true);
+  };
+  const [deleteResponseOk, setDeleteResponseOk] = useState(false);
+  const [deleteResponseNotOk, setDeleteResponseNotOk] = useState(false);
+  const [deleteOperationAborted, setDeleteOperationAborted] = useState(false);
+
+  const handleDelete = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`/api/blogs/${blogTitleValueForDelete}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Handle success, e.g., redirect or show a success message
+        console.log("Blog deleted successfully!");
+        setDeleteResponseOk(true);
+      } else {
+        // Handle error
+        console.error("Error deleting blog");
+        setDeleteResponseNotOk(true);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+    console.log("Blog to be deleted!");
+    setDisplayDeleteForm(false);
+    setYesNoWindow(false);
+    const form = document.getElementById("selection-form");
+    form.reset();
+    setBlogTitleValueForDelete("");
+  };
+  const handleNoDelete = (e) => {
+    e.preventDefault();
+    console.log("Delete operation canceled");
+    setDisplayDeleteForm(false);
+    setYesNoWindow(false);
+    const form = document.getElementById("selection-form");
+    form.reset();
+    setBlogTitleValueForDelete("");
+    setDeleteOperationAborted(true);
   };
   return (
     <div className="blogform">
@@ -283,8 +354,13 @@ const BlogsForm = () => {
       )}
       {/* Confirmation message that blog added */}
       {postResponseOk && (
-        <div className="confirm-window">
-          <p>Blog Created Successfully!</p>
+        <div className="confirm-window-success">
+          <p>Blog created successfully!</p>
+        </div>
+      )}
+      {postResponseNotOk && (
+        <div className="confirm-window-failure">
+          <p>Blog creation failed, try again later.</p>
         </div>
       )}
       {/* updating-blog form: */}
@@ -394,12 +470,68 @@ const BlogsForm = () => {
       )}
       {/* Confirmation message that blog updated */}
       {patchResponseOk && (
-        <div className="confirm-window">
-          <p>Blog Updated Successfully!</p>
+        <div className="confirm-window-success">
+          <p>Blog updated successfully!</p>
         </div>
       )}
-      {displayUpdateForm && <div>This is Update Form</div>}
-      {displayDeleteForm && <div>This is Delete Form</div>}
+      {patchResponseNotOk && (
+        <div className="confirm-window-failure">
+          <p>Blog update failed. A blog with such title not found.</p>
+        </div>
+      )}
+      {/* deleting-blog form: */}
+      {displayDeleteForm && (
+        <form className="getTitle-form-delete" id="getTitle-form-delete">
+          <label htmlFor="blog-title-old-delete">
+            Type the title of the blog you wish to delete:
+            <br />
+            <input
+              type="text"
+              id="blog-title-old-delete"
+              onChange={handleChangeForTitleToDelete}
+              value={blogTitleValueForDelete}
+              required
+            />
+          </label>
+          <button className="next-button" onClick={getTitleDataDelete}>
+            Next
+          </button>
+        </form>
+      )}
+      {yesNoWindow && (
+        <form className="yes-no-form" id="getTitle-form-delete">
+          <label htmlFor="blog-title-old-delete">
+            The blog will be deleted permanently, are you sure you want to
+            delete this blog?
+            <br />
+            <br />
+            <div className="yes-no-buttons">
+              <button className="yes-button" onClick={handleDelete}>
+                Yes
+              </button>
+              <button className="no-button" onClick={handleNoDelete}>
+                No
+              </button>
+            </div>
+          </label>
+        </form>
+      )}
+      {/* Confirmation message that blog deleted */}
+      {deleteResponseOk && (
+        <div className="confirm-window-success">
+          <p>Blog deleted successfully!</p>
+        </div>
+      )}
+      {deleteResponseNotOk && (
+        <div className="confirm-window-failure">
+          <p>A blog with such a title not found.</p>
+        </div>
+      )}
+      {deleteOperationAborted && (
+        <div className="confirm-window-failure">
+          <p>Delete operation aborted.</p>
+        </div>
+      )}
       <SFooter />
     </div>
   );

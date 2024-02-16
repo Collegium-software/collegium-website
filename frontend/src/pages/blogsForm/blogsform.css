@@ -79,7 +79,13 @@
     border: 1px solid rgb(192, 178, 178);
     border-radius: 10px;
 }
-.next-button, .next-button-update {
+.yes-no-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+}
+.next-button, .next-button-update, .next-button-delete, .yes-button, .no-button {
     margin-left: 2vw;
     font-size: 1.2vw;
     height: 1.8vw;
@@ -90,7 +96,10 @@
     border-radius: 10px;
     cursor: pointer;
 }
-.create-update-form, .getTitle-form{
+.yes-button, .no-button {
+    margin: 0;
+}
+.create-update-form, .getTitle-form, .getTitle-form-delete, .yes-no-form{
     margin-top: 1vw;
     border: 1px solid rgb(176, 172, 172);
     padding: 2vw;
@@ -103,8 +112,10 @@
     color: black;
     margin: auto;
 }
-
-.create-update-form input, .getTitle-form input{
+.yes-no-form {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+.create-update-form input, .getTitle-form input, .getTitle-form-delete input{
     margin-bottom: 15px;
     width: 30vw;
     height: 2vw;
@@ -133,17 +144,17 @@
     border-radius: 10px;
     cursor: pointer;
 }
-.create-update-form .cr-updt-button:hover, .next-button:hover {
+.create-update-form .cr-updt-button:hover, .next-button:hover, .yes-button:hover, .no-button:hover {
     background-color:beige;
 }
-.confirm-window, .update-guideline {
+.confirm-window-success, .update-guideline, .confirm-window-failure {
     display: flex;
     justify-content: center;
     width: 30%;
     height: 50%;
     margin: auto;
     background-color: beige;
-    color: black;
+    color: green;
     z-index: 200;
 
 }
@@ -151,7 +162,9 @@
     width: 100%;
     justify-content: left;
     background-color: transparent;
-    color: green;
+}
+.confirm-window-failure {
+    color: red;
 }
 
 @media screen and (max-width: 768px){
