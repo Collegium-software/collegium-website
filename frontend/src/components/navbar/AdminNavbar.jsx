@@ -1,8 +1,6 @@
 import "./navbar.css";
-
 import { useState, useEffect, useCallback } from "react";
-
-const Navbar = (props) => {
+const AdminNavbar = (props) => {
   const { background, color } = props;
   const navStyle = {
     backgroundColor: background || "black",
@@ -278,16 +276,10 @@ const Navbar = (props) => {
           <a href="/faqs" style={isNavListVisible ? navStyleMobile : navStyle}>
             <li className="nav-link-menu">FAQs</li>
           </a>
-          <a
-            href="/admin/login"
-            style={isNavListVisible ? navStyleMobile : navStyle}
-          >
-            <li className="nav-link-menu">Admin</li>
-          </a>
         </ul>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default AdminNavbar;

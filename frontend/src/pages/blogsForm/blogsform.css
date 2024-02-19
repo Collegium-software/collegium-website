@@ -64,6 +64,13 @@
     font-size: 1vw;
     width: 30vw;
 }
+.logout-button-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1vw;
+    margin-right: 1vw;
+}
 .selection-form {
     margin-top: 3vw;
     border: 1px solid rgb(176, 172, 172);
@@ -101,7 +108,7 @@
     align-items: center;
     gap: 4vw;
 }
-.next-button, .next-button-update, .next-button-delete, .yes-button, .no-button {
+.next-button, .next-button-update, .next-button-delete, .yes-button, .no-button, .logoutButton {
     font-size: 1.2vw;
     width: 7vw;
     height: 2vw;
@@ -110,6 +117,10 @@
     border-radius: 10px;
     cursor: pointer;
     
+}
+.logoutButton {
+    background-color: #f1356d;
+    color: white;
 }
 .yes-button, .no-button {
     margin: 0;
@@ -159,6 +170,9 @@
     border: 1px solid rgb(192, 178, 178);
     border-radius: 10px;
     cursor: pointer;
+}
+.logoutButton:hover {
+    font-weight: bold;
 }
 .create-update-form .cr-updt-button:hover, .next-button:hover, .yes-button:hover, .no-button:hover {
     background-color:beige;

@@ -1,11 +1,31 @@
 import "./blogsform.css";
 import blogsHero from "../../images/blogs/blogs-hero.jpg";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SFooter from "../../components/footer/SFooter";
-import Navbar from "../../components/navbar/Navbar";
+import AdminNavbar from "../../components/navbar/AdminNavbar";
 
 const BlogsForm = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      try {
+        const response = await fetch("/admin/check-auth", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        if (!response.ok) {
+          navigate("/admin/login");
+        }
+      } catch (error) {
+        console.error("Error checking authentication ", error);
+      }
+    };
+    checkAuthentication();
+  }, [navigate]);
+
   const [displayCreateForm, setDisplayCreateForm] = useState(false);
   const [titleEntryUpdateForm, setTitleEntryUpdateForm] = useState(false);
   const [displayUpdateForm, setDisplayUpdateForm] = useState(false);
@@ -247,9 +267,29 @@ const BlogsForm = () => {
     setBlogTitleValueForDelete("");
     setDeleteOperationAborted(true);
   };
+
+  //handling logout:
+  const logout = async () => {
+    try {
+      const response = await fetch("/admin/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (response.ok) {
+        console.log("Logged out successfully!");
+        navigate("/admin/login");
+      } else {
+        console.log("Error logging out.");
+      }
+    } catch (error) {
+      console.error("Error while logging out ", error);
+    }
+  };
   return (
     <div className="blogform">
-      <Navbar background="#0a253b" color="white" />
+      <AdminNavbar background="#0a253b" color="white" />
       <div className="blogs-hero">
         <img src={blogsHero} alt="blogs-hero" />
         <div className="blogs-hero-text">
@@ -265,6 +305,11 @@ const BlogsForm = () => {
         </div>
       </div>
       <div className="allmyblogforms">
+        <div className="logout-button-div">
+          <button className="logoutButton" onClick={logout}>
+            Logout
+          </button>
+        </div>
         {/* CRUD Operation selection form: */}
         <form className="selection-form" id="selection-form">
           <label htmlFor="mySelect">
@@ -552,6 +597,7 @@ const BlogsForm = () => {
           </div>
         )}
       </div>
+
       <SFooter />
     </div>
   );

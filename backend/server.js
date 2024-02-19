@@ -4,14 +4,62 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const MONGODB_URI = process.env.MONGODB_URI;
+const session = require("express-session");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const corsOptions = {
   origin: "https://collegium.onrender.com",
   // Add more origins if needed, e.g., ['https://your-render-app.onrender.com', 'http://localhost:3000']
 };
 
+app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
+//middleware for login session:
+app.use(
+  session({
+    secret: "collegium24",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 60000,
+    },
+  })
+);
+//dummy username and  password
+const dummyUser = {
+  username: "user@user.com",
+  password: "password",
+};
+//route for login page:
+app.post("/admin/login", (req, res) => {
+  const { username, password } = req.body;
+
+  if (username === dummyUser.username && password === dummyUser.password) {
+    req.session.user = username;
+    res.status(200).json({ message: "Login Successful!" });
+  } else {
+    res.status(401).json({ message: "Invalid cridentials" });
+  }
+});
+app.get("/admin/check-auth", (req, res) => {
+  if (req.session.user) {
+    res.status(200).json({ authenticated: true });
+  } else {
+    res.status(401).json({ authenticated: false });
+  }
+});
+app.post("/admin/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log("Error destroying the session", err);
+      res.status(500).json({ error: "Internal server error" });
+    } else {
+      res.status(200).json({ message: "Logout successful" });
+    }
+  });
+});
 const pathToBuild = path.join(__dirname, "../frontend/build");
 app.use(express.static(pathToBuild));
 app.use(express.json());
