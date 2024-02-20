@@ -30,7 +30,7 @@ app.use(
 //dummy username and  password
 const dummyUser = {
   username: "user@user.com",
-  password: "password",
+  password: "@collegium123",
 };
 //route for login page:
 app.post("/admin/login", (req, res) => {
