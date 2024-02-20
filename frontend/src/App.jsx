@@ -21,6 +21,7 @@ import BlogFourDetails from "./pages/blogs/BlogFourDetails";
 import BlogFiveDetails from "./pages/blogs/BlogFiveDetails";
 import BlogsForm from "./pages/blogsForm/BlogsForm";
 import Login from "./pages/blogsForm/Login";
+import AllBlogs from "./pages/blogs/AllBlogs";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/admin/login" element={<Login />} />
+        <Route path="/blogs/all-blogs" element={<AllBlogs />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="blogs/blog1" element={<BlogOneDetails />} />
         <Route path="blogs/blog2" element={<BlogTwoDetails />} />

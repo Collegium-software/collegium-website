@@ -6,6 +6,7 @@ import BlogVertical from "./BlogVertical";
 
 import "./blogs.css";
 import { useEffect, useState } from "react";
+import Button from "../../components/button/Button";
 const Blogs = () => {
   const [blogsData, setBlogsData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -68,6 +69,7 @@ const Blogs = () => {
           id={sortedBlogs[0].id}
           image={sortedBlogs[0].image}
           title={sortedBlogs[0].title}
+          author={sortedBlogs[0].author}
           description={sortedBlogs[0].description}
           date={sortedBlogs[0].date}
           bttnLabel={sortedBlogs[0].button.label}
@@ -83,6 +85,7 @@ const Blogs = () => {
                 id={blog.id}
                 image={blog.image}
                 title={blog.title}
+                author={blog.author}
                 description={blog.description}
                 date={blog.date}
                 bttnLabel={blog.button.label}
@@ -98,6 +101,7 @@ const Blogs = () => {
           id={sortedBlogs[1].id}
           image={sortedBlogs[1].image}
           title={sortedBlogs[1].title}
+          author={sortedBlogs[1].author}
           description={sortedBlogs[1].description}
           date={sortedBlogs[1].date}
           bttnLabel={sortedBlogs[1].button.label}
@@ -105,11 +109,13 @@ const Blogs = () => {
           bttnTo={sortedBlogs[1].button.to}
         />
       )}
+
       {bottomBlog && blogAvailable && (
         <BlogHorizontal
           id={sortedBlogs[4].id}
           image={sortedBlogs[4].image}
           title={sortedBlogs[4].title}
+          author={sortedBlogs[4].author}
           description={sortedBlogs[4].description}
           date={sortedBlogs[4].date}
           bttnLabel={sortedBlogs[4].button.label}
@@ -117,6 +123,9 @@ const Blogs = () => {
           bttnTo={sortedBlogs[4].button.to}
         />
       )}
+      <div className="all-blogs-button">
+        <Button label="See all blogs" color="black" to="/blogs/all-blogs" />
+      </div>
       <SFooter />
     </div>
   );

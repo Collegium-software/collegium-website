@@ -30,6 +30,8 @@ const Login = () => {
       console.log("Login Form data: ", formData);
       if (response.ok) {
         console.log("Log in successful");
+        const token = "collegium";
+        localStorage.setItem("token", token);
         navigate("/blogs-forms");
       } else {
         console.log("Login failed");

@@ -233,7 +233,7 @@
         border-radius: 5px;
     }
 
-    .next-button, .next-button-update, .next-button-delete, .yes-button, .no-button {
+    .next-button, .next-button-update, .next-button-delete, .yes-button, .no-button, .logoutButton {
         font-size: 12px;
         width: 80px;
         height: 20px;

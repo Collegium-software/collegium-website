@@ -38,6 +38,7 @@ app.post("/admin/login", (req, res) => {
 
   if (username === dummyUser.username && password === dummyUser.password) {
     req.session.user = username;
+
     res.status(200).json({ message: "Login Successful!" });
   } else {
     res.status(401).json({ message: "Invalid cridentials" });

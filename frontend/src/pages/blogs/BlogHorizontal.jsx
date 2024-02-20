@@ -1,12 +1,22 @@
 import "./bloghorizontal.css";
 import Button from "../../components/button/Button";
 const BlogHorizontal = (props) => {
-  const { id, image, title, description, date, bttnLabel, bttnColor, bttnTo } =
-    props;
+  const {
+    id,
+    image,
+    title,
+    author,
+    description,
+    date,
+    bttnLabel,
+    bttnColor,
+    bttnTo,
+  } = props;
   const blogElements = {
     id: id,
     image: image,
     title: title,
+    author: author,
     description: description,
     date: date,
     button: {
@@ -21,6 +31,7 @@ const BlogHorizontal = (props) => {
       id: blogElements.id,
       image: blogElements.image,
       title: blogElements.title,
+      author: blogElements.author,
       description: blogElements.description,
       date: blogElements.date,
       button: {
@@ -36,6 +47,9 @@ const BlogHorizontal = (props) => {
         <div className="blogHorizontal-text">
           <div className="blogHorizontal-title">
             <h2>{hblog.title}</h2>
+          </div>
+          <div className="blogHorizontal-author">
+            <p>Written by:&emsp; {hblog.author}</p>
           </div>
           <div className="blogHorizontal-description">
             <p>{hblog.description}</p>

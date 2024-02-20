@@ -3,13 +3,14 @@ import blogoneHero from "../../images/blogs/blogoneHero.png";
 import Navbar from "../../components/navbar/Navbar";
 import SFooter from "../../components/footer/SFooter";
 import { useEffect } from "react";
-const BlogOneDetails = () => {
+const BlogDetailsTemplate = ({ image, title, author }) => {
   useEffect(() => {
     const locationReset = () => {
       window.scrollTo(0, 0);
     };
     locationReset();
   }, []);
+
   return (
     <div className="blogpagedetails">
       <Navbar background="white" color="black" />
@@ -142,4 +143,4 @@ const BlogOneDetails = () => {
   );
 };
 
-export default BlogOneDetails;
+export default BlogDetailsTemplate;

@@ -75,6 +75,7 @@ const BlogsForm = () => {
     id: "",
     image: "",
     title: "",
+    author: "",
     description: "",
     date: "",
     button: {
@@ -91,6 +92,7 @@ const BlogsForm = () => {
       id: blogId,
       image: document.getElementById("blog-image-url").value,
       title: document.getElementById("blog-title").value,
+      author: document.getElementById("blog-author").value,
       description: document.getElementById("blog-description").value,
       date: document.getElementById("blog-date").value,
       button: {
@@ -132,6 +134,7 @@ const BlogsForm = () => {
       id: "",
       image: "",
       title: "",
+      author: "",
       description: "",
       date: "",
       button: {
@@ -191,6 +194,7 @@ const BlogsForm = () => {
       id: "",
       image: "",
       title: "",
+      author: "",
       description: "",
       date: "",
       button: {
@@ -279,6 +283,7 @@ const BlogsForm = () => {
       });
       if (response.ok) {
         console.log("Logged out successfully!");
+        localStorage.removeItem("token");
         navigate("/admin/login");
       } else {
         console.log("Error logging out.");
@@ -365,6 +370,18 @@ const BlogsForm = () => {
                 id="blog-title"
                 onChange={handleChange}
                 value={formData.title}
+                required
+              />
+            </label>
+
+            <label htmlFor="blog-author">
+              Blog Author:
+              <br />
+              <input
+                type="text"
+                id="blog-author"
+                onChange={handleChange}
+                value={formData.author}
                 required
               />
             </label>
@@ -487,7 +504,17 @@ const BlogsForm = () => {
                 required
               />
             </label>
-
+            <label htmlFor="blog-author">
+              Blog Author:
+              <br />
+              <input
+                type="text"
+                id="blog-author"
+                onChange={handleChange}
+                value={formData.author}
+                required
+              />
+            </label>
             <label htmlFor="blog-description">
               Blog Description: <br />
               <span>

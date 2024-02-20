@@ -1,0 +1,108 @@
+.all-blogs-section {
+    color: black;
+    margin-top: 3vw;
+}
+.myBlog-gradient {
+    background: linear-gradient(to right, #1882FF, #36EBCA); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2vw;
+}
+.myBlog-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+
+}
+.myBlog-image{
+    display: flex;
+    flex: 30%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+.myBlog-image img {
+    object-fit: cover;
+    height: 28vw;
+}
+.myBlog-text {
+    display: flex;
+    flex: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 2vw 6vw 0vw 6vw;
+    box-sizing: border-box;
+    height: 100%;
+}
+.myBlog-text .date-created {
+    font-size: 1.2vw;
+}
+.myBlog-text .myBlog-title{
+    font-size: 1.7vw;
+}
+.myBlog-text .myBlog-description {
+    max-height: 155px;
+    min-height: 155px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    font-size: 1.2vw;
+    margin-top: 0;
+}
+.myBlog-text .myBlog-author {
+    font-size: 1.2vw;
+    margin-top: 0;
+}
+.myBlog-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+@media screen and (max-width: 768px) {
+    .myBlog-container{
+        flex-direction: column;
+    }
+    .myBlog-image{
+       width: 100%;
+    }
+    .myBlog-image img {
+        width: 100%;
+        height: 200px;
+    }
+    .myBlog-text {
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    .myBlog-text .date-created {
+        font-size: 12px;
+    }
+    .myBlog-text .myBlog-title{
+        font-size: 16px;
+    }
+    .myBlog-text .myBlog-author {
+        font-size: 12px;
+
+    }
+    .myBlog-text .myBlog-description {
+        max-height: 110px;
+        min-height: 110px;
+        width: 100%;
+        font-size: 12px;
+    }
+    .myBlog-button {
+        margin-bottom: 0;
+    }
+}
