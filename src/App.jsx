@@ -8,6 +8,7 @@ import Testimony1 from "./components/testimony1/Testimony1";
 import Projects from "./components/projects/Projects";
 import SFooter from "./components/footer/SFooter";
 import Owners from "./pages/owners/Owners";
+import Vendors from "./pages/vendors/Vendors";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";
 import Navbar from "./components/navbar/Navbar";
@@ -42,6 +43,7 @@ function App() {
 
         <Route path="/footer" element={<SFooter />} />
         <Route path="/owners" element={<Owners />} />
+        <Route path="/vendors" element={<Vendors />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/contactus" element={<ContactUs/>} />
 

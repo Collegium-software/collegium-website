@@ -1,0 +1,17 @@
+
+.contact-card-div {
+    margin-top: -4vw;
+    position: absolute;
+    right: 4vw;
+ }
+ @media screen and (max-width: 768px) {
+   
+     .contact-card-div {
+         right: 0;
+         margin-top: 0;
+         position: inherit;
+         
+     }
+ 
+ }
+ 
