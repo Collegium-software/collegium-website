@@ -22,6 +22,7 @@ import BlogFiveDetails from "./pages/blogs/BlogFiveDetails";
 import BlogsForm from "./pages/blogsForm/BlogsForm";
 import Login from "./pages/blogsForm/Login";
 import AllBlogs from "./pages/blogs/AllBlogs";
+import SurveyForm from "./pages/surveyForm/SurveyForm";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="blogs/blog4" element={<BlogFourDetails />} />
         <Route path="blogs/blog5" element={<BlogFiveDetails />} />
         <Route path="blogs-forms" element={<BlogsForm />} />
+        <Route path="/survey" element={<SurveyForm />} />
 
         {/* <Route path="/vendors" element={<Vendors />} />
         <Route path="/project-team" element={<ProjectTeam />} /> */}

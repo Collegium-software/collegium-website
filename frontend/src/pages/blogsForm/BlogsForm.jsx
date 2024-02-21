@@ -105,8 +105,6 @@ const BlogsForm = () => {
 
   //handling the creation of form:
   const handleCreate = async (e) => {
-    console.log("This is Date at point (b): ", formData.date);
-
     e.preventDefault();
 
     try {

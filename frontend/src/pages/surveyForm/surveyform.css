@@ -1,0 +1,149 @@
+
+.survey {
+    width: 70%;
+    margin: auto;
+    color: black;
+    min-height: 65vw;
+    margin-top: 3vw;
+}
+.header {
+    padding: 1vw;
+}
+
+.header .sub-title{
+    font-size: 1.2vw;
+    text-align: justify;
+}
+.questions-answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+}
+.question-answer-individual, .user-details, .survey-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    border: 1px solid rgb(176, 172, 172);
+    border-radius: 10px;
+}
+.user-details {
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-bottom: 1vw;
+    padding: 2vw 3vw 1vw 3vw;
+    gap: 1vw;
+}
+.user-details-guide {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+.user-details-guide p {
+    font-size: 1.2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.user-details-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    /* gap: 3vw; */
+    width: 100%;
+    margin-top: 0;
+    /* border: solid red; */
+}
+.user-details-fields input {
+    width: 20vw;
+    height: 2vw;
+    border: 1px solid rgb(176, 172, 172);
+    border-radius: 10px;
+}
+.survey-result {
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.survey-result h3 {
+    margin-bottom: 0;
+}
+.survey-result p {
+    font-size: 1.2vw;
+}
+.question-answer-individual .question{
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    border-right: 1px dashed rgb(176, 172, 172);
+    padding: 1vw 3vw 1vw 3vw;
+    gap: 0;
+    /* border: solid red; */
+}
+.question-answer-individual .question span {
+    margin-bottom: 0;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+.question-answer-individual .question p {
+    margin: 0;
+    font-size: 1.2vw;
+}
+.question-answer-individual .answer{
+    flex: 0.4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+
+    /* border: solid green; */
+}
+.question-answer-individual .answer label{
+    font-weight: bold;
+}
+.survey-button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.survey-submit-button, .survey-result-medium button, .survey-result-low button {
+    font-size: 1.2vw;
+    width: 7vw;
+    height: 2vw;
+    background-color: #f1356d;
+    color: white;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1vw;
+}
+.survey-result-medium button, .survey-result-low button {
+    width: 10vw;
+    background-color: transparent;
+    color: black;
+}
+.survey-submit-button:hover, .survey-result-medium button:hover, .survey-result-low button:hover {
+    font-weight: bolder;
+}
+.survey-result {
+    padding: 3vw;
+}
+.survey-result-high, .survey-result-medium, .survey-result-low {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
