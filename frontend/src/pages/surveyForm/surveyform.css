@@ -144,6 +144,38 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
+}
+
+@media screen and (max-width: 768px) {
+    .survey {
+        width: 90%;
+    }
+    .header .sub-title{
+        font-size: 12px;
+    }
+    .user-details-guide p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .user-details-fields {
+        font-size: 12px;
+    }
+    .user-details-fields input {
+        width: 150px;
+        height: 15px;
+        border: 1px solid rgb(176, 172, 172);
+        border-radius: 5px;
+    }
+    .question-answer-individual {
+        font-size: 12px;
+    }
+    .question-answer-individual .question p,  .question-answer-individual .question span {
+        font-size: 12px;
+    }
+    .survey-submit-button, .survey-result-medium button, .survey-result-low button {
+        width: 80px;
+        height: 20px;
+        font-size: 12px;
+    }
 }
