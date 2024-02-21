@@ -1,0 +1,42 @@
+.us-text-container{
+  color:black;
+  
+}
+.us-gallery-container{
+  width: 90%;
+  margin: auto;
+ margin-top: 10%;
+  margin-bottom: 10%;
+}
+.us-project-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2%;
+ align-items: center;
+ 
+  border: solid;
+  border-width: 0.2vw;
+  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
+  /* border: solid red; */
+}
+.us-text-container{
+  padding: 2%;
+}
+.us-image-container img{
+  width:100%
+  
+}
+
+.us-button{
+  position: absolute;
+}
+
+.date-button-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-items: end;
+}
+.date-button-container p{
+align-items: start;
+}
