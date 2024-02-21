@@ -18,7 +18,7 @@ const WhoWeAre = () => {
             with exceptional outcomes.
           </p>
           <div className="herobutton">
-            <Button label="Contact Us" />
+            <Button label="Contact Us" to="/contactus" />
           </div>
         </div>
       </div>

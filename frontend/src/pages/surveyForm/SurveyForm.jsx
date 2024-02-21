@@ -186,7 +186,7 @@ const SurveyForm = () => {
   };
   return (
     <>
-      <Navbar background="transparent" color="black" />
+      <Navbar background="white" color="black" />
       <div className="survey">
         {formVisible && (
           <div className="header">

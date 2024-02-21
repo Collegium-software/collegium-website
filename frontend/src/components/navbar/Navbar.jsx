@@ -211,12 +211,6 @@ const Navbar = (props) => {
                 style={isNavListVisible ? navStyleMobile : navStyle}
               >
                 <a
-                  href="/community"
-                  style={isNavListVisible ? navStyleMobile : navStyle}
-                >
-                  <li className="nav-link-submenu">Community</li>
-                </a>
-                <a
                   href="/blogs"
                   style={isNavListVisible ? navStyleMobile : navStyle}
                 >
@@ -227,6 +221,12 @@ const Navbar = (props) => {
                   style={isNavListVisible ? navStyleMobile : navStyle}
                 >
                   <li className="nav-link-submenu">User Stories</li>
+                </a>
+                <a
+                  href="/faqs"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">FAQs</li>
                 </a>
               </ul>
             )}
@@ -274,9 +274,6 @@ const Navbar = (props) => {
             style={isNavListVisible ? navStyleMobile : navStyle}
           >
             <li className="nav-link-menu">Careers</li>
-          </a>
-          <a href="/faqs" style={isNavListVisible ? navStyleMobile : navStyle}>
-            <li className="nav-link-menu">FAQs</li>
           </a>
           <a
             href="/admin/login"

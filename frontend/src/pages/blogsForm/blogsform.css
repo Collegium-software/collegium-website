@@ -16,6 +16,7 @@
     position: relative;
     color: white;
     border-radius: 20px;
+    margin-bottom: 0;
 
 }
 .blogs-hero img {
@@ -118,6 +119,7 @@
     cursor: pointer;
     
 }
+
 .logoutButton {
     background-color: #f1356d;
     color: white;
