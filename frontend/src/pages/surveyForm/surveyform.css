@@ -150,6 +150,7 @@
 @media screen and (max-width: 768px) {
     .survey {
         width: 90%;
+        min-height: 300px;
     }
     .header .sub-title{
         font-size: 12px;
@@ -175,7 +176,10 @@
     }
     .survey-submit-button, .survey-result-medium button, .survey-result-low button {
         width: 80px;
-        height: 20px;
+        height: 25px;
+        font-size: 12px;
+    }
+    .survey-result-high p, .survey-result-medium p, .survey-result-low p {
         font-size: 12px;
     }
 }
