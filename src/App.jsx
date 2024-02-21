@@ -22,6 +22,8 @@ import BlogThreeDetails from "./pages/blogs/BlogThreeDetails";
 import BlogFourDetails from "./pages/blogs/BlogFourDetails";
 import BlogFiveDetails from "./pages/blogs/BlogFiveDetails";
 import BlogsForm from "./pages/blogsForm/BlogsForm";
+import UsersStoriesPage from "./pages/userStory/UsersStoriesPage";
+
 
 function App() {
   return (
@@ -34,11 +36,14 @@ function App() {
         <Route path="/testimony" element={<Testimony1 />} />
 
         <Route path="/projects" element={<ProjectsPage/>} />
-        
+        <Route path="/project1" element={<SingleProject/>} />
+
+        <Route path="/userstories" element={<UsersStoriesPage/>}/>
+
         <Route path="/footer" element={<SFooter />} />
         <Route path="/owners" element={<Owners />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
-        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/contactus" element={<ContactUs/>} />
 
         <Route path="/blogs" element={<Blogs />} />
         <Route path="blogs/blog1" element={<BlogOneDetails />} />
@@ -47,7 +52,8 @@ function App() {
         <Route path="blogs/blog4" element={<BlogFourDetails />} />
         <Route path="blogs/blog5" element={<BlogFiveDetails />} />
 
-        <Route path="/project1" element={<SingleProject/>} />
+
+        
 
         <Route path="admin/blogs" element={<BlogsForm />} />
 

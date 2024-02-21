@@ -1,9 +1,10 @@
-import Footer from "../../../components/footer/Footer";
+
 import Navbar from "../../../components/navbar/Navbar";
 import SingleProjectHero from "./SingleProjectHero";
 import SingleProject from "./SingleProject";
 import ContactCard from "../../../components/contactCard/SadiqContactCard";
 import SingleProjectCarousel from "./SingleProjectCarousel";
+import SFooter from "../../../components/footer/SFooter";
 
 
 const SingleProjectPage = () => {
@@ -16,7 +17,7 @@ const SingleProjectPage = () => {
       </div>
       <SingleProject/>
       <SingleProjectCarousel/>
-      <Footer/>
+      <SFooter/>
 
 
     </div>

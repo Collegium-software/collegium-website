@@ -2,36 +2,33 @@
   /* height: 100vh; */
   width: auto;
   display:grid;
-  text-align: justify;
- 
+  text-align: left;
   grid-template-columns:  1fr 1fr 1fr;
   gap:1vw;
-   background-color: #0A253B;
-   padding: 1%;
+  background-color: #0A253B;
+  padding: 1%;
    /* padding: 1%; */
   } 
  
 
   .title-why-different{
     color: white;
-    margin-bottom: 20%;
- 
+    /* margin-bottom: 5%; */
     padding: 0;
      }
 
   
 
     .text-container-why-different{
-      text-align: justify;
+      text-align:left;
       padding: 3%;
-      
-     
+   
     }
     
     h1.title-why-different {
       margin: 0;
       padding-top: 0;
-      margin-bottom: 20%;
+   
     }
 
     .text-why-different{
@@ -40,13 +37,23 @@
       }
 
       .comparison-container li{
-      margin-top: 10%;
-      text-align:justify ;
+      margin-top: 7%;
+      text-align:left;
       }
+
+      .comparison-container ul{
+       padding-left: 10%;
+        }
 
       .white-container{
         /* background-image: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%); */
-        
+        background-image:url("../../images/comparison/blue-texture1.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat; /* This ensures the image is not repeated */
+        background-position: center;
+        position: relative;
+
+
         background-color: #E0FBFC;
         color:black;
         border: solid;
@@ -59,13 +66,27 @@
         margin-bottom: 10%;
          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     
-        
       }
+
+      .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+
+      }
+
       .white-container li {
         color: black;
-      }
+      }  
       .dark-container{
         /* background-image:linear-gradient( #1FC1C3,#0F0F0F); */
+
+       
+        background-image:url("../../images/comparison/darkBgr2.jpeg");
+        background-size: cover;
         background-color:#0F0F0F;
         color: white;
         padding: 1vw;
@@ -91,13 +112,15 @@
            gap:0.5vw;
            margin-top: 10%;
            margin-bottom: 10%;
+           margin-left: 5%;
+           margin-right: 5%;
            
          }
 
      
   @media only screen and (max-width: 768px) {
     .comparison-container{
-      height: auto;
+    height: auto;
     grid-template-columns:none;
     padding-top: 1%;
        }
@@ -157,12 +180,12 @@
     margin-bottom: 5%;
   }
   h1.title-why-different {
-    margin: 0;
+    margin-bottom: 2%;
   }
   .text-container{
     margin-left: 8%;
     margin-right: 8%;
   }
 
-  
+}
  
