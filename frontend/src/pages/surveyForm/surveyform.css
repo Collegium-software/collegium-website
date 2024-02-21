@@ -145,12 +145,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    
 }
 
 @media screen and (max-width: 768px) {
     .survey {
         width: 90%;
-        min-height: 300px;
+        min-height: 550px;
     }
     .header .sub-title{
         font-size: 12px;
@@ -178,6 +179,9 @@
         width: 80px;
         height: 25px;
         font-size: 12px;
+    }
+    .survey-result {
+        height: 150px;
     }
     .survey-result-high p, .survey-result-medium p, .survey-result-low p {
         font-size: 12px;
