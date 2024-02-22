@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import "./blogpagedetails.css";
 import Navbar from "../../components/navbar/Navbar";
 import SFooter from "../../components/footer/SFooter";
@@ -83,14 +82,6 @@ const BlogThreeDetails = () => {
       </div>
 
       <SFooter />
-=======
-import Navbar from "../../components/navbar/Navbar";
-
-const BlogThreeDetails = () => {
-  return (
-    <div>
-      <Navbar background="white" color="black" />
->>>>>>> main
     </div>
   );
 };

@@ -84,10 +84,12 @@
     font-size: 1.1vw;
     padding-bottom: 0vw;
     margin-bottom: 1vw;
+
     
 }
 .sfooter-about .sfooter-links a {
     text-decoration: none;
+    color: white;
 }
 .sfooter-about .sfooter-links a:hover {
     font-weight: bold;

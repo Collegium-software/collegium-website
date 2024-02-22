@@ -6,7 +6,7 @@ import Blog from "./components/blog/Blog";
 import Comparison from "./components/comparison/Comparison";
 import Testimony1 from "./components/testimony1/Testimony1";
 import Projects from "./components/projects/Projects";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/footer/SFooter";
 import Owners from "./pages/owners/Owners";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";

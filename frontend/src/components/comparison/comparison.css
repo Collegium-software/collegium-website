@@ -47,7 +47,7 @@
 
       .white-container{
         /* background-image: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%); */
-        background-image:url("../../images/comparison/blue-texture1.jpeg");
+        /* background-image:url("../../images/comparison/blue-texture1.jpeg"); */
         background-size: cover;
         background-repeat: no-repeat; /* This ensures the image is not repeated */
         background-position: center;
@@ -85,7 +85,7 @@
         /* background-image:linear-gradient( #1FC1C3,#0F0F0F); */
 
        
-        background-image:url("../../images/comparison/darkBgr2.jpeg");
+        /* background-image:url("../../images/comparison/darkBgr2.jpeg"); */
         background-size: cover;
         background-color:#0F0F0F;
         color: white;

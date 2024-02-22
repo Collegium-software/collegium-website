@@ -52,8 +52,8 @@
     font-size: 1.7vw;
 }
 .myBlog-text .myBlog-description {
-    max-height: 155px;
-    min-height: 155px;
+    max-height: 120px;
+    min-height: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: justify;

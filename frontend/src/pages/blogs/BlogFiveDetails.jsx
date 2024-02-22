@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import "./blogpagedetails.css";
 import Navbar from "../../components/navbar/Navbar";
 import SFooter from "../../components/footer/SFooter";
@@ -85,10 +84,6 @@ const BlogFiveDetails = () => {
       <SFooter />
     </div>
   );
-=======
-const BlogFiveDetails = () => {
-  return <div></div>;
->>>>>>> main
 };
 
 export default BlogFiveDetails;
