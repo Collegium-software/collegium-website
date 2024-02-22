@@ -26,7 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    padding: 2vw 6vw 0vw 6vw;
+    padding: 1.6vw 6vw 0vw 6vw;
     box-sizing: border-box;
     flex: 0.5;
     text-align: left;
@@ -40,9 +40,10 @@
     display: flex;
     justify-content: left;
     align-items: left;
-    max-height: 120px;
+    max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 90%;
 
 }
 .blogHorizontal-description p{
