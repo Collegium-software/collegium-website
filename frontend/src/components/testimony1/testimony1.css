@@ -1,12 +1,13 @@
 .testimony {
   display: flex;
   flex-direction: row; 
-  align-items: center; 
+  align-items:end; 
   color: black;
   padding: 2%;
   text-align: center;
   background: #F6FCFC;
   justify-content:center;
+  gap:2%;
  
 }
 
@@ -44,9 +45,9 @@
 
 .testimonyImageContainer img {
 
-  /* height: 100%; */
-  /* width: 100%; */
-  object-fit: cover;
+  width: 100%;
+  
+
 }
 
 .testimonyText {
@@ -91,8 +92,15 @@ margin: 5%;
   height: auto;
   margin: 5%;
 }
+
+.testimonyImageContainer img {
+  height: 100%; 
+  width: 100%; 
+  object-fit: cover;
+}
+
 }
   
   
   
-
+  

@@ -5,14 +5,15 @@
   flex-direction: column;
   justify-content: center;
   background-color: #0a253b;
+  color:white;
 }
 
 .owners-benefits-Container {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start; 
   flex-direction: row;
-  padding-top: 10vw;
-  padding-bottom: 5vw;
+  padding: 10vw 0vw;
 }
 
 .benefitsContainer,
@@ -20,34 +21,35 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  width: 21vw;
+  align-items: left;
+  width: 25vw;
 }
 
 .benefitsContainer p {
-  font-size: 2vh;
-  padding-top:2vh;
-  margin-bottom:5vh;
+  font-size: 1.2vw;
+  padding-top:1vw;
+  margin:0vw;
+  
 }
 
 .imageContainer {
   position: relative;
-  border: 0.5vh solid;
+  border: 0.2vw solid;
   border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border-bottom: none;
   border-image-slice: 1;
+  background-size: cover;
+  background-position: center;
+  height: 31vw;
+  width:99.8%;
 }
 
-.imageContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 .image-label {
   position: absolute;
   bottom: 0%;
-  left: 0%;
-  right: 0%;
+  left: -0.7%;
   width: 100%;
   height: 30%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -56,7 +58,10 @@
   align-items: center;
   justify-content: center;
   color: white;
+  font-size: 1.6vw;
+  border:none;
 }
+
 
 @media (max-width: 768px) {
   .owners-benefits-Container {

@@ -8,8 +8,8 @@ const Container = ({ imageUrl, label, description }) => {
   console.log('Rendering Card:', label);  // Log a message when the Card component renders
   return (
     <div className="container">
-      <div className="image-Container"><img src={imageUrl} className="projectImages" alt={`${label} - ${description}`} /></div>
-      <p>{description}</p>
+      <div className="image-Container" alt={label} style={{ backgroundImage: `url(${imageUrl})` }} ></div>
+      <h4>{description}</h4>
     </div>
   );
 };
@@ -37,17 +37,17 @@ const Projects = () => {
         <Container
           imageUrl={ProjectPic1}
           label="Project 1"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          description="SkyRise Residences"
         />
         <Container
           imageUrl={ProjectPic2}
           label="Project 2"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          description="HarborView Office Complex"
         />
         <Container
           imageUrl={ProjectPic3}
           label="Project 3"
-          description="Ut enim ad minim veniam,."
+          description="Golden Gate Bridge"
         />
       </div>
     </div>
@@ -55,3 +55,5 @@ const Projects = () => {
 };
 
 export default Projects;
+export {Container}
+

@@ -1,0 +1,16 @@
+.la-sng-heroSection {
+  background-image: url("../../../images/projectsPage/Hero-Single-Project.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: white;
+  margin-top: 5vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  padding-left: 16vw;
+  box-sizing: border-box;
+}
+

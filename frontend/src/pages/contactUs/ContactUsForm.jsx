@@ -76,9 +76,9 @@ const ContactUsForm = () => {
 </div> 
 </form>
     </div>
-<div className="graphics-container">
-   {/* <img src={BackgroundImage} alt="" /> */}
-   </div>
+{/* <div className="graphics-container">
+   <img src={BackgroundImage} alt="" /> 
+   </div> */}
 
   </div>
    );

@@ -1,5 +1,6 @@
 import "./blogsform.css";
 import blogsHero from "../../images/blogs/blogs-hero.jpg";
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SFooter from "../../components/footer/SFooter";
@@ -293,6 +294,11 @@ const BlogsForm = () => {
   return (
     <div className="blogform">
       <AdminNavbar background="#0a253b" color="white" />
+=======
+const BlogsForm = () => {
+  return (
+    <div className="blogform">
+>>>>>>> main
       <div className="blogs-hero">
         <img src={blogsHero} alt="blogs-hero" />
         <div className="blogs-hero-text">
@@ -307,6 +313,7 @@ const BlogsForm = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div className="allmyblogforms">
         <div className="logout-button-div">
           <button className="logoutButton" onClick={logout}>
@@ -624,6 +631,20 @@ const BlogsForm = () => {
       </div>
 
       <SFooter />
+=======
+      <form className="blogs-form">
+        <label htmlFor="mySelect">
+          Choose the action from the list:
+          <br />
+          <select id="mySelect" className="actionLabel-select">
+            <option value="create">Create new blog</option>
+            <option value="update">Update existing blog</option>
+            <option value="create">Delete an existing blog</option>
+          </select>
+          <button className="next-button">Next</button>
+        </label>
+      </form>
+>>>>>>> main
     </div>
   );
 };

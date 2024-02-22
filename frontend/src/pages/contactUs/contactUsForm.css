@@ -3,18 +3,21 @@
   background-color:  #0A253B;
    color:white;
    position: relative;
+  
 }
 
 .contact-us-container h1{
   color: white;
   padding: 5%;
   position: absolute;
+  font-size: 2vw;
 
 }
 
 .contact-us-form{
   justify-items: center;
   background-color: #0A253B;
+  /* margin-bottom: -10vh; */
 }
 
 
@@ -47,7 +50,11 @@ border: solid;
   text-align: left;
   grid-template-columns: 1fr 1fr;
   margin-top: 1%;
-  background-image: url("../../images/contactUs/backgroundContact.png");
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 5%;
+
+  /* background-image: url("../../images/contactUs/backgroundContact.png"); */
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,6 +64,7 @@ border: solid;
 
 .checkbox-container p{
   margin-top: 4%;
+  font-size:1.2vw;
 }
 
 
@@ -83,7 +91,8 @@ border: solid;
 
 .contact-us-submit-btn{
  display: flex;
- margin-top:30%
+ margin-top:20%;
+ 
 }
 
 
@@ -152,7 +161,7 @@ margin-right: 20%;
   }
 
   .contact-us-container{
-    height: 150vh;
+    height: auto;
 
 }
 }

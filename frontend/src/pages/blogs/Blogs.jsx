@@ -6,14 +6,21 @@ import BlogVertical from "./BlogVertical";
 
 import "./blogs.css";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
 import Button from "../../components/button/Button";
+=======
+>>>>>>> main
 const Blogs = () => {
   const [blogsData, setBlogsData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
+<<<<<<< HEAD
         const response = await fetch("/api/blogs");
+=======
+        const response = await fetch("http://localhost:4000/blogs");
+>>>>>>> main
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -37,6 +44,7 @@ const Blogs = () => {
     .sort((a, b) => new Date(b.date) - new Date(a.date));
   console.log(sortedBlogs);
   let bottomBlog = true;
+<<<<<<< HEAD
   let blogAvailable = true;
   let zeroBlog = false;
   let vToH = false;
@@ -52,10 +60,17 @@ const Blogs = () => {
     vToH = true;
     vBlog = false;
   }
+=======
+  if (sortedBlogs.length < 5) {
+    bottomBlog = false;
+  }
+
+>>>>>>> main
   return (
     <div>
       <Navbar background="#0a253b" color="white" />
       <BlogsHero />
+<<<<<<< HEAD
       {zeroBlog && (
         <div className="no-blog">
           <h4>
@@ -126,6 +141,46 @@ const Blogs = () => {
       <div className="all-blogs-button">
         <Button label="See all blogs" color="black" to="/blogs/all-blogs" />
       </div>
+=======
+      <BlogHorizontal
+        id={sortedBlogs[0].id}
+        image={sortedBlogs[0].image}
+        title={sortedBlogs[0].title}
+        description={sortedBlogs[0].description}
+        date={sortedBlogs[0].date}
+        bttnLabel={sortedBlogs[0].button.label}
+        bttnColor={sortedBlogs[0].button.color}
+        bttnTo={sortedBlogs[0].button.to}
+      />
+      <div className="myBlogsList">
+        {sortedBlogs.slice(1, 4).map((blog, index) => (
+          <div key={index} className="cover-container">
+            <BlogVertical
+              id={blog.id}
+              image={blog.image}
+              title={blog.title}
+              description={blog.description}
+              date={blog.date}
+              bttnLabel={blog.button.label}
+              bttnColor={blog.button.color}
+              bttnTo={blog.button.to}
+            />
+          </div>
+        ))}
+      </div>
+      {bottomBlog && (
+        <BlogHorizontal
+          id={sortedBlogs[sortedBlogs.length - 1].id}
+          image={sortedBlogs[sortedBlogs.length - 1].image}
+          title={sortedBlogs[sortedBlogs.length - 1].title}
+          description={sortedBlogs[sortedBlogs.length - 1].description}
+          date={sortedBlogs[sortedBlogs.length - 1].date}
+          bttnLabel={sortedBlogs[sortedBlogs.length - 1].button.label}
+          bttnColor={sortedBlogs[sortedBlogs.length - 1].button.color}
+          bttnTo={sortedBlogs[sortedBlogs.length - 1].button.to}
+        />
+      )}
+>>>>>>> main
       <SFooter />
     </div>
   );

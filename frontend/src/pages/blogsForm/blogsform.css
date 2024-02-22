@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .blogform {
@@ -8,6 +9,16 @@
 
 }
 
+=======
+.blogform {
+    color: black;
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 1vw;
+
+}
+>>>>>>> main
 .blogs-hero {
     display: flex;
     flex-direction: column;
@@ -16,7 +27,10 @@
     position: relative;
     color: white;
     border-radius: 20px;
+<<<<<<< HEAD
     margin-bottom: 0;
+=======
+>>>>>>> main
 
 }
 .blogs-hero img {
@@ -49,6 +63,7 @@
     font-size: 1.5vw;
     margin-top: 0.2vw;
 }
+<<<<<<< HEAD
 .allmyblogforms {
     min-height: 65vh;
 }
@@ -204,6 +219,28 @@
 
 @media screen and (max-width: 768px){
 
+=======
+.blogs-form {
+    margin-top: 3vw;
+    border: 1px solid rgb(243, 237, 237);
+    padding: 2vw;
+    border-radius: 10px;
+
+}
+.actionLabel-select, .actionLabel-select option {
+    font-size: 1vw;
+    padding: 0.2vw;
+    margin-top: 0.5vw;
+}
+.next-button {
+    margin-left: 2vw;
+    font-size: 1vw;
+    height: 1.8vw;
+    min-width: 5vw;
+}
+
+@media screen and (max-width: 768px){
+>>>>>>> main
     .blogs-hero {
         height: 160px;
     }
@@ -216,6 +253,7 @@
     .blogs-subtitle p {
         font-size: 12px;
     }
+<<<<<<< HEAD
     .allmyblogforms label {
         font-size: 12px;
     }
@@ -264,4 +302,6 @@
     .confirm-window-success, .update-guideline, .confirm-window-failure {
         width: 90%;
     }
+=======
+>>>>>>> main
 }

@@ -1,8 +1,9 @@
 import React from "react";
-import '../testimony1/testimony1.css';
+import '../../components/testimony1/testimony1.css'
 import Button from '../button/Button';
-import testimonyPic from "../../images/TestimonyPicture.png";
-import CustomerPic from "../../images/CustomerPic.png";
+import testimonyPic from "../../images/testimony/testimonials2.jpeg";
+import CustomerPic from "../../images/testimony/CustomerPic.png";
+
 
 const Testimony1 = () => (
   <div className="testimony">
