@@ -52,6 +52,7 @@
 }
 .allmyblogforms {
     min-height: 65vh;
+    margin-bottom: 3vw;
 }
 .allmyblogforms label {
     font-weight: bold;
