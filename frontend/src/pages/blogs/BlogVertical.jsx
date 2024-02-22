@@ -2,12 +2,22 @@ import Button from "../../components/button/Button";
 import "./blogvertical.css";
 
 const BlogVertical = (props) => {
-  const { id, image, title, description, date, bttnLabel, bttnColor, bttnTo } =
-    props;
+  const {
+    id,
+    image,
+    title,
+    author,
+    description,
+    date,
+    bttnLabel,
+    bttnColor,
+    bttnTo,
+  } = props;
   const blogElements = {
     id: id,
     image: image,
     title: title,
+    author: author,
     description: description,
     date: date,
     button: {
@@ -22,6 +32,7 @@ const BlogVertical = (props) => {
       id: blogElements.id,
       image: blogElements.image,
       title: blogElements.title,
+      author: blogElements.author,
       description: blogElements.description,
       date: blogElements.date,
       button: {
@@ -42,14 +53,16 @@ const BlogVertical = (props) => {
             <div className="blogslist-title">
               <h2>{blog.title}</h2>
             </div>
+            <div className="blogslist-author">
+              <p>Written by:&emsp;{blog.author}</p>
+            </div>
             <div className="blogslist-description">
               <p>{blog.description}</p>
             </div>
           </div>
           <div className="blogslist-date-button">
             <p>{blog.date}</p>
-            <div className="blogslist-boutton">
-              {" "}
+            <div className="blogslist-button">
               <Button
                 label={blog.button.label}
                 color={blog.button.color}

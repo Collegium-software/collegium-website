@@ -1,12 +1,95 @@
 import "./blogpagedetails.css";
+<<<<<<< HEAD
+import Navbar from "../../components/navbar/Navbar";
+import SFooter from "../../components/footer/SFooter";
+import { useEffect, useState } from "react";
+import BlogVertical from "./BlogVertical";
+import Button from "../../components/button/Button";
+const BlogTwoDetails = () => {
+  const [allBlogs, setAllBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const locationReset = () => {
+      window.scrollTo(0, 0);
+    };
+    locationReset();
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/blogs");
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ", ${response.status}`);
+        }
+        const data = await response.json();
+        console.log("Fetched data: ", data);
+        setAllBlogs(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data", error);
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  const undesiredUrl = "/blogs/blog2";
+  const filteredBlogs = allBlogs.filter(
+    (blog) => blog.button.to !== undesiredUrl
+  );
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+=======
 import blog4 from "../../images/blogs/blog3.jpg";
 import Navbar from "../../components/navbar/Navbar";
 import SFooter from "../../components/footer/SFooter";
 const BlogTwoDetails = () => {
+>>>>>>> main
   return (
     <div className="blogpagedetails">
       <Navbar background="white" color="black" />
       <div className="blog-hero-pic">
+<<<<<<< HEAD
+        <img src={allBlogs[1].image} alt={allBlogs[1].title} />
+      </div>
+      <div className="blogpage-full-article">
+        <div className="blogpageFullArticle-title">
+          <h2>{allBlogs[1].title}</h2>
+          <p>
+            <strong>Written by: {allBlogs[1].author}</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{allBlogs[1].date}
+          </p>
+        </div>
+        <div className="blogpageFullArticle-description">
+          <p>{allBlogs[1].description}</p>
+        </div>
+      </div>
+      <div className="recent-posts">
+        <h1>Other Blogs:</h1>
+        <div className="blogs">
+          {filteredBlogs.slice(0, 3).map((blog, index) => (
+            <div key={index}>
+              <BlogVertical
+                id={blog.id}
+                image={blog.image}
+                title={blog.title}
+                author={blog.author}
+                description={blog.description}
+                date={blog.date}
+                bttnLabel={blog.button.label}
+                bttnColor={blog.button.color}
+                bttnTo={blog.button.to}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="see-more-button">
+        <Button label="See more blogs" color="black" to="/blogs/all-blogs" />
+      </div>
+
+=======
         <img src={blog4} alt="blogtwohero" />
       </div>
       <div className="blogpage-full-article">
@@ -130,6 +213,7 @@ const BlogTwoDetails = () => {
       <div className="recent-posts">
         <h1>RECENT POSTS</h1>
       </div>
+>>>>>>> main
       <SFooter />
     </div>
   );

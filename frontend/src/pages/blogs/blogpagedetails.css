@@ -63,8 +63,17 @@
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    
-
+}
+.recent-posts .blogs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    gap: 3vw;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3vw;
 }
 .recent-posts h1 {
     font-size: 2vw;
@@ -72,8 +81,17 @@
     color: black;
     margin-bottom: 0;
 }
+.see-more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
 
 @media screen and (max-width: 768px) {
+    .blogpage-full-article {
+        border-bottom: 1px dashed grey;
+    }
     .blogpageFullArticle-title h2 {
         font-size: 16px;
     }
@@ -89,4 +107,8 @@
     .recent-posts h1 {
         font-size: 16px;
     }
+    .recent-posts {
+        display: none;
+    }
+
 }

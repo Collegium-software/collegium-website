@@ -13,7 +13,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
 }
 .blogslist-gradient-mask {
     display: flex;
@@ -41,8 +40,8 @@
 .blogslist-text {
     padding: 2vw 2vw 0 2vw;
     box-sizing: border-box;
-
     width: 100%;
+    min-height: 210px;
 
     
 }
@@ -56,6 +55,7 @@
     max-height: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
+    
     
 }
 .blogslist-description p {
@@ -76,39 +76,39 @@
     box-sizing: border-box;
     
 }
-.blogslist-date-button p, .blogslist-description p {
+.blogslist-date-button p, .blogslist-description p, .blogslist-author p {
     font-size: 1.2vw;
 }
-
+.blogslist-author p {
+    font-style: italic;
+    margin-top: 0;
+}
 @media screen and (max-width: 768px) {
     .blogslist-container {
         flex-direction: column;
-        /* width: 90%; */
+        width: 100%;
         
     }
  
     .blogslist-gradient {
-        width: 200px;
+        width: 100%;
     }
     .blogslist-pics img {
-        height: 200px;
+        width: 100%;
 
     }
     .blogslist-text {
-        height: 100px;
+        width: 100%;
         
     }
 
     .blogslist-title h2 {
         font-size: 16px;
     }
-    .blogslist-description p {
+    .blogslist-description p, .blogslist-date-button p, .blogslist-author p {
         font-size: 12px;
     }
 
-    .blogslist-date-button p {
-        font-size: 12px;
-    }
 
 
 

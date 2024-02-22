@@ -1,8 +1,6 @@
 import "./navbar.css";
-
 import { useState, useEffect, useCallback } from "react";
-
-const Navbar = (props) => {
+const AdminNavbar = (props) => {
   const { background, color } = props;
   const navStyle = {
     backgroundColor: background || "black",
@@ -211,6 +209,12 @@ const Navbar = (props) => {
                 style={isNavListVisible ? navStyleMobile : navStyle}
               >
                 <a
+                  href="/community"
+                  style={isNavListVisible ? navStyleMobile : navStyle}
+                >
+                  <li className="nav-link-submenu">Community</li>
+                </a>
+                <a
                   href="/blogs"
                   style={isNavListVisible ? navStyleMobile : navStyle}
                 >
@@ -221,12 +225,6 @@ const Navbar = (props) => {
                   style={isNavListVisible ? navStyleMobile : navStyle}
                 >
                   <li className="nav-link-submenu">User Stories</li>
-                </a>
-                <a
-                  href="/faqs"
-                  style={isNavListVisible ? navStyleMobile : navStyle}
-                >
-                  <li className="nav-link-submenu">FAQs</li>
                 </a>
               </ul>
             )}
@@ -275,11 +273,8 @@ const Navbar = (props) => {
           >
             <li className="nav-link-menu">Careers</li>
           </a>
-          <a
-            href="/admin/login"
-            style={isNavListVisible ? navStyleMobile : navStyle}
-          >
-            <li className="nav-link-menu">Admin</li>
+          <a href="/faqs" style={isNavListVisible ? navStyleMobile : navStyle}>
+            <li className="nav-link-menu">FAQs</li>
           </a>
         </ul>
       </div>
@@ -287,4 +282,4 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+export default AdminNavbar;

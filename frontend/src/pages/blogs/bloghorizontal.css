@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 5vw;
+    /* margin-top: 3vw; */
 }
 .blogHorizontal {
     background-color: white;
@@ -30,9 +30,11 @@
     box-sizing: border-box;
     flex: 0.5;
     text-align: left;
+    width: 100%;
 }
 .blogHorizontal-title h2{
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
+
 }
 .blogHorizontal-description{
     display: flex;
@@ -59,17 +61,21 @@
     gap: 4vw;
     width: 100%;
     padding-top: 4vw;
+    padding-bottom: 1vw;
     box-sizing: border-box;
 }
-.blogHorizontal-date-button p {
+.blogHorizontal-date-button p, .blogHorizontal-author p {
     font-size: 1.2vw;
+}
+.blogHorizontal-author p{
+    margin-top: 0;
+    font-style: italic;
 }
 .blogHorizontal-pic{
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0.5;
-    
     height: 25vw;
 }
 .blogHorizontal-pic img {
@@ -90,9 +96,14 @@
         padding: 10px;
 
     }
-    .blogHorizontal-date-button p {
-        font-size: 12px;
+    ..blogHorizontal-date-button {
+        /* padding-bottom: 0; */
     }
+    .blogHorizontal-date-button p, .blogHorizontal-author p {
+        font-size: 12px;
+        
+    }
+
     .blogHorizontal-pic{
         width: 100%;
         /* margin-top: 30px; */
@@ -103,7 +114,7 @@
 
     .blogHorizontal-title h2{
         font-size: 16px;
-        padding-top: 16px;
+        /* padding-top: 16px; */
         box-sizing: border-box;
     }
     .blogHorizontal-description p{

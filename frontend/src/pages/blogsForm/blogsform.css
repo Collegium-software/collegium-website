@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.blogform {
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 1.2vw;
+
+}
+
+=======
 .blogform {
     color: black;
     width: 70%;
@@ -6,6 +18,7 @@
     font-size: 1vw;
 
 }
+>>>>>>> main
 .blogs-hero {
     display: flex;
     flex-direction: column;
@@ -14,6 +27,10 @@
     position: relative;
     color: white;
     border-radius: 20px;
+<<<<<<< HEAD
+    margin-bottom: 0;
+=======
+>>>>>>> main
 
 }
 .blogs-hero img {
@@ -46,6 +63,163 @@
     font-size: 1.5vw;
     margin-top: 0.2vw;
 }
+<<<<<<< HEAD
+.allmyblogforms {
+    min-height: 65vh;
+}
+.allmyblogforms label {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+.allmyblogforms span {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1vw;
+    width: 30vw;
+}
+.logout-button-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1vw;
+    margin-right: 1vw;
+}
+.selection-form {
+    margin-top: 3vw;
+    border: 1px solid rgb(176, 172, 172);
+    padding: 2vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    color: black;
+    margin: auto;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+    gap: 1vw;
+}
+
+.selection-form select {
+    width: 30vw;
+    height: 2vw;
+}
+.actionLabel-select, .actionLabel-select option {
+    font-size: 1.2vw;
+    padding: 0.2vw;
+    margin-top: 0.5vw;
+    width: 20vw;
+    height: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+}
+.yes-no-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+}
+.next-button, .next-button-update, .next-button-delete, .yes-button, .no-button, .logoutButton {
+    font-size: 1.2vw;
+    width: 7vw;
+    height: 2vw;
+    background-color: white;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.logoutButton {
+    background-color: #f1356d;
+    color: white;
+}
+.yes-button, .no-button {
+    margin: 0;
+}
+.create-update-form, .getTitle-form, .getTitle-form-delete, .yes-no-form{
+
+    border: 1px solid rgb(176, 172, 172);
+    padding: 2vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    width: 35%;
+    color: black;
+    margin: auto;
+    margin-top: 1vw;
+}
+.yes-no-form {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+.create-update-form input, .getTitle-form input, .getTitle-form-delete input{
+    margin-bottom: 15px;
+    width: 30vw;
+    height: 2vw;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    font-size: 1.2vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.create-update-form textarea {
+    resize: none;
+    margin-bottom: 15px;
+    width: 30vw;
+    height: 10vw;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    font-size: 1.2vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.create-update-form .cr-updt-button {
+    width: 7vw;
+    height: 2vw;
+    font-size: 1.2vw;
+    background-color: white;
+    border: 1px solid rgb(192, 178, 178);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.logoutButton:hover {
+    font-weight: bold;
+}
+.create-update-form .cr-updt-button:hover, .next-button:hover, .yes-button:hover, .no-button:hover {
+    background-color:beige;
+}
+.confirm-window-success, .update-guideline, .confirm-window-failure {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 50%;
+    margin: auto;
+    background-color: beige;
+    color: green;
+    z-index: 200;
+
+}
+.update-guideline {
+    width: 100%;
+    justify-content: left;
+    background-color: transparent;
+}
+.update-guideline p {
+    margin-top: 0;
+}
+.confirm-window-failure {
+    color: red;
+}
+
+@media screen and (max-width: 768px){
+
+=======
 .blogs-form {
     margin-top: 3vw;
     border: 1px solid rgb(243, 237, 237);
@@ -66,6 +240,7 @@
 }
 
 @media screen and (max-width: 768px){
+>>>>>>> main
     .blogs-hero {
         height: 160px;
     }
@@ -78,4 +253,55 @@
     .blogs-subtitle p {
         font-size: 12px;
     }
+<<<<<<< HEAD
+    .allmyblogforms label {
+        font-size: 12px;
+    }
+    .allmyblogforms span {
+        font-size: 10px;
+        width: 250px;
+    }
+    .allmyblogforms form {
+        width: 90%;
+    }
+    .selection-form select {
+        width: 100%;
+        height: 20px;
+    }
+    .actionLabel-select, .actionLabel-select option {
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .next-button, .next-button-update, .next-button-delete, .yes-button, .no-button, .logoutButton {
+        font-size: 12px;
+        width: 80px;
+        height: 20px;
+    }
+    .create-update-form input, .getTitle-form input, .getTitle-form-delete input{
+        margin-bottom: 15px;
+        width: 250px;
+        height: 20px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+    .create-update-form textarea {
+        width: 250px;
+        height: 200px;
+        border-radius: 5px;
+        font-size: 12px;
+       
+    }
+    .create-update-form .cr-updt-button {
+        font-size: 12px;
+        width: 80px;
+        height: 20px;
+    }
+
+    .confirm-window-success, .update-guideline, .confirm-window-failure {
+        width: 90%;
+    }
+=======
+>>>>>>> main
 }

@@ -7,12 +7,30 @@
     gap: 3vw;
     width: 90%;
     margin: auto;
-    margin-top: 5vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 .cover-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+}
+.no-blog {
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.all-blogs-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+    margin-top: 3vw;
+    width: 90%;
 }
 @media screen and (max-width: 768px) {
     .myBlogsList {
