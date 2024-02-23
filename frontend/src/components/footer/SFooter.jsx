@@ -14,11 +14,36 @@ const SFooter = () => {
     { id: 5, link: "/contactus", label: "Contact Us" },
   ];
   const socialMediaIcons = [
-    { id: 1, name: "LinkedIn", image: linkedin },
-    { id: 2, name: "Facebook", image: facebook },
-    { id: 3, name: "Instagram", image: instagram },
-    { id: 4, name: "X", image: twitter },
-    { id: 5, name: "Whatsapp", image: whatsapp },
+    {
+      id: 1,
+      name: "LinkedIn",
+      image: linkedin,
+      url: "https://www.linkedin.com/",
+    },
+    {
+      id: 2,
+      name: "Facebook",
+      image: facebook,
+      url: "https://www.facebook.com/",
+    },
+    {
+      id: 3,
+      name: "Instagram",
+      image: instagram,
+      url: "https://www.instagram.com/collegium_built/",
+    },
+    {
+      id: 4,
+      name: "X",
+      image: twitter,
+      url: "https://x.com/collegiumbuilt?t=6agu15xYfhvyNthNMTfOWA&s=09",
+    },
+    {
+      id: 5,
+      name: "Whatsapp",
+      image: whatsapp,
+      url: "https://web.whatsapp.com/",
+    },
   ];
   const Links = ({ link }) => {
     return (
@@ -30,7 +55,9 @@ const SFooter = () => {
   const SocialMedia = ({ smedia }) => {
     return (
       <div className="smdia-icons">
-        <img src={smedia.image} alt={smedia.name} />
+        <a href={smedia.url} target="blank">
+          <img src={smedia.image} alt={smedia.name} />
+        </a>
       </div>
     );
   };

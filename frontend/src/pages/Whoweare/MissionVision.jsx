@@ -1,6 +1,6 @@
 import "./missionvision.css";
-import mission from "../../images/WhoWeAre/mission.jpg";
-import vision from "../../images/WhoWeAre/vision.jpg";
+
+import mv from "../../images/WhoWeAre/mission-vision.jpg";
 
 const MissionVision = () => {
   return (
@@ -15,7 +15,6 @@ const MissionVision = () => {
               </h2>
             </div>
           </div>
-
           <div className="mv-sub-title">
             <p>
               “You never change things by fighting the existing reality. To
@@ -23,30 +22,40 @@ const MissionVision = () => {
               obsolete.”
             </p>
           </div>
+
           <div className="missionVision-cards">
             <div className="mv-gradient">
               <div className="mission">
-                <img src={mission} alt="mission" />
+                <img src={mv} alt="mission" />
                 <div className="grey-mask"></div>
                 <div className="mission-text">
                   <h2>Mission</h2>
                   <p>
-                    We bring emergent technologies of AI, Machine Learning, and
-                    IoT to a new digital process of making buildings in
-                    comparison.
+                    At Collegium, we revolutionize Real Estate Development by
+                    addressing complex projects wihtout using traditional manual
+                    processes. Through advanced digital tools, we streamline
+                    contract writing, expedite cash flow, optimize supply chain
+                    efficiency, and ensure fair costs aligned with stakeholder
+                    interests. Our mission is to consistently deliver Real
+                    Estate Development projects with unparalleled outcomes.
                   </p>
                 </div>
               </div>
             </div>
             <div className="mv-gradient">
               <div className="vision">
-                <img src={vision} alt="vision" />
+                <img src={mv} alt="vision" />
                 <div className="grey-mask"></div>
                 <div className="vision-text">
                   <h2>Vision</h2>
                   <p>
-                    Changing the Business Model of Design & Construction so we
-                    can afford to build our most vital infrastructure.
+                    At Collegium, we revolutionize Real Estate Development by
+                    addressing complex projects wihtout using traditional manual
+                    processes. Through advanced digital tools, we streamline
+                    contract writing, expedite cash flow, optimize supply chain
+                    efficiency, and ensure fair costs aligned with stakeholder
+                    interests. Our mission is to consistently deliver Real
+                    Estate Development projects with unparalleled outcomes.
                   </p>
                 </div>
               </div>
