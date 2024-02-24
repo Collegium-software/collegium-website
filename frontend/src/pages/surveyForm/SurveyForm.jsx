@@ -6,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 
 const SurveyForm = () => {
-  useEffect(() => {
-    const locationReset = () => {
-      window.scrollTo(0, 0);
-    };
-    locationReset();
-  }, []);
+  // useEffect(() => {
+  //   const locationReset = () => {
+  //     window.scrollTo(0, 0);
+  //   };
+  //   locationReset();
+  // });
   const [responses, setResponses] = useState({});
   const [userDetails, setUserDetails] = useState({
     name: "",
@@ -22,12 +22,14 @@ const SurveyForm = () => {
   const [resultVisible, setResultVisible] = useState(false);
 
   const handleResponseChange = (questionId, response) => {
+    
     setResponses((prevResponses) => ({
       ...prevResponses,
       [questionId]: response,
     }));
   };
   const handleUserDetailsChange = (e) => {
+   
     setUserDetails((prevDetails) => ({
       ...prevDetails,
       name: document.getElementById("user-name").value,

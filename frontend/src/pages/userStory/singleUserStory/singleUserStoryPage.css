@@ -1,0 +1,91 @@
+.sup-hero-pic {
+  margin-top: 3vw;
+  width: 90%;
+  height: 15vw;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.sup-hero-pic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.sup-page-full-article {
+  margin-top: 3vw;
+  width: 80%;
+  
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.sup-pageFullArticle-title {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: flex-start;
+  text-align: left;
+  background: transparent;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #1882FF, #36EBCA); 
+  border-image-slice: 1; 
+  border-width:0 0 2px 0;
+  width: 100%;
+  padding-bottom: 1vw;
+}
+
+
+
+.sup-pageFullArticle-title h2 {
+  padding-bottom: 0;
+  font-size: 2vw;
+}
+.sup-pageFullArticle-title p {
+  font-size: 1.2vw;
+  margin-top: 0.3vw;
+  margin-bottom: 0;
+}
+.sub-pageFullArticle-description {
+  margin-top: 2vw;
+  
+}
+
+
+
+.sup-page-full-article{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5%;
+  align-items: start;
+}
+
+.customer-image{
+margin-top: 5%;
+margin-bottom: 2%;
+
+}
+.customer-image img{
+  width: 20%;
+}
+
+.sup-page-logo img{
+  width:80%;
+
+}
+
+
+.sup-testimonials-gallery{
+ display: grid;
+ grid-template-columns: auto;
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+  
+}

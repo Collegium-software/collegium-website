@@ -2,12 +2,16 @@
   margin: 4dvh;
 }
 
+
 .slider-container1 img{
-  width:90%;
+  width: 90%;
+  /* width:100px;
+  object-fit: cover; */
 }
 .slider-container1{
   margin:4vh;
 }
+
 
 
 .slick-prev, 
@@ -27,7 +31,12 @@
 .slick-next:before {
  
   font-size: 30px;
-  color: black;
+  color:black;
+ 
+
+  
+ 
+  
 }
 
 .slick-prev:hover,
@@ -38,9 +47,11 @@
 
 
 .slick-prev{
-  left:-40px;
+  left:-30px;
+
 }
 
-.slick-arrow.slick-hidden {
+
+/* .slick-arrow.slick-hidden {
   display:none
-}
+} */

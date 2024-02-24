@@ -1,9 +1,14 @@
 import "../SingleProject/singleProject.css"
 import SingleProjectImage from "../../../images/projectsPage/singleProjectImage.png"
-
+import { useEffect } from "react";
 
 const SingleProject = () => {
-
+  useEffect(() => {
+    const locationReset = () => {
+      window.scrollTo(0, 0);
+    };
+    locationReset();
+  });
 
   return ( 
   <div className="single-project-container">

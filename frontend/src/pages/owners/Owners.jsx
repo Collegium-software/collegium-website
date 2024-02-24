@@ -11,6 +11,10 @@ import ContactCard from "../../components/contactCard/SadiqContactCard";
 
 const Owners = () => {
   useEffect(() => {
+    const locationReset = () => {
+      window.scrollTo(0, 0);
+    };
+    locationReset();
     document.body.style.backgroundColor = "White";
     return () => {
       document.body.style.backgroundColor = "";

@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
+import Slider1 from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -13,24 +13,28 @@ import image4 from "../../../images/projectsPage/projectsGalImg4.jpg";
 
 
 const SingleProjectCarousel = () => {
+  
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
     arrows: true,
-     slidesToShow: 3,
+    slidesToShow: 3,
+    // slidesToShow: 2,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-         
+        arrows: true,
+        
         }
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2
+          
         }
       },
       {
@@ -44,7 +48,7 @@ const SingleProjectCarousel = () => {
 
   return (
     <div className="slider-container1">
-      <Slider {...settings}>
+      <Slider1 {...settings}>
        
         <div>
           <img src={image2} alt="collegium project 1" />
@@ -55,7 +59,7 @@ const SingleProjectCarousel = () => {
         <div>
           <img src={image4} alt="collegium project 3" />
         </div>
-      </Slider>
+      </Slider1>
     </div>
   );
 }
