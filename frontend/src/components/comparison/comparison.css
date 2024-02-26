@@ -186,5 +186,19 @@
     margin-right: 8%;
   }
 
+  .comparison-container p,
+  .comparison-container h3,
+  .comparison-container h4,
+  .comparison-container ul
+  {
+  font-size: 12px;
+  }
+  
+  .comparison-container h1{
+    font-size: 16px;
+  }
+
+
+
 }
  

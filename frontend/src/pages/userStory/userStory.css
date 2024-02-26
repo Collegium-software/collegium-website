@@ -63,5 +63,15 @@
     display: block;
   }
 
+  .us-gallery-container p,
+  .us-gallery-container h3,
+  .us-gallery-container h4 {
+    font-size: 12px;
 
+  }
+  
+
+  .us-gallery-container h1{
+    font-size: 16px;
+  }
 }
