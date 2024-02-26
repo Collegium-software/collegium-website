@@ -78,6 +78,7 @@
   .testimony{
   flex-direction:column;
 
+
 }
 
 .testimonyContainer{
@@ -98,7 +99,16 @@ margin: 5%;
   width: 100%; 
   object-fit: cover;
 }
+.testimony p,
+.testimony h3,
+.testimony h4
+{
+font-size: 12px;
+}
 
+.testimony h1{
+  font-size: 16px;
+}
 }
   
   
