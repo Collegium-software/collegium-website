@@ -1,0 +1,25 @@
+.question-container{
+  color: black;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-bottom: solid;
+  border-width: 0.2vw;
+  border-image:  linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1; 
+}
+
+.faq-herobutton{
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+
+  .question-container h1,
+  .question-container h3,
+  .question-container p {
+    font-size: 12px;
+  }
+
+}
