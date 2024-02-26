@@ -19,8 +19,9 @@ const SingleProjectPage = () => {
       <div className="my-carousel"> 
       <SingleProjectCarousel/>
       </div>
+      <div>
       <SFooter/>
-
+      </div>
 
     </div>
 

@@ -34,6 +34,7 @@ import Login from "./pages/blogsForm/Login";
 import AllBlogs from "./pages/blogs/AllBlogs";
 import SurveyForm from "./pages/surveyForm/SurveyForm";
 import SingleUserStoryPage from "./pages/userStory/singleUserStory/SingleUserStoryPage"
+import FAQ from "./pages/FAQ/FAQ"
 
 function App() {
   return (
@@ -67,8 +68,12 @@ function App() {
         <Route path="blogs/blog10" element={<BlogTenDetails />} />
         <Route path="blogs-forms" element={<BlogsForm />} />
         <Route path="/survey" element={<SurveyForm />} />
+
         <Route path="/vendors" element={<Vendors />} />
         {/* <Route path="/project-team" element={<ProjectTeam />}/>  */}
+        <Route path="/faqs" element={<FAQ />} />
+
+
       </Routes>
     </Router>
   );
