@@ -1,97 +1,60 @@
-.innov-sustain {
+.innov-sustain-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #003459;
-    color: white;
-}
-.innovSustain-container {
-    display: flex;
-    justify-content:center;
-    align-items: flex-start;
     flex-direction: row;
-    padding: 4vw;
-
-}
-.gradient-div {
-    display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #1882FF, #36EBCA); 
-    flex: 1;
+    color: black;
+    padding: 3vw;
+    box-sizing: border-box;
+    gap: 3vw;
 }
 .innovation, .sustainability {
     display: flex;
-    justify-content: center;
-    align-items:left;
     flex-direction: column;
-    /* width: 50%; */
-    padding: 6vw;
-    /* border: solid red; */
-
+    justify-content: left;
+    align-items: left;
+    width: 50%;
+    padding: 1vw 5vw 1vw 3vw;
+    min-height: 35vw;
 }
-.innovation {
-    background-color: #003459;
-}
-.sustainability {
-    background-color: #003459;
-    margin-left: 1px;
-    /* border: solid red; */
-}
-
-.innov-sustain h2 {
-    font-size: 2vw;
-    margin-bottom: 2vw;
-}
-.innov-sustain p {
-    font-size: 1.2vw;
-}
-.sustain-img {
-    background: linear-gradient(to bottom, #1882FF, #36EBCA); 
+.sustain-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 18vh;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
 }
-.sustain-img img {
-    width: 99%;
-    height: 99%;
+.sustain-image img {
     object-fit: cover;
-
+    width: 100%;
+    height: 15vw;
+    filter: hue-rotate(120deg);
 }
 .sustain-button {
     display: flex;
-    margin-top: 3vw;
-    margin-left: auto;
-    
-
+    justify-content: flex-end;
+    align-items: center;
 }
 
 @media screen and (max-width: 768px) {
-    .innovSustain-container {
+    .innov-sustain-section { 
         flex-direction: column;
-        text-align: center;
+        gap: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
-    .innov-sustain h2 {
+    .innovation, .sustainability {
+        width: 300px;
+    }
+    .innovation h2, .sustainability h2 {
         font-size: 16px;
+        margin-bottom: 0;
     }
-    .innov-sustain p {
+    .innovation p, .sustainability p {
         font-size: 12px;
     }
-    .gradient-div {
-        background: linear-gradient(to right, #1882FF, #36EBCA); 
-    }
-    .sustainability {
-        margin-left: 0;
-        margin-top: 1px;
+    .sustain-image img {
+        height: 100px;
     }
     .sustain-button {
-        margin-left: initial;
-        justify-content: center;
-        align-items: center;
+        margin-top: 12px;
     }
-};
-    
+}

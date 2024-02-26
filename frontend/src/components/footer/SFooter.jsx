@@ -19,6 +19,7 @@ const SFooter = () => {
       name: "LinkedIn",
       image: linkedin,
       url: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAAYQRAYBz9jEogyxYeKlye59BsrDK5qMfd4&keywords=luke%20west%2C%20mba&origin=RICH_QUERY_SUGGESTION&position=0&searchId=7ca5b8f4-1da7-404f-bd99-acb5649c1679&sid=oSW&spellCorrectionEnabled=false",
+
     },
     {
       id: 2,

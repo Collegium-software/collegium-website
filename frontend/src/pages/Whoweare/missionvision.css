@@ -8,8 +8,7 @@
     padding-top: 4vw;
     padding-bottom: 4vw;
     box-sizing: border-box;
-
-
+    
 }
 
 .mv-main-container {
@@ -27,7 +26,7 @@
     align-items: center;
     background: linear-gradient(to right, #1882FF, #36EBCA); 
     width: 40vw;
-    height: 10vw;
+    height: 12vw;
     /* border: solid red; */
     position: relative;
 
@@ -67,8 +66,8 @@
 .mv-gradient {
     background: linear-gradient(to bottom, #1882FF, #36EBCA); 
     position: relative;
-    width: 25vw;
-    height: 25vw;
+    width: 30vw;
+    height: 35vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +79,6 @@
     width: 99%;
     height: 99%;
     position: relative;
-    cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   
 }
@@ -90,7 +88,7 @@
     object-fit: cover;
 }
 .grey-mask {
-    background: linear-gradient(to bottom, rgba(74, 83, 88, 0.7), rgba(53, 61, 66, 0.7)); 
+    background: linear-gradient(to right, rgba(74, 83, 88, 0.7) 80%, rgba(74, 83, 88, 0.4)); 
     width: 99.9%;
     height: 99.9%;
     position: absolute;
@@ -99,26 +97,21 @@
 .mission-text, .vision-text {
     position: absolute;
     color: white;
-    width: 70%;
+    width: 80%;
+    text-align: justify;
+    hyphens: auto;
+    
 }
 .mission-text h2, .vision-text h2 {
     color: #E0FBFC;
     margin-bottom: 4vw;
     font-size: 2vw;
+    text-align: center;
 }
 .mission-text p, .vision-text p{
    font-size: 1.2vw;
 }
 
-.mission:hover .grey-mask, .vision:hover .grey-mask{
-    background: rgba(224, 251, 252, 0.9);
-    
-}
-.mission:hover .mission-text, .vision:hover .vision-text,.mission:hover .mission-text h2, .vision:hover .vision-text h2{
-    color: black;
-    
-    
-}
 
 @media screen and (max-width: 768px) { 
     .mv-title-gradient {
