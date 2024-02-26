@@ -2,9 +2,9 @@ import React from "react";
 import "./solution.css";
 import Button from "../button/Button";
 
-import Vendors from "../../images/vendors.jpeg";
-import ProjectTeamImage from "../../images/ProjectTeam.png";
-import Owners from "../../images/owners/Owners.jpeg";
+import Vendors from "../../images/home/vendors.jpeg";
+import ProjectTeamImage from "../../images/home/projectTeam.jpeg";
+import Owners from "../../images/home/owners.jpeg";
 
 const Card = ({ imageUrl, label, description, to }) => {
   console.log('Rendering Card:', label);
