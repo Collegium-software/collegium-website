@@ -16,7 +16,9 @@ const SingleProjectPage = () => {
         <ContactCard/>
       </div>
       <SingleProject/>
+      <div className="my-carousel"> 
       <SingleProjectCarousel/>
+      </div>
       <SFooter/>
 
 

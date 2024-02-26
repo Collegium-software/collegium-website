@@ -22,7 +22,7 @@ const UserStory = (props) => {
       <p>{date}</p>
       </div>
       <div className="us-button">
-      <Button label="Learn More" color="black"/>
+      <Button label="Learn More" to="/userstory1" color="black"/>
       </div>
       </div>
     </div>

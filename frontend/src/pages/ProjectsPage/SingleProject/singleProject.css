@@ -9,6 +9,7 @@
   margin: 4vw;
   gap:4%;
   justify-content: center;
+  align-items: end;
   /* padding:2% */
   /* padding: 4vw;  */
 }
@@ -29,7 +30,7 @@
 
 .project-subtitle-text h2, 
 .project-subtitle-text p{
-  padding-bottom: 2%;
+  /* padding-bottom: 2%; */
 }
 
 .sp-main-text-container{

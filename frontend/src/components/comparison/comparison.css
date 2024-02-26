@@ -47,7 +47,7 @@
 
       .white-container{
         /* background-image: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%); */
-        /* background-image:url("../../images/comparison/blue-texture1.jpeg"); */
+        background-image:url("../../images/comparison/blue-texture1.jpeg");
         background-size: cover;
         background-repeat: no-repeat; /* This ensures the image is not repeated */
         background-position: center;
@@ -68,15 +68,15 @@
     
       }
 
-      .overlay{
+      /* .comparison-overlay{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.5);
 
-      }
+      } */
 
       .white-container li {
         color: black;
@@ -84,8 +84,7 @@
       .dark-container{
         /* background-image:linear-gradient( #1FC1C3,#0F0F0F); */
 
-       
-        /* background-image:url("../../images/comparison/darkBgr2.jpeg"); */
+        background-image:url("../../images/comparison/darkBgr2.jpeg"); 
         background-size: cover;
         background-color:#0F0F0F;
         color: white;

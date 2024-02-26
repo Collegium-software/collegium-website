@@ -1,15 +1,15 @@
 import React from "react";
 import "../../components/testimony1/testimony1.css";
 import Button from "../button/Button";
-// import testimonyPic from "../../images/testimony/testimonials2.jpeg";
-// import CustomerPic from "../../images/testimony/CustomerPic.png";
+import testimonyPic from "../../images/testimony/testimonials2.jpeg"
+import CustomerPic from "../../images/testimony/CustomerPic.png"
 
 const Testimony1 = () => (
   <div className="testimony">
     <div className="testimonyContainer">
-      <h1>Customer Story</h1>
+      <h1>User's Story</h1>
       <div className="client">
-        <img className="clientImage" src={"CustomerPic"} alt="Customer" />
+        <img className="clientImage" src={CustomerPic} alt="Customer" />
         <h3>Alan Main</h3>
         <h4>CEO of “Calgary Construction Co"</h4>
       </div>
@@ -21,12 +21,12 @@ const Testimony1 = () => (
           of the project.
         </p>
         <div className="testimonyButton">
-          <Button label="Read More" />
+          <Button label="Read More" to="/userstories"/>
         </div>
       </div>
     </div>
     <div className="testimonyImageContainer">
-      <img className="testimonyImage" src={"testimonyPic"} alt="Project" />
+      <img className="testimonyImage" src={testimonyPic} alt="Project" />
     </div>
   </div>
 );

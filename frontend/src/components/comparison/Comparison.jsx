@@ -63,7 +63,7 @@ const Comparison = () => {
               comparison. ​ That's Collegium.
             </p>
             <div className="comparisonButton">
-              <Button label="Contact Us" />
+              <Button label="Contact Us" to="/contactus"/>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ const Comparison = () => {
           {linkText.map((list) => (
             <MyList key={list.id} list={list} />
           ))}
-          <div class="overlay"></div>
+          <div className="comparison-overlay"></div>
         </div>
 
         <div className="dark-container">
@@ -83,7 +83,7 @@ const Comparison = () => {
             <MyList key={list.id} list={list} />
           ))}
         </div>
-        <div class="overlay"></div>
+        <div className="comparison-overlay"></div>
       </div>
     </section>
   );

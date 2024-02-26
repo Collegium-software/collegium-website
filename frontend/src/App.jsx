@@ -6,6 +6,10 @@ import Blog from "./components/blog/Blog";
 import Comparison from "./components/comparison/Comparison";
 import Testimony1 from "./components/testimony1/Testimony1";
 import Projects from "./components/projects/Projects";
+import ProjectsPage from "./pages/ProjectsPage/OurProjects/ProjectsPage";
+import SingleProject from "./pages/ProjectsPage/SingleProject/SingleProjectPage"
+import UsersStoriesPage from "./pages/userStory/UsersStoriesPage"
+
 import Footer from "./components/footer/SFooter";
 import Owners from "./pages/owners/Owners";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
@@ -28,6 +32,7 @@ import BlogsForm from "./pages/blogsForm/BlogsForm";
 import Login from "./pages/blogsForm/Login";
 import AllBlogs from "./pages/blogs/AllBlogs";
 import SurveyForm from "./pages/surveyForm/SurveyForm";
+import SingleUserStoryPage from "./pages/userStory/singleUserStory/SingleUserStoryPage"
 
 function App() {
   return (
@@ -38,11 +43,14 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/comparison" element={<Comparison />} />
         <Route path="/testimony" element={<Testimony1 />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<ProjectsPage/>} />
+        <Route path="/project1" element={<SingleProject/>} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/owners" element={<Owners />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/userstories" element={<UsersStoriesPage/>}/>
+        <Route path="/userstory1" element={<SingleUserStoryPage />} />
         <Route path="/admin/login" element={<Login />} />
         <Route path="/blogs/all-blogs" element={<AllBlogs />} />
         <Route path="/blogs" element={<Blogs />} />
@@ -76,6 +84,8 @@ const Home = () => (
     <Blog />
     <Testimony1 />
     <Footer />
+
+
   </>
 );
 

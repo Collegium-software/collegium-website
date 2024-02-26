@@ -21,7 +21,7 @@ const BlogCard = ({ title, description, label }) => (
       <h3 className="BlogHeadline">{title}</h3>
       <p className="mainParagraph">{description}</p>
       <div className="blogButton">
-        <Button label={label} />
+        <Button label={label} to="/blogs/all-blogs/"/>
       </div>
       <div className="author">
         <img className="LukeImage" src={LukeImage} alt="Luke West" />

@@ -38,8 +38,9 @@ const Carousel = () => {
 
   const settings = {
     // dots: true,
+    arrows:false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -59,9 +60,9 @@ const Carousel = () => {
       <h1 className='changing-text'>{changingTexts[changingTextIndex]}</h1>
 
       {changingTexts[changingTextIndex] ===  'Buyers Guide. Is a Collegium project right for you?' ? (
-        <div className="herButton"><Button label="Take the Survey"/></div>
+        <div className="herButton"><Button label="Take the Survey" to="/survey" /></div>
       ) : (
-        <div className="herButton"><Button label="Learn More"/></div>
+        <div className="herButton"></div>
       )}
     </div>
   );

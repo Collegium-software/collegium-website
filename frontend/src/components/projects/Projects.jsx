@@ -21,7 +21,7 @@ const Header = ({ title1, title2, label }) => {
       <h1>{title1}</h1>
       <h2>{title2}</h2>
       <div className="projectButton">
-        <Button color="black" label="Browse All Project"/></div>
+        <Button color="black" label="Browse All Project" to="/projects"/></div>
     </header>
   );
 };

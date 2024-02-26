@@ -3,7 +3,7 @@ import "./solution.css";
 import Button from "../button/Button";
 
 import Vendors from "../../images/vendors.jpeg";
-import ProjectTeamImage from "../../images/projectTeam.jpeg";
+import ProjectTeamImage from "../../images/ProjectTeam.png";
 import Owners from "../../images/owners/Owners.jpeg";
 
 const Card = ({ imageUrl, label, description, to }) => {
@@ -28,7 +28,7 @@ const Card = ({ imageUrl, label, description, to }) => {
 const Header = ({ title }) => {
   return (
     <header className="SolutionsHeader">
-      <h1>{title}</h1>
+      <h2>{title}</h2>
     </header>
   );
 };

@@ -8,6 +8,10 @@ import SFooter from "../../components/footer/SFooter";
 const AllBlogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
   useEffect(() => {
+    const locationReset = () => {
+      window.scrollTo(0, 0);
+    };
+    locationReset();
     const retrieveAllBlogs = async () => {
       try {
         const response = await fetch("/api/blogs");

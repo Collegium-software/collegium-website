@@ -1,0 +1,78 @@
+
+.us-ver-text-container{
+  color:black;
+  
+}
+.us-ver-gallery-container{
+  width: 90%;
+  margin: auto;
+ margin-top: 5%;
+  margin-bottom: 5%;
+}
+.us-ver-project-container {
+  align-items: center;
+ 
+  border: solid;
+  border-width: 0.2vw;
+  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
+  /* border: solid red; */
+}
+.us-ver-text-container{
+  width: 90%;
+  padding: 2%;
+  
+}
+.us-ver-image-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.us-ver-image-container{
+  flex: 1; /* Allow image container to grow */
+  overflow: hidden; /* Ensure content overflow is hidden */
+  height: 200px; /* Set a specific height for image container */
+  padding: 2%;
+}
+
+.user-story-vertical-gallery-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5%;
+}
+
+.us-ver-text-container {
+ 
+  display: flex;
+  flex-direction: column; /* Ensure children stack vertically */
+}
+
+.ver-date-button-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin-top: auto; 
+}
+
+.ver-date-button-container p {
+  margin: 0; 
+}
+
+.ver-us-button {
+  align-self: flex-end; 
+}
+.us-ver-text-container p {
+  max-height: 100px; /* Adjust this value as needed */
+  overflow: hidden;
+}
+
+
+@media only screen and (max-width: 768px) { 
+  .user-story-vertical-gallery-container {
+  display: block
+  
+    
+  }
+}
