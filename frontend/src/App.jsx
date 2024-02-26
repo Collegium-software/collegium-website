@@ -18,6 +18,7 @@ import Blogs from "./pages/blogs/Blogs";
 import Navbar from "./components/navbar/Navbar";
 
 import ContactUs from "./pages/contactUs/ContactUs";
+import CareersPage from "./pages/careers/CareersPage";
 
 import BlogOneDetails from "./pages/blogs/BlogOneDetails";
 import BlogTwoDetails from "./pages/blogs/BlogTwoDetails";
@@ -69,8 +70,8 @@ function App() {
         <Route path="blogs-forms" element={<BlogsForm />} />
         <Route path="/survey" element={<SurveyForm />} />
 
+        <Route path="careers" element={<CareersPage />} />
         <Route path="/vendors" element={<Vendors />} />
-        {/* <Route path="/project-team" element={<ProjectTeam />}/>  */}
         <Route path="/faqs" element={<FAQ />} />
 
 

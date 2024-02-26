@@ -1,7 +1,7 @@
 import "./careers.css";
 import Button from "../../components/button/Button";
 import { useState, useEffect } from 'react';
-import careersData from "../../data/careers.json"; // Import the JSON data
+import careersData from "../../data/careers.json"; 
 
 const Careers = () => {
   const [careers, setCareers] = useState([]);
