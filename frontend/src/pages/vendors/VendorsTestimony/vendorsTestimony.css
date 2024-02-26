@@ -2,13 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items:center;
+  justify-content: center;
   background-color: #F6FCFC;
   color:black;
-  padding-bottom:20vh;
+  padding:5vw 0vw 8vw 0vw;
 }
+
 .vendors-Testimony-Page h2 {
-  padding-bottom:10vh;
-}
+  padding: 6vw 0vw 3vw 0vw;
+  font-size: 2vw;
+  }
+
+
 .vendors-Partners-Container {
   display: flex;
   flex-direction: row;
@@ -25,40 +30,36 @@
   justify-content: center;
 }
 
-.vendorsTestimonyHeader{
-  width:100vw;
-  Padding:10vh 0vw 10vh 0vw;
+.vendorsTestimonyHeader h1{
+  margin-bottom:0vw;
+  font-size: 3vw;
+  font-weight: bolder;
 }
 
 .vendorsTestimonyHeader p{
-  margin-top:5vh;
-  font-size: 1.3vw;
-}
-
-.vendorsTestimonyHeader h1{
-  margin-bottom:0vh;
-  font-size: 4vw;
-  font-weight: bolder;
+  margin-top:3vw;
+  font-size: 1.5vw;
 }
 
 .vendorsPartners{
   display:flex;
   flex-direction: column;
   justify-items: center;
+  align-items: center;
   width:15vw;
 }
 .vendorsPartners p{
   margin:0;
-  font-size: 1.3vw;
+  font-size: 1.2vw;
 }
 
-.PartnersImage{
+.vendorsPartnersImage{
   width:100%;
-  height:8vw;
+  height:6vw;
   margin-bottom:1vh;
 }
 
-.PartnersImage img{
+.vendorsPartnersImage img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -81,31 +82,14 @@
       max-width: none; 
     }
     .vendorsPartners{
-      width:80%;
+      width:60%;
+      height:25vw;
       max-width: none; 
       height:auto;
     }
 
-    .PartnersImage{
-      width:80%;
+    .vendorsPartnersImage{
+      width:50%;
     }
-  
-  
-  .vendors-Testimony-Page h2{
-    font-size: 16px;
-  }
 
-  .vendorsTestimonyHeader p{
-  font-size: 12px;
-  margin-bottom: 10px;
-  }
-  .vendorsTestimonyHeader h1{
-    font-size: 17px;
-    
-  }
-  .vendorsPartners p{
-    font-size: 12px;
-    padding: 10px;
-  } 
-  
   }

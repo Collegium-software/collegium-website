@@ -1,4 +1,3 @@
-
 .ownerServicesPage {
   display: flex;
   flex-direction: column;
@@ -19,7 +18,6 @@
   font-size: 2.5vw;
 }
 
-
 /* Main-container */
 .servicesContainer {
   display: flex;
@@ -33,7 +31,6 @@
   display: flex;
   flex-direction: column;
   width: 60vw; 
-
   height:40vw;
   padding-bottom: 2vw;
   margin:auto;
@@ -54,7 +51,6 @@
 .contentContainer p {
   margin: 0vw;
   font-size: 1.2vw;
-
 }
 
 /* Sidebar-services-container */

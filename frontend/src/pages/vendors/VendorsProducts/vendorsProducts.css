@@ -2,22 +2,20 @@
   display: grid;
   background-color: #F6FCFC;
   color: black;
-  /* padding: 5vw 8vw; */
-  width:100vw;
-  text-align: center;
 }
 
 .vendors-Products-Page h1 {
-  padding: 10vh;
-  font-size: 3vw;
+  padding: 3vw;
+  font-size: 2.5vw;
+  text-align: center;
 }
 
 .products-Container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17vw, 1fr));
   row-gap: 5vw; 
   column-gap: 10vw; 
-  padding: 1vw 5vw 8vw 5vw;
+  padding: 1vw 8vw 4vw 8vw;
 }
 
 .product{
@@ -25,25 +23,28 @@
   flex-direction: column;
   justify-items: center;
 } 
-
 .product
 p {
-  font-size: 1vw; 
-  margin-top:0vw;
+  font-size: 1.2vw;
+  margin:0vw;
 }
-.product
-h3 {
+.product h4 {
   font-size: 1.5vw; 
+  margin:0.5vw;
+  text-align: center;
 }
- .productImage {
-  height: 15vh;
-  width: 100%;
-} 
 
+.productImage {
+  width: 25%;
+  max-width: 25%; 
+  height: auto; 
+  margin:auto;
+  color:black;
+}
 .productImage img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain; /* Keeps the aspect ratio and fits the entire SVG within the container */
   border: none;
 }
 
@@ -66,4 +67,3 @@ h3 {
       font-size: 12px; 
     }
 } 
-

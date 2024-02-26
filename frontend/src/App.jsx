@@ -12,6 +12,7 @@ import UsersStoriesPage from "./pages/userStory/UsersStoriesPage"
 
 import Footer from "./components/footer/SFooter";
 import Owners from "./pages/owners/Owners";
+import Vendors from "./pages/vendors/Vendors";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";
 import Navbar from "./components/navbar/Navbar";
@@ -66,9 +67,8 @@ function App() {
         <Route path="blogs/blog10" element={<BlogTenDetails />} />
         <Route path="blogs-forms" element={<BlogsForm />} />
         <Route path="/survey" element={<SurveyForm />} />
-
-        {/* <Route path="/vendors" element={<Vendors />} />
-        <Route path="/project-team" element={<ProjectTeam />} /> */}
+        <Route path="/vendors" element={<Vendors />} />
+        {/* <Route path="/project-team" element={<ProjectTeam />}/>  */}
       </Routes>
     </Router>
   );

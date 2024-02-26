@@ -1,62 +1,65 @@
-
-
 import React from 'react';
-import './vendorsProducts.css';
+import './vendorsProducts.css'; // Updated CSS file name
 
-import VendorsPic1 from '../../../images/vendors/ownersPic1.png';
-import VendorsPic2 from '../../../images/vendors/ownersPic2.png';
-import VendorsPic3 from '../../../images/vendors/ownersPic3.png';
+
+import TenderManagement from '../../../images/owners/TenderManagement.png'; 
+import InvoiceManagement from '../../../images/owners/InvoiceManagement.png'; 
+import ProjectManagement from '../../../images/owners/ProjectManagement.png'; 
+import ProjectFinancial from '../../../images/owners/ProjectFinancial.png';
+import QualitySafety from '../../../images/owners/QualitySafety.png'; 
+import Analytics from '../../../images/owners/Analytics.png'; 
+
 
 const Product = ({ id, imageUrl, title, description }) => (
   <div id={id} className="product">
     <div className="productImage"><img src={imageUrl} alt={title} /></div>
-    <h3>{title}</h3>
+    <h4>{title}</h4>
     <p>{description}</p>
   </div>
 );
 
-const VendorsProducts = () => {
+const VendorsProducts = () => { // Updated component name
   const productsData = [
     {
       id: 1,
-      imageUrl: VendorsPic1,
+      imageUrl: TenderManagement,
       title: "Tender Management",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 2,
-      imageUrl: VendorsPic2,
+      imageUrl: InvoiceManagement,
       title: "Invoice Management",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 3,
-      imageUrl: VendorsPic3,
-      title: "Project Financials",
+      imageUrl: ProjectFinancial,
+      title: "Project Financial",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 4,
-      imageUrl: VendorsPic1,
+      imageUrl:ProjectManagement,
       title: " Project Management",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 5,
-      imageUrl: VendorsPic2,
+      imageUrl: QualitySafety,
       title: "Quality & Safety",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 6,
-      imageUrl: VendorsPic3,
+      imageUrl: Analytics,
       title: "Analytics",
       description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     }
   ];
 
   return (
-    <div className="vendors-Products-Page">
+    <div className="vendors-Products-Page"> {/* Updated class name */}
       <h1>Our products purposefully built for you</h1>
       <div className="products-Container">
         {productsData.map((product) => (
@@ -72,4 +75,4 @@ const VendorsProducts = () => {
   );
 };
 
-export default VendorsProducts;
+export default VendorsProducts; // Updated component name

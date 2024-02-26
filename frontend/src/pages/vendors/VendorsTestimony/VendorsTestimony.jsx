@@ -1,27 +1,30 @@
 import React from 'react';
 import './vendorsTestimony.css';
+
+import Partner1 from '../../../images/owners/Cetana.png';
+import Partner2 from '../../../images/owners/nextArch.png';
+import Partner3 from '../../../images/owners/MCWLogo.png';
+import Partner4 from '../../../images/owners/Smoky Lake .png';
 import Line from '../../../components/Line';
 
-import VendorsPic1 from '../../../images/vendors/ownersPic1.png';
-import VendorsPic2 from '../../../images/vendors/ownersPic2.png';
-import VendorsPic3 from '../../../images/vendors/ownersPic3.png';
 
 const VendorsTestimonyHeader = () => {
-return(
-  <div className="vendorsTestimonyHeader">
-    <h1>"R. Buckminster Fuller"</h1>
-    <Line blackLine />
-    <p>“This is the placeholder for the testimonial. A great testimonial can boost your brand’s image.”</p>
-  </div>
-)};
+  return(
+    <div className="vendorsTestimonyHeader">
+      <h1>"Andrew Bowerbank"</h1>
+      <Line blackLine />
+      <p>“We are thrilled with our partnership with Collegium." - CEO OF CETANA</p>
+    </div>
+  );
+};
 
 
 const VendorsPartners = ({ imageUrl, title }) => {
   return (
-      <div className="vendorsPartners">
-        <div className="PartnersImage"><img src={imageUrl} alt={title} /></div> 
-        <p>{title}</p>
-      </div>
+    <div className="vendorsPartners">
+      <div className="vendorsPartnersImage"><img src={imageUrl} alt={title} /></div> 
+      <p>{title}</p>
+    </div>
   );
 };
 
@@ -29,27 +32,27 @@ const VendorsTestimony = () => {
   return (
     <div className="vendors-Testimony-Page">
       <VendorsTestimonyHeader />
-      <h2>Vendors Trust Us</h2>
+      <h2 className="vendorsSubheader">Vendors Trust Us</h2>
       <div className="vendors-Partners-Container ">
         <VendorsPartners
-          imageUrl={VendorsPic1}
-          title="Partner 1"
+          imageUrl={Partner1}
+          title="CETANA GROUP"
         />
         <VendorsPartners
-          imageUrl={VendorsPic2}
-          title="Partner 2"
+          imageUrl={Partner2}
+          title="NEXT ARCHITECTURE"
         />
         <VendorsPartners
-          imageUrl={VendorsPic3}
-          title="Partner 3"
+          imageUrl={Partner3}
+          title="MCW ENGINEERING"
         />
         <VendorsPartners
-          imageUrl={VendorsPic3}
-          title="Partner 4"
+          imageUrl={Partner4}
+          title="SMOKY LAKE"
         />
       </div>
     </div>
   );
 };
 
-export default VendorsTestimony
+export default VendorsTestimony;
