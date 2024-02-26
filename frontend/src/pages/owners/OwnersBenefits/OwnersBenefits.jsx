@@ -1,22 +1,20 @@
 import React from 'react';
 import './ownersBenefits.css';
 
-import OwnersPic1 from '../../../images/owners/ownersPic1.png';
-import OwnersPic2 from '../../../images/owners/ownersPic2.png';
-import OwnersPic3 from '../../../images/owners/ownersPic3.png';
-
+import OwnersPic1 from '../../../images/owners/ownersProjectPic1.png';
+import OwnersPic2 from '../../../images/owners/ownersProjectPic2.png';
+import OwnersPic3 from '../../../images/owners/ownersProjectPic3.png';
 
 
 const BenefitsContainer = ({ imageUrl, label, description }) => (
   <div className="benefitsContainer">
     <div className="imageContainer" alt={label} style={{ backgroundImage: `url(${imageUrl})` }}>
-    {/* <div className="imageContainer"> */}
-      {/* <img src={imageUrl} className="benefitsImage" alt={label} /> */}
       <div className="image-label">{label}</div>
     </div>
     <p>{description}</p>
   </div>
 );
+
 
 
 const Owners = () => {

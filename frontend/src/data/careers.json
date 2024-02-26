@@ -1,0 +1,40 @@
+{
+  "careers": [
+    {
+      "id": 1,
+      "title": "Software Engineer",
+      "description": "We're looking for a skilled software engineer to join our team and embark on an exciting journey of building cutting-edge applications that make a real impact....",
+      "author": "John Doe",
+      "date": "2022-02-21",
+      "button": {
+        "label": "Apply Now",
+        "color": "black",
+        "to": "/apply/software-engineer"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Marketing Specialist",
+      "description": "Are you a strategic thinker with a passion for marketing and a drive to make an impact? Join our team as a marketing specialist and play a key role in shaping our brand's success. ",
+      "author": "Jane Smith",
+      "date": "2022-02-22",
+      "button": {
+        "label": "Apply Now",
+        "color": "black",
+        "to": "/apply/marketing-specialist"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Copy Writer",
+      "description": "Are you a wordsmith with a flair for storytelling and a knack for captivating an audience? Join our team as a copywriter and unleash your creativity to craft compelling content that resonates with our audience. ",
+      "author": "Jane Smith",
+      "date": "2022-02-22",
+      "button": {
+        "label": "Apply Now",
+        "color": "black",
+        "to": "/apply/copy-writer"
+      }
+    }
+  ]
+}

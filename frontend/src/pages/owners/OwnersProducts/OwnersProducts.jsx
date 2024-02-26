@@ -1,18 +1,19 @@
-import React from "react";
-import "./ownersProducts.css";
 
-// import TenderManagement from "../../../images/owners/TenderManagement.png";
-// import InvoiceManagement from "../../../images/owners/InvoiceManagement.png";
-// import ProjectManagement from "../../../images/owners/ProjectManagement.png";
-// import ProjectFinancial from "../../../images/owners/ProjectFinancial.png";
-// import QualitySafety from "../../../images/owners/QualitySafety.png";
-// import Analytics from "../../../images/owners/Analytics.png";
+import React from 'react';
+import './ownersProducts.css';
+
+
+import TenderManagement from '../../../images/owners/TenderManagement.png';
+import InvoiceManagement from '../../../images/owners/InvoiceManagement.png';
+import ProjectManagement from '../../../images/owners/ProjectManagement.png';
+import ProjectFinancial from '../../../images/owners/ProjectFinancial.png';
+import QualitySafety from '../../../images/owners/QualitySafety.png';
+import Analytics from '../../../images/owners/Analytics.png';
+
 
 const Product = ({ id, imageUrl, title, description }) => (
   <div id={id} className="product">
-    <div className="productImage">
-      <img src={imageUrl} alt={title} />
-    </div>
+    <div className="productImage"><img src={imageUrl} alt={title} /></div>
     <h4>{title}</h4>
     <p>{description}</p>
   </div>
@@ -22,46 +23,40 @@ const OwnersProducts = () => {
   const productsData = [
     {
       id: 1,
-      imageUrl: "TenderManagement",
+      imageUrl: TenderManagement,
       title: "Tender Management",
-      description:
-        "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 2,
-      imageUrl: "InvoiceManagement",
+      imageUrl: InvoiceManagement,
       title: "Invoice Management",
-      description:
-        "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 3,
-      imageUrl: "ProjectFinancial",
+      imageUrl: ProjectFinancial,
       title: "Project Financial",
-      description:
-        "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 4,
-      imageUrl: "ProjectManagement",
+      imageUrl:ProjectManagement,
       title: " Project Management",
-      description:
-        "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 5,
-      imageUrl: "QualitySafety",
+      imageUrl: QualitySafety,
       title: "Quality & Safety",
-      description:
-        "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
     },
     {
       id: 6,
-      imageUrl: "Analytics",
+      imageUrl: Analytics,
       title: "Analytics",
-      description:
-        "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
-    },
+      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+    }
   ];
 
   return (
@@ -82,3 +77,4 @@ const OwnersProducts = () => {
 };
 
 export default OwnersProducts;
+
