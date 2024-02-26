@@ -90,7 +90,8 @@
         flex-direction: column;
     }
     .team-title {
-        margin-top: 10px;        
+        margin-top: 10px; 
+        margin-bottom: 10px;       
     }
     .team-title h2 {
         font-size: 16px; 

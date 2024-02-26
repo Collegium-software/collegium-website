@@ -49,13 +49,15 @@ const MissionVision = () => {
                 <div className="vision-text">
                   <h2>Vision</h2>
                   <p>
-                    At Collegium, we revolutionize Real Estate Development by
-                    addressing complex projects wihtout using traditional manual
-                    processes. Through advanced digital tools, we streamline
-                    contract writing, expedite cash flow, optimize supply chain
-                    efficiency, and ensure fair costs aligned with stakeholder
-                    interests. Our mission is to consistently deliver Real
-                    Estate Development projects with unparalleled outcomes.
+                    In envisioning the future, Collegium pioneers the evolution
+                    of Real Estate Development, replacing traditional manual
+                    processes with cutting-edge digital tools. Our vision is to
+                    set a new standard, streamlining contract writing,
+                    expediting cash flow, and optimizing supply chain
+                    efficiency, all while ensuring fairness in costs aligned
+                    with stakeholder interests. Collegium aims to consistently
+                    deliver unparalleled outcomes, redefining excellence in the
+                    dynamic landscape of Real Estate Development.
                   </p>
                 </div>
               </div>

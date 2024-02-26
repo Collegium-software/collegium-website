@@ -19,6 +19,11 @@ import BlogTwoDetails from "./pages/blogs/BlogTwoDetails";
 import BlogThreeDetails from "./pages/blogs/BlogThreeDetails";
 import BlogFourDetails from "./pages/blogs/BlogFourDetails";
 import BlogFiveDetails from "./pages/blogs/BlogFiveDetails";
+import BlogSixDetails from "./pages/blogs/BlogSixDetails";
+import BlogSevenDetails from "./pages/blogs/BlogSevenDetails";
+import BlogEightDetails from "./pages/blogs/BlogEightDetails";
+import BlogNineDetails from "./pages/blogs/BlogNineDetails";
+import BlogTenDetails from "./pages/blogs/BlogTenDetails";
 import BlogsForm from "./pages/blogsForm/BlogsForm";
 import Login from "./pages/blogsForm/Login";
 import AllBlogs from "./pages/blogs/AllBlogs";
@@ -46,6 +51,11 @@ function App() {
         <Route path="blogs/blog3" element={<BlogThreeDetails />} />
         <Route path="blogs/blog4" element={<BlogFourDetails />} />
         <Route path="blogs/blog5" element={<BlogFiveDetails />} />
+        <Route path="blogs/blog6" element={<BlogSixDetails />} />
+        <Route path="blogs/blog7" element={<BlogSevenDetails />} />
+        <Route path="blogs/blog8" element={<BlogEightDetails />} />
+        <Route path="blogs/blog9" element={<BlogNineDetails />} />
+        <Route path="blogs/blog10" element={<BlogTenDetails />} />
         <Route path="blogs-forms" element={<BlogsForm />} />
         <Route path="/survey" element={<SurveyForm />} />
 
@@ -66,7 +76,6 @@ const Home = () => (
     <Blog />
     <Testimony1 />
     <Footer />
-    <ContactUs />
   </>
 );
 

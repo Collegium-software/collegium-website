@@ -97,12 +97,16 @@
 .mission-text, .vision-text {
     position: absolute;
     color: white;
-    width: 70%;
+    width: 80%;
+    text-align: justify;
+    hyphens: auto;
+    
 }
 .mission-text h2, .vision-text h2 {
     color: #E0FBFC;
     margin-bottom: 4vw;
     font-size: 2vw;
+    text-align: center;
 }
 .mission-text p, .vision-text p{
    font-size: 1.2vw;
