@@ -1,5 +1,5 @@
-.la-sng-heroSection {
-  background-image: url("../../../images/projectsPage/Hero-Single-Project.png");
+.faq-sng-heroSection {
+  background-image: url("../../images/FAQ/FaqHero.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -17,16 +17,16 @@
 @media screen and (max-width: 768px) {
   
   
-  .sng-project-container p,
-  .sng-project-container h3,
-  .sng-project-container h2,
-  .sng-project-container h4 {
-    font-size: 12px;
+  .faq-project-container p,
+  .faq-project-container h3,
+  .faq-project-container h2,
+  .faq-project-container h4 {
+  font-size: 12px;
 
   }
   
 
-  .sng-project-container h1{
+  .faq-project-container h1{
     font-size: 16px;
   }
 

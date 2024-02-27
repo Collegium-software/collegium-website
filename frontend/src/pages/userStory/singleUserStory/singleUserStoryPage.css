@@ -88,4 +88,17 @@ margin-bottom: 2%;
 
 @media screen and (max-width: 768px) {
   
+  
+  .userstorydetails p,
+  .userstorydetails h3,
+  .userstorydetails h4 {
+    font-size: 12px;
+
+  }
+  
+
+  .userstorydetails h1{
+    font-size: 16px;
+  }
+
 }

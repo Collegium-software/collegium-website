@@ -12,11 +12,13 @@ import UsersStoriesPage from "./pages/userStory/UsersStoriesPage"
 
 import Footer from "./components/footer/SFooter";
 import Owners from "./pages/owners/Owners";
+import Vendors from "./pages/vendors/Vendors";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";
 import Navbar from "./components/navbar/Navbar";
 
 import ContactUs from "./pages/contactUs/ContactUs";
+import CareersPage from "./pages/careers/CareersPage";
 
 import BlogOneDetails from "./pages/blogs/BlogOneDetails";
 import BlogTwoDetails from "./pages/blogs/BlogTwoDetails";
@@ -33,6 +35,7 @@ import Login from "./pages/blogsForm/Login";
 import AllBlogs from "./pages/blogs/AllBlogs";
 import SurveyForm from "./pages/surveyForm/SurveyForm";
 import SingleUserStoryPage from "./pages/userStory/singleUserStory/SingleUserStoryPage"
+import FAQ from "./pages/FAQ/FAQ"
 
 function App() {
   return (
@@ -67,8 +70,11 @@ function App() {
         <Route path="blogs-forms" element={<BlogsForm />} />
         <Route path="/survey" element={<SurveyForm />} />
 
-        {/* <Route path="/vendors" element={<Vendors />} />
-        <Route path="/project-team" element={<ProjectTeam />} /> */}
+        <Route path="careers" element={<CareersPage />} />
+        <Route path="/vendors" element={<Vendors />} />
+        <Route path="/faqs" element={<FAQ />} />
+
+
       </Routes>
     </Router>
   );
