@@ -11,7 +11,7 @@ const FaqHero = () => {
           <h3>Find Answers Here to Your Question</h3>
           
           <div className="faq-herobutton">
-            <Button label="Contact Us" />
+            <Button label="Contact Us" to="/contactus"/>
           </div>
         </div>
       </div>
