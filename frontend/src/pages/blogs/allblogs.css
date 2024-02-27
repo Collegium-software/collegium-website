@@ -70,7 +70,14 @@
     align-items: center;
     margin-bottom: 2vw;
 }
-
+.noblog {
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 @media screen and (max-width: 768px) {
     .myBlog-container{
         flex-direction: column;
@@ -104,5 +111,9 @@
     }
     .myBlog-button {
         margin-bottom: 0;
+    }
+    .no-blog {
+       font-size: 16px;
+        
     }
 }
