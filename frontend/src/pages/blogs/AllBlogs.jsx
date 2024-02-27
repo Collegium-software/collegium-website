@@ -7,6 +7,7 @@ import SFooter from "../../components/footer/SFooter";
 
 const AllBlogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
+  const [zeroBlog, setZeroBlog] = useState(false);
   useEffect(() => {
     const locationReset = () => {
       window.scrollTo(0, 0);
@@ -31,9 +32,13 @@ const AllBlogs = () => {
   const sortedBlogs = allBlogs
     .slice()
     .sort((a, b) => new Date(b.date) - new Date(a.date));
+
   console.log("Sorted Blogs: ", sortedBlogs);
 
   const Blog = ({ blog }) => {
+    if (allBlogs.length === 0) {
+      setZeroBlog(true);
+    }
     return (
       <div className="myBlog-gradient">
         <div className="myBlog-container">
@@ -65,6 +70,14 @@ const AllBlogs = () => {
         title="All Blogs"
         subtitle="Insights & Updates"
       />
+      {zeroBlog && (
+        <div className="noblog">
+          <h4>
+            Sorry! no blog to display at the moment. Please visit the page
+            later.
+          </h4>
+        </div>
+      )}
       <div className="all-blogs-section">
         {sortedBlogs.map((blog) => (
           <Blog key={blog.id} blog={blog} />
