@@ -14,7 +14,7 @@ const OurProjectsHero = () => {
           Welcome to our Projects section, where we take pride in showcasing the diverse range of construction endeavors we've undertaken, each representing our commitment to excellence, innovation, and client satisfaction. 
           </p>
           <div className="la-herobutton">
-            <Button label="Contact Us" />
+            <Button label="Contact Us"to="/contactus"/>
           </div>
         </div>
       </div>
