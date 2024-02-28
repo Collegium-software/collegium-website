@@ -90,17 +90,14 @@
   }
   
   .solutionButton Button {
-    margin-left: initial;
-    justify-content: center;
-    align-items: center;
-}
+    max-width:15px;
   
 } 
 
 
 
 
-
+ }
 
   
 

@@ -1,0 +1,124 @@
+.projectteamServicesPage { /* Updated class name */
+  display: flex;
+  flex-direction: column;
+  background-color: #0a253b;
+  gap: 2vw;
+  padding: 0vw 5vw 0vw 5vw;
+}
+
+/* Header */
+.servicesHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 5vh;
+}
+
+/* Main-container */
+.servicesContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Content-container */
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60vw; 
+  padding-bottom: 10vh;
+  margin: auto;
+}
+
+.contentContainer h3 {
+  margin-top: 0.9vw;
+  font-size: 1.5vw;
+}
+
+.contentContainer p {
+  margin: 0;
+  font-size: 1.3vw;
+}
+
+/* Sidebar-services-container */
+.services {
+  width: 25vw; 
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.services p {
+  margin-bottom: 1vw;
+  font-size: 1.3vw;
+}
+
+.serviceImageContainer {
+  margin-top: 3vw;
+  width: 95%; 
+  border: 0.5vh solid;
+  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border-image-slice: 1;
+}
+
+.serviceImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ServicesButton */
+.ServicesButton {
+  display: flex;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .projectteamServicesPage { /* Updated class name */
+    display: flex;
+    align-items: center;
+  }
+  .servicesHeader {
+    width: 80%;
+  }
+
+  .servicesHeader h1 {
+    font-size: 20px;
+  }
+  
+  .servicesContainer {
+    display: flex;
+    flex-direction: column; 
+    gap: 3vw;
+    width: 80%;
+  }
+  
+  .services {
+    /* display: flex;
+    flex-direction: row; */
+    width: 80%;
+    height: 20%;
+    margin: 0;
+  }
+  
+  .services p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .contentContainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: auto;
+  }
+  
+  .contentContainer p {
+    font-size: 12px;
+  }
+  
+  .contentContainer h3 {
+    font-size: 18px;
+  }
+}

@@ -9,7 +9,7 @@ const VendorHeader = ({ title1, title2, description, label }) => (
     <h1 className="title">{title1}</h1>
     <h3 className="subtitle-">{title2}</h3>
     <p>{description}</p>
-    <div className="vendorsHeaderButton"><Button label={label} /></div>
+    <div className="vendorsHeaderButton"><Button label={label} to="/contactus" /></div>
   </header>
 );
 
