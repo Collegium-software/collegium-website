@@ -89,3 +89,5 @@ const AllBlogs = () => {
 };
 
 export default AllBlogs;
+
+//to fetch all blogs from the database.
