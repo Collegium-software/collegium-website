@@ -1,5 +1,7 @@
 import React from "react";
 import "./contactUsForm.css"
+import { useEffect } from 'react';
+
 
 
 import Button from "../../components/button/Button";
@@ -8,6 +10,12 @@ import Image3 from "../../images/contactUs/Rectangle 1.png"
 
 
 const ContactUsForm = () => {
+
+  useEffect(() => {
+    // Reset form fields when the component mounts
+    document.getElementById("form").reset();
+  }, []); //
+
   return (
 
 
@@ -22,7 +30,7 @@ const ContactUsForm = () => {
      
     
     <div className="contact-us-form">
-    <form action="https://api.web3forms.com/submit" method="POST">
+    <form id="form"action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="e45112b0-46e4-453f-aab9-aced02807209"/>
       <div className="main-form">
       <div className="main-form1">
@@ -44,7 +52,7 @@ const ContactUsForm = () => {
      <div className="checkbox-container">
     
       <div> 
-        <p>What best describes your company?*</p>
+        <p>What best describes your company?</p>
         
  
       <input type="checkbox" id="real-estate-dev" name="Real Estate Developer" value="yes"/>
@@ -78,9 +86,7 @@ const ContactUsForm = () => {
 </div> 
 </form>
     </div>
-{/* <div className="graphics-container">
-   <img src={BackgroundImage} alt="" /> 
-   </div> */}
+
 
   </div>
    );
@@ -88,5 +94,9 @@ const ContactUsForm = () => {
 
    
 }
- 
+
+
+
+
+
 export default ContactUsForm;
