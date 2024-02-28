@@ -1,0 +1,93 @@
+.projectteams-Testimony-Page { /* Updated class name */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6FCFC;
+  color: black;
+  padding: 5vw 0vw 8vw 0vw;
+}
+
+.projectteams-Testimony-Page h2 { /* Updated class name */
+  padding: 6vw 0vw 3vw 0vw;
+  font-size: 2vw;
+}
+
+.projectteams-Partners-Container { /* Updated class name */
+  display: flex;
+  flex-direction: row;
+  gap: 10vw;
+  align-items: center;
+}
+
+.projectteamsTestimonyHeader,
+.projectteamsPartners { /* Updated class names */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectteamsTestimonyHeader h1 { /* Updated class name */
+  margin-bottom: 0vw;
+  font-size: 3vw;
+  font-weight: bolder;
+}
+
+.projectteamsTestimonyHeader p { /* Updated class name */
+  margin-top: 3vw;
+  font-size: 1.5vw;
+}
+
+.projectteamsPartners { /* Updated class name */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 15vw;
+}
+
+.projectteamsPartners p { /* Updated class name */
+  margin: 0;
+  font-size: 1.2vw;
+}
+
+.projectteamsPartnersImage {
+  width: 100%;
+  height: 6vw;
+  margin-bottom: 1vh;
+}
+
+.projectteamsPartnersImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .projectteamsTestimonyHeader { /* Updated class name */
+    width: 70%;
+    height: auto;
+    text-align: center;
+  }
+  
+  .projectteams-Partners-Container { /* Updated class name */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: none; 
+  }
+  
+  .projectteamsPartners { /* Updated class name */
+    width: 60%;
+    height: 25vw;
+    max-width: none; 
+    height: auto;
+  }
+
+  .projectteamsPartnersImage {
+    width: 50%;
+  }
+}

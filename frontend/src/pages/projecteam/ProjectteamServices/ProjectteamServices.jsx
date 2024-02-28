@@ -1,8 +1,8 @@
-
 import React from 'react';
-import './ownersServices.css';
+import './projectteamServices.css'; 
 import Button from "../../../components/button/Button";
-import ownersGraph from '../../../images/owners/ownersGraph.png';
+import { Link } from 'react-router-dom';
+import ownersGraph from "../../../images/owners/ownersGraph.png";
 
 const ServicesHeader = ({ title, label }) => (
   <header className="servicesHeader">
@@ -26,11 +26,11 @@ const ServicesContainer = ({ imageUrl, label }) => (
   </section>
 );
 
-const OwnerServices = () => (
-  <div className="ownerServicesPage">
+const ProjectteamServices = () => ( 
+  <div className="projectteamServicesPage">
     <ServicesHeader title="What We Can Do" label="Contact Us" />
     <ServicesContainer imageUrl={ownersGraph} label="Contact" />
   </div>
 );
 
-export default OwnerServices;
+export default ProjectteamServices; 

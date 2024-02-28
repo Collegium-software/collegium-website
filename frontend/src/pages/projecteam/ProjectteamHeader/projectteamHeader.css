@@ -1,0 +1,82 @@
+.projectteam-Header-Page { /* Updated class name */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color:white;
+  background-image: url(../../../images/projectteam/projectteamHeader.jpeg); /* Updated path */
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  box-sizing: border-box;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+ filter: grayscale(90%);
+}
+
+.projectteamHeader { /* Updated class name */
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 16vw;
+}
+
+.projectteamHeader h1 { /* Updated class name */
+  font-size: 3vw;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+.projectteamHeader h3 { /* Updated class name */
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+  font-size: 1.8vw;
+}
+
+.projectteamHeader h4 { /* Updated class name */
+  font-size: 1vw;
+  padding-bottom:1vw;
+}
+
+.projectteamHeader p { /* Updated class name */
+  line-height: 2vw;
+  font-size: 1.2vw;
+}
+
+.projectteamHeaderButton { /* Updated class name */
+  margin-top: 2vw;
+}
+
+.projectteamHeaderCard { /* Updated class name */
+  position: absolute;
+  height: 30%;
+  left: 60%;
+  top: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .projectteamHeader { /* Updated class name */
+    text-align: left;
+    align-items:left;
+    width: 70%;
+  }
+
+  .route {
+    font-size: 10px;
+  }
+
+  .projectteamHeader h1 { /* Updated class name */
+    font-size: 25px;
+  }
+
+  .projectteamHeader h3 { /* Updated class name */
+    font-size: 15px;
+  }
+
+  .projectteamHeader p { /* Updated class name */
+    line-height: 16px;
+    font-size: 12px;
+  }
+}

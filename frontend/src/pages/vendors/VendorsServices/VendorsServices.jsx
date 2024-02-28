@@ -6,7 +6,7 @@ import ownersGraph from "../../../images/owners/ownersGraph.png"
 const ServicesHeader = ({ title, label }) => (
   <header className="servicesHeader">
     <h1>{title}</h1>
-    <div className="ServicesButton"><Button label={label} /></div>
+    <div className="ServicesButton"><Button label={label} to="/contactus" /></div>
   </header>
 );
 

@@ -4,6 +4,7 @@ import ProjectPic1 from '../../images/projectPic1.png';
 import ProjectPic2 from '../../images/projectPic2.png';
 import ProjectPic3 from '../../images/projectPic3.png';
 
+
 const Container = ({ imageUrl, label, description }) => {
   console.log('Rendering Card:', label);  // Log a message when the Card component renders
   return (
@@ -13,6 +14,7 @@ const Container = ({ imageUrl, label, description }) => {
     </div>
   );
 };
+
 
 const Header = ({ title1, title2, label }) => {
 

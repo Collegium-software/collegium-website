@@ -13,6 +13,7 @@ import UsersStoriesPage from "./pages/userStory/UsersStoriesPage"
 import Footer from "./components/footer/SFooter";
 import Owners from "./pages/owners/Owners";
 import Vendors from "./pages/vendors/Vendors";
+
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";
 import Navbar from "./components/navbar/Navbar";
@@ -36,6 +37,7 @@ import AllBlogs from "./pages/blogs/AllBlogs";
 import SurveyForm from "./pages/surveyForm/SurveyForm";
 import SingleUserStoryPage from "./pages/userStory/singleUserStory/SingleUserStoryPage"
 import FAQ from "./pages/FAQ/FAQ"
+import Projectteams from "./pages/projecteam/Projectteam";
 
 function App() {
   return (
@@ -72,6 +74,7 @@ function App() {
 
         <Route path="careers" element={<CareersPage />} />
         <Route path="/vendors" element={<Vendors />} />
+        <Route path="/projectteam" element={<Projectteams />} />
         <Route path="/faqs" element={<FAQ />} />
 
 

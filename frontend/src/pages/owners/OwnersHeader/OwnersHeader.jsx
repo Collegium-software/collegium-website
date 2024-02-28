@@ -1,7 +1,7 @@
 import React from 'react';
 import './ownersHeader.css';
 import Button from "../../../components/button/Button";
-// import Navbar from '../../components/navbar/Navbar';
+
 
 
 
@@ -12,7 +12,7 @@ const OwnerHeader = ({ title1,title2, description, label }) => (
     <h1 className="title">{title1}</h1>
     <h3 className="subtitle-">{title2}</h3>
     <p>{description}</p>
-    <div className="ownersHeaderButton"><Button label={label} /></div>
+    <div className="ownersHeaderButton"><Button label={label} to="/contactus"  /></div>
   </header>
 );
 
@@ -20,7 +20,6 @@ const OwnerHeader = ({ title1,title2, description, label }) => (
 const OwnersHeader  = () => {
   return (
     <div className="owners-Header-Page" >
-      {/* <Navbar /> */}
       <OwnerHeader
       title1= "Owners"
       title2= "Optimize, Streamline, and Protect."
