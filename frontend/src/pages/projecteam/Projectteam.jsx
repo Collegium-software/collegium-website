@@ -20,7 +20,7 @@ const Projectteams = () => {
 
   return (
     <>
-      <Navbar background="transparent" color="black" h3Color="black" />
+      <Navbar background="white" color="black" h3Color="black" />
       <ProjectteamsHeader />
       <div className="contact-card-div">
         <ContactCard />
