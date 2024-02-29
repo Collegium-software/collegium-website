@@ -24,40 +24,41 @@ const OwnersProducts = () => {
       id: 1,
       imageUrl: TenderManagement,
       title: "Tender Management",
-      description: "Our Tender Management service streamlines the entire tendering process, from initial procurement to contract award. We ensure efficient bid preparation, submission, and evaluation, helping you secure the best contracts for your projects.",
+      description: "Streamlining the tendering process from procurement to contract award to help secure the best contracts for your projects.",
     },
     
     {
       id: 2,
       imageUrl: InvoiceManagement,
       title: "Invoice Management",
-      description: "With our Invoice Management service, we handle all aspects of invoice processing and tracking, ensuring accurate and timely payments to vendors and contractors. Our automated systems minimize errors and delays, allowing for smooth financial operations.",
+      description: "Handling invoice processing and tracking to ensure accurate and timely payments, minimizing errors and delays.",
     },
     {
       id: 3,
       imageUrl: ProjectFinancial,
       title: "Project Financial",
-      description: "We offer comprehensive financial oversight for your projects. From budgeting and forecasting to expense tracking and financial reporting, we help you manage project finances effectively, ensuring profitability and cost control.",
+      description: "Providing comprehensive financial oversight, from budgeting to expense tracking, to ensure project profitability and cost control.",
     },
     {
       id: 4,
       imageUrl:ProjectManagement,
       title: " Project Management",
-      description: "Our Project Management service encompasses the planning, execution, and monitoring of projects from start to finish. We employ industry-leading methodologies and tools to ensure project success, delivering on time and within budget.",
+      description: "Managing projects from start to finish with industry-leading methodologies and tools, ensuring on-time delivery and within budget.",
     },
     {
       id: 5,
       imageUrl: QualitySafety,
       title: "Quality & Safety",
-      description: "Quality and safety are paramount in every project.Ensure adherence to rigorous quality standards and safety protocols throughout the project lifecycle. We prioritize safety measures and quality assurance to minimize risks and deliver high-quality outcomes.",
+      description: "Ensuring adherence to quality standards and safety protocols throughout the project lifecycle to minimize risks and deliver high-quality outcomes.",
     },
     {
       id: 6,
       imageUrl: Analytics,
       title: "Analytics",
-      description: "Leverage advanced data analysis techniques to extract valuable insights from project data. By analyzing key performance indicators, trends, and patterns, we empower informed decision-making and drive continuous improvement across projects and operations.",
+      description: "Leveraging data analysis techniques to extract valuable insights from project data, empowering informed decision-making and continuous improvement.",
     }
   ];
+
 
 
   return (
