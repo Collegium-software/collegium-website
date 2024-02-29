@@ -10,13 +10,9 @@
   box-sizing: border-box;
   padding-top: 4vw;
   padding-bottom: 4vw;
-  filter: grayscale(50%);
+filter: grayscale(50%);
 }
 
-
-/* .projectteam-Header-Page button {
-  filter: none; 
-} */
 
 .projectteamHeader { /* Updated class name */
   width: 50vw;
