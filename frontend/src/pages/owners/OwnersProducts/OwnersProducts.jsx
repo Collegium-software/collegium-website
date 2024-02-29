@@ -18,46 +18,47 @@ const Product = ({ id, imageUrl, title, description }) => (
     <p>{description}</p>
   </div>
 );
-
 const OwnersProducts = () => {
   const productsData = [
     {
       id: 1,
       imageUrl: TenderManagement,
       title: "Tender Management",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Our Tender Management service streamlines the entire tendering process, from initial procurement to contract award. We ensure efficient bid preparation, submission, and evaluation, helping you secure the best contracts for your projects.",
     },
+    
     {
       id: 2,
       imageUrl: InvoiceManagement,
       title: "Invoice Management",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "With our Invoice Management service, we handle all aspects of invoice processing and tracking, ensuring accurate and timely payments to vendors and contractors. Our automated systems minimize errors and delays, allowing for smooth financial operations.",
     },
     {
       id: 3,
       imageUrl: ProjectFinancial,
       title: "Project Financial",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "We offer comprehensive financial oversight for your projects. From budgeting and forecasting to expense tracking and financial reporting, we help you manage project finances effectively, ensuring profitability and cost control.",
     },
     {
       id: 4,
       imageUrl:ProjectManagement,
       title: " Project Management",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Our Project Management service encompasses the planning, execution, and monitoring of projects from start to finish. We employ industry-leading methodologies and tools to ensure project success, delivering on time and within budget.",
     },
     {
       id: 5,
       imageUrl: QualitySafety,
       title: "Quality & Safety",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Quality and safety are paramount in every project.Ensure adherence to rigorous quality standards and safety protocols throughout the project lifecycle. We prioritize safety measures and quality assurance to minimize risks and deliver high-quality outcomes.",
     },
     {
       id: 6,
       imageUrl: Analytics,
       title: "Analytics",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Leverage advanced data analysis techniques to extract valuable insights from project data. By analyzing key performance indicators, trends, and patterns, we empower informed decision-making and drive continuous improvement across projects and operations.",
     }
   ];
+
 
   return (
     <div className="owners-Products-Page">
