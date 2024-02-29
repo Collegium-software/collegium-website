@@ -13,10 +13,10 @@
   filter: grayscale(50%);
 }
 
-/* Override filter property for button component */
-.projectteam-Header-Page button {
-  filter: none; /* or any other value as needed */
-}
+
+/* .projectteam-Header-Page button {
+  filter: none; 
+} */
 
 .projectteamHeader { /* Updated class name */
   width: 50vw;
@@ -59,6 +59,7 @@
   height: 30%;
   left: 60%;
   top: 80%;
+  filter: none;
 }
 
 @media screen and (max-width: 768px) {
