@@ -21,21 +21,21 @@ const Projectteams = () => {
   return (
     <div className="projectteams-benefits-Page">
       <div className="projectteams-benefits-Container">
-        <BenefitsContainer
-          imageUrl={ProjectteamPic1}
-          label="Effortless Onboarding"
-          description="Implementing strategic measures to optimize costs, unlocking new avenues for financial efficiency and resource utilization."
-        />
-        <BenefitsContainer
-          imageUrl={ProjectteamPic2}
-          label="Reliable Financial Assurance"
-          description="Secure a steady and predictable income stream with assured payment within 30 days."
-        />
-        <BenefitsContainer
-          imageUrl={ProjectteamPic3}
-          label="Simplified Bidding Process"
-          description="Seamlessly and efficient bid submission.  "
-        />
+      <BenefitsContainer
+        imageUrl={ProjectteamPic1}
+        label="Diverse Projects"
+        description="Engage in a wide range of projects spanning various industries, from commercial buildings to infrastructure and beyond."
+      />
+      <BenefitsContainer
+        imageUrl={ProjectteamPic2}
+        label="Creative Freedom"
+        description="Exercise your creativity and bring innovative ideas to life, shaping the future of construction and design."
+      />
+      <BenefitsContainer
+        imageUrl={ProjectteamPic3}
+        label="Professional Growth"
+        description="Opportunities for professional development and career advancement through mentorship, training, and challenging projects."
+      />
       </div>
     </div>
   );

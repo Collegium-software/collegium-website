@@ -23,7 +23,7 @@ const OwnersHeader  = () => {
       <OwnerHeader
       title1= "Owners"
       title2= "Optimize, Streamline, and Protect."
-      description="Execute the Blueprint for Operational Excellence. Lorem ipsum dolor sit amet consectetur. Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt."
+      description="Execute the Blueprint for Operational Excellence. Our mission is to optimize operations, streamline processes, and protect assets. With a focus on operational excellence, we aim to enhance efficiency and ensure sustainable growth."
       label="Contact us"
      />
     </div>
