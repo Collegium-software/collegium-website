@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
+import React, { useEffect, useRef, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 // import 'slick-carousel/slick/slick-theme.css';
-import '../carousel/carousel.css'
-import Button from '../button/Button';
-
+import "../carousel/carousel.css";
+import Button from "../button/Button";
 
 import image1 from "../../images/drmakete-lab-hsg538WrP0Y-unsplash.png";
 import image2 from "../../images/alex-padurariu-ZKBQmgMyf8s-unsplash.png";
@@ -15,9 +14,10 @@ const Carousel = () => {
 
   const [changingTextIndex, setChangingTextIndex] = useState(0);
   const changingTexts = [
-    'A Turnkey Real Estate Development Platform. Collegium is the Digital Antithesis of Traditional Design & Construction.',
-    'Collapsing Cost, Schedule, and Risk using Collegium.',
-    'Buyers Guide. Is a Collegium project right for you?']; 
+    "A Turnkey Real Estate Development Platform. Collegium is the Digital Antithesis of Traditional Design & Construction.",
+    "Collapsing Cost, Schedule, and Risk using Collegium.",
+    "Buyers Guide. Is a Collegium project right for you?",
+  ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -27,7 +27,9 @@ const Carousel = () => {
     }, 5000);
 
     const textIntervalId = setInterval(() => {
-      setChangingTextIndex((prevIndex) => (prevIndex + 1) % changingTexts.length);
+      setChangingTextIndex(
+        (prevIndex) => (prevIndex + 1) % changingTexts.length
+      );
     }, 5000);
 
     return () => {
@@ -37,30 +39,37 @@ const Carousel = () => {
   }, [changingTexts.length]);
 
   const settings = {
-    // dots: true,
-    arrows:false,
+    dots: true,
+    arrows: false,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
 
-  const images = [image1, image2, image3]; 
+  const images = [image1, image2, image3];
 
   return (
     <div className="changing-text-container">
       <Slider ref={sliderRef} {...settings}>
         {images.map((img, index) => (
           <div key={index} className="carousel-image-container">
-            <img src={img} alt={`Slide ${index + 1}`} className="carousel-image" />
+            <img
+              src={img}
+              alt={`Slide ${index + 1}`}
+              className="carousel-image"
+            />
           </div>
         ))}
       </Slider>
 
-      <h1 className='changing-text'>{changingTexts[changingTextIndex]}</h1>
+      <h1 className="changing-text">{changingTexts[changingTextIndex]}</h1>
 
-      {changingTexts[changingTextIndex] ===  'Buyers Guide. Is a Collegium project right for you?' ? (
-        <div className="herButton"><Button label="Take the Survey" to="/survey" /></div>
+      {changingTexts[changingTextIndex] ===
+      "Buyers Guide. Is a Collegium project right for you?" ? (
+        <div className="herButton">
+          <Button label="Take the Survey" to="/survey" />
+        </div>
       ) : (
         <div className="herButton"></div>
       )}
@@ -69,6 +78,3 @@ const Carousel = () => {
 };
 
 export default Carousel;
-
-
-
