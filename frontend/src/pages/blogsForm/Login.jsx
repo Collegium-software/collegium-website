@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
+import InterimNavbarBlog from "../../components/navbar/InterimNavbarBlog";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +44,7 @@ const Login = () => {
   };
   return (
     <>
-      <Navbar />
+      <InterimNavbarBlog />
       <div className="login-form-section">
         <form className="login-form" onSubmit={handleLoginSubmit}>
           <h4>Login to your account</h4>

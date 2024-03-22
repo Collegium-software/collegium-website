@@ -8,6 +8,7 @@ import OwnersProducts from "./OwnersProducts/OwnersProducts";
 import OwnerHeader from "./OwnersHeader/OwnersHeader";
 import { useEffect } from "react";
 import ContactCard from "../../components/contactCard/SadiqContactCard";
+import InterimNavbar from "../../components/navbar/InterimNavbar";
 
 const Owners = () => {
   useEffect(() => {
@@ -18,15 +19,13 @@ const Owners = () => {
   }, []);
   return (
     <>
-      <Navbar background="white" color="black" />
+      <InterimNavbar background="white" color="black" />
       <OwnerHeader />
       <div className="contact-card-div">
         <ContactCard />
       </div>
       <OwnersBenefits />
-      <OwnersTestimony />
-      <OwnersServices />
-      <OwnersProducts />
+
       <SFooter />
     </>
   );

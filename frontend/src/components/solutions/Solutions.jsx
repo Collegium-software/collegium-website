@@ -16,9 +16,6 @@ const Card = ({ imageUrl, label, description, to }) => {
   return (
     <div className="card" style={cardStyle}>
       <div className="cardContent">
-        <div className="labelText">
-          <p>{description}</p>
-        </div>
         <div className="solutionButton">
           <Button width="250px" label={label} to={to} />
         </div>
@@ -38,25 +35,20 @@ const Header = ({ title }) => {
 const Solutions = () => {
   return (
     <div className="SolutionsPage">
-      <Header title="Solutions for you" />
+      <Header title="Solutions" />
       <div className="solutionsContainer">
-        <Card
-          imageUrl={Owners}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          label=" Owners "
-          to="/owners"
-        />
+        <Card imageUrl={Owners} description="" label="Owners" to="/owners" />
         <Card
           imageUrl={Vendors}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          label=" Vendors "
-          to="/vendors"
+          description=""
+          label="Owners Team"
+          to="/owners-team"
         />
         <Card
           imageUrl={ProjectTeamImage}
-          description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-          label="Project Team"
-          to="/projectteam"
+          description=""
+          label="Vendors"
+          to="/vendors"
         />
       </div>
     </div>

@@ -4,10 +4,16 @@ import Navbar from "../../components/navbar/Navbar";
 import Button from "../../components/button/Button";
 import BlogsHero from "./BlogsHero";
 import SFooter from "../../components/footer/SFooter";
+import waitForFetch from "../../images/blogs/loading.gif";
+import axios from "axios";
+import InterimNavbar from "../../components/navbar/InterimNavbar";
+import InterimNavbarBlog from "../../components/navbar/InterimNavbarBlog";
 
 const AllBlogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
   const [zeroBlog, setZeroBlog] = useState(false);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const locationReset = () => {
       window.scrollTo(0, 0);
@@ -15,17 +21,16 @@ const AllBlogs = () => {
     locationReset();
     const retrieveAllBlogs = async () => {
       try {
-        const response = await fetch("/api/blogs");
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ", ${response.status}`);
-        }
-        const data = await response.json();
-        setAllBlogs(data);
-        console.log("data: ", data);
+        const response = await axios.get("http://localhost:3000/api/blogsData");
+
+        console.log("data: ", response.data);
+        setAllBlogs(response.data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data ", error);
       }
     };
+
     retrieveAllBlogs();
   }, []);
 
@@ -43,7 +48,10 @@ const AllBlogs = () => {
       <div className="myBlog-gradient">
         <div className="myBlog-container">
           <div className="myBlog-image">
-            <img src={blog.image} alt={blog.title} />
+            <img
+              src={`data:image/jpeg;base64,${blog.image}`}
+              alt={blog.title}
+            />
           </div>
           <div className="myBlog-text">
             <p className="date-created">Date created: &emsp;{blog.date}</p>
@@ -64,25 +72,34 @@ const AllBlogs = () => {
   };
   return (
     <>
-      <Navbar background="#0a253b" color="white" />
+      <InterimNavbarBlog background="#0a253b" color="white" />
       <BlogsHero
         route="Blogs/All- Blogs"
         title="All Blogs"
         subtitle="Insights & Updates"
       />
-      {zeroBlog && (
-        <div className="noblog">
-          <h4>
-            Sorry! no blog to display at the moment. Please visit the page
-            later.
-          </h4>
+      {loading ? (
+        <div className="loading-waitTime">
+          <img src={waitForFetch} />
         </div>
+      ) : (
+        <>
+          {zeroBlog && (
+            <div className="noblog">
+              <h4>
+                Sorry! no blog to display at the moment. Please visit the page
+                later.
+              </h4>
+            </div>
+          )}
+          <div className="all-blogs-section">
+            {sortedBlogs.map((blog) => (
+              <Blog key={blog.id} blog={blog} />
+            ))}
+          </div>
+        </>
       )}
-      <div className="all-blogs-section">
-        {sortedBlogs.map((blog) => (
-          <Blog key={blog.id} blog={blog} />
-        ))}
-      </div>
+
       <SFooter />
     </>
   );

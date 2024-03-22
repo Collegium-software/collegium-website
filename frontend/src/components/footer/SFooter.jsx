@@ -1,17 +1,16 @@
 import "./sfooter.css";
 import logo from "../../images/footer/logo.png";
-import linkedin from "../../images/footer/wLinkedin.png";
-import facebook from "../../images/footer/wFacebook.png";
-import instagram from "../../images/footer/wInstagram.png";
-import twitter from "../../images/footer/wX.png";
-import whatsapp from "../../images/footer/wWhatsapp.png";
+import linkedin from "../../images/footer/linkedin2.png";
+import twitter from "../../images/footer/twitter2.png";
+
 const SFooter = () => {
   const linksList = [
-    { id: 1, link: "/careers", label: "Careers" },
-    { id: 2, link: "/blogs", label: "Blogs" },
-    { id: 3, link: "/partners", label: "Partners" },
-    { id: 4, link: "/faqs", label: "FAQs" },
+    { id: 1, link: "/owners", label: "Owners" },
+    { id: 2, link: "/owners-team", label: "Owners Team" },
+    { id: 3, link: "/vendors", label: "Vendors" },
+    { id: 4, link: "/blogs", label: "Blogs" },
     { id: 5, link: "/contactus", label: "Contact Us" },
+    { id: 5, link: "/platform/login", label: "Platform" },
   ];
   const socialMediaIcons = [
     {
@@ -19,31 +18,13 @@ const SFooter = () => {
       name: "LinkedIn",
       image: linkedin,
       url: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAAYQRAYBz9jEogyxYeKlye59BsrDK5qMfd4&keywords=luke%20west%2C%20mba&origin=RICH_QUERY_SUGGESTION&position=0&searchId=7ca5b8f4-1da7-404f-bd99-acb5649c1679&sid=oSW&spellCorrectionEnabled=false",
+    },
 
-    },
-    {
-      id: 2,
-      name: "Facebook",
-      image: facebook,
-      url: "https://www.facebook.com/",
-    },
-    {
-      id: 3,
-      name: "Instagram",
-      image: instagram,
-      url: "https://www.instagram.com/collegium_built/",
-    },
     {
       id: 4,
       name: "X",
       image: twitter,
       url: "https://x.com/collegiumbuilt?t=6agu15xYfhvyNthNMTfOWA&s=09",
-    },
-    {
-      id: 5,
-      name: "Whatsapp",
-      image: whatsapp,
-      url: "https://web.whatsapp.com/",
     },
   ];
   const Links = ({ link }) => {
@@ -74,11 +55,12 @@ const SFooter = () => {
             </div>
             <div className="collegium-slogan">
               <p>
-                At Collegium, our commitment is to drive efficiency and
+                At Collegium, our commitment is to drive efficiency and //
                 collaboration in the construction ecosystem.
               </p>
             </div>
             <div className="sfooter-socialmedia">
+              <p>Follow us on social media: </p>
               {socialMediaIcons.map((smedia) => (
                 <SocialMedia key={smedia.id} smedia={smedia} />
               ))}
@@ -96,16 +78,10 @@ const SFooter = () => {
             <h5>Offices</h5>
             <ul className="sfooter-contacts-links">
               <li>
-                <strong>Headquarter:</strong>
+                <strong>Headquarters:</strong>
                 <br />
-                123 ABC Ave, SW <br />
-                Calgary, AB, Canada
-              </li>
-              <li>
-                <strong>USA:</strong>
-                <br />
-                123 ABC Ave, SW <br />
-                Los Angeles, CA, USA
+                302, 10526 Jasper Avenue <br />
+                Edmonton, AB, Canada T5J 1Z7
               </li>
             </ul>
           </div>

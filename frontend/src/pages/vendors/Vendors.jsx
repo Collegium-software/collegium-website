@@ -1,13 +1,14 @@
-import React from 'react';
-import Navbar from '../../components/navbar/Navbar';
-import VendorsBenefits from './VendorsBenefits/VendorsBenefits';
-import SFooter from'../../components/footer/SFooter';
-import VendorsServices from './VendorsServices/VendorsServices';
-import VendorsTestimony from './VendorsTestimony/VendorsTestimony';
-import VendorsProducts from './VendorsProducts/VendorsProducts';
-import VendorsHeader from './VendorsHeader/VendorsHeader';
+import React from "react";
+import Navbar from "../../components/navbar/Navbar";
+import VendorsBenefits from "./VendorsBenefits/VendorsBenefits";
+import SFooter from "../../components/footer/SFooter";
+import VendorsServices from "./VendorsServices/VendorsServices";
+import VendorsTestimony from "./VendorsTestimony/VendorsTestimony";
+import VendorsProducts from "./VendorsProducts/VendorsProducts";
+import VendorsHeader from "./VendorsHeader/VendorsHeader";
 import { useEffect } from "react";
-import ContactCard from '../../components/contactCard/SadiqContactCard';
+import ContactCard from "../../components/contactCard/SadiqContactCard";
+import InterimNavbar from "../../components/navbar/InterimNavbar";
 
 const Vendors = () => {
   useEffect(() => {
@@ -18,19 +19,18 @@ const Vendors = () => {
   }, []);
   return (
     <>
-    <Navbar background="transparent" color="black" h3Color="black"/>
-    <VendorsHeader />
-    <div className="contact-card-div">
-    <ContactCard />
-    </div>
-    <VendorsBenefits />
-    <VendorsTestimony />
-    <VendorsServices />
-    <VendorsProducts />
-    <SFooter />
-</>
+      <InterimNavbar background="white" color="black" h3Color="black" />
+      <VendorsHeader />
+      <div className="contact-card-div">
+        <ContactCard />
+      </div>
+      <VendorsBenefits />
+      {/* <VendorsTestimony />
+      <VendorsServices />
+      <VendorsProducts /> */}
+      <SFooter />
+    </>
   );
-}
+};
 
-export default Vendors
-
+export default Vendors;

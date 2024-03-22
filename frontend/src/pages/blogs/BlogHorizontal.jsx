@@ -3,10 +3,10 @@ import Button from "../../components/button/Button";
 const BlogHorizontal = (props) => {
   const {
     id,
-    image,
     title,
     author,
     description,
+    image,
     date,
     bttnLabel,
     bttnColor,
@@ -14,10 +14,10 @@ const BlogHorizontal = (props) => {
   } = props;
   const blogElements = {
     id: id,
-    image: image,
     title: title,
     author: author,
     description: description,
+    image: image,
     date: date,
     button: {
       label: bttnLabel,
@@ -29,10 +29,10 @@ const BlogHorizontal = (props) => {
   const blogsData = [
     {
       id: blogElements.id,
-      image: blogElements.image,
       title: blogElements.title,
       author: blogElements.author,
       description: blogElements.description,
+      image: blogElements.image,
       date: blogElements.date,
       button: {
         label: blogElements.button.label,
@@ -64,7 +64,10 @@ const BlogHorizontal = (props) => {
           </div>
         </div>
         <div className="blogHorizontal-pic">
-          <img src={hblog.image} alt={hblog.title} />
+          <img
+            src={`data:image/jpeg;base64,${hblog.image}`}
+            alt={hblog.title}
+          />
         </div>
       </div>
     );

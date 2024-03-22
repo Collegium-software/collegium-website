@@ -5,9 +5,8 @@ const ContactCard = () => {
     <div className="contact-card">
       <div className="contact-card-mask">
         <div className="contactCard-container">
-          <p className="contact-title">CALL / EMAIL US TODAY</p>
-          <p className="contact-number">+1(234)-567-1234</p>
-          <p className="contact-email">collegium@collegium.com</p>
+          <p className="contact-title">Email Us Today:</p>
+          <p className="contact-email">info@collegium.com</p>
         </div>
       </div>
     </div>

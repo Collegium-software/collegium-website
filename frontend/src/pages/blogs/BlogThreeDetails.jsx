@@ -15,7 +15,7 @@ const BlogThreeDetails = () => {
     locationReset();
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/blogs");
+        const response = await fetch("/api/blogsPics");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ", ${response.status}`);
         }
@@ -36,14 +36,17 @@ const BlogThreeDetails = () => {
   );
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p style={{ color: "black" }}>Loading...</p>;
   }
 
   return (
     <div className="blogpagedetails">
       <Navbar background="white" color="black" />
       <div className="blog-hero-pic">
-        <img src={allBlogs[2].image} alt={allBlogs[2].title} />
+        <img
+          src={`data:image/jpeg;base64,${allBlogs[2].image}`}
+          alt={allBlogs[2].title}
+        />
       </div>
       <div className="blogpage-full-article">
         <div className="blogpageFullArticle-title">

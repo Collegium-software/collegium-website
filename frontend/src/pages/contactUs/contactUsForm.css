@@ -1,7 +1,7 @@
 .contact-us-container{
   min-height: 100vh;
   background-color:  #0A253B;
-   color:white;
+   color:black;
    position: relative;
    margin-bottom: 2%;
   
@@ -27,7 +27,10 @@
   border-image:  linear-gradient(to right, #1882FF, #36EBCA);
   border-image-slice: 1;
 }
-
+.checkbox-container{
+  margin: 3%;
+  color: white;
+}
 .checkbox-container input{
   margin: 3%;
 }
