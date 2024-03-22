@@ -23,8 +23,6 @@ const Blogs = () => {
         console.log(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
       }
     };
     fetchData();
