@@ -21,7 +21,7 @@ const BlogOneDetails = () => {
     locationReset();
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/blogsData");
+        const response = await axios.get("/api/blogsData");
 
         console.log("Fetched data: ", response.data);
 

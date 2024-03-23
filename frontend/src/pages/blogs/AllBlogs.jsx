@@ -21,7 +21,7 @@ const AllBlogs = () => {
     locationReset();
     const retrieveAllBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/blogsData");
+        const response = await axios.get("/api/blogsData");
 
         console.log("data: ", response.data);
         setAllBlogs(response.data);

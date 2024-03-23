@@ -17,7 +17,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/blogsData");
+        const response = await axios.get("/api/blogsData");
         setBlogsData(response.data);
         setLoading(false);
         console.log(response.data);
@@ -33,6 +33,7 @@ const Blogs = () => {
     .slice()
     .sort((a, b) => new Date(b.date) - new Date(a.date));
   console.log(sortedBlogs);
+
   let bottomBlog = true;
   let blogAvailable = true;
   let zeroBlog = false;
