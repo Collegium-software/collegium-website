@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import SFooter from "../../components/footer/SFooter";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
+import InterimNavbar from "../../components/navbar/InterimNavbar";
 
 const SurveyForm = () => {
   // useEffect(() => {
@@ -22,14 +23,12 @@ const SurveyForm = () => {
   const [resultVisible, setResultVisible] = useState(false);
 
   const handleResponseChange = (questionId, response) => {
-    
     setResponses((prevResponses) => ({
       ...prevResponses,
       [questionId]: response,
     }));
   };
   const handleUserDetailsChange = (e) => {
-   
     setUserDetails((prevDetails) => ({
       ...prevDetails,
       name: document.getElementById("user-name").value,
@@ -188,7 +187,7 @@ const SurveyForm = () => {
   };
   return (
     <>
-      <Navbar background="white" color="black" />
+      <InterimNavbar background="white" color="black" />
       <div className="survey">
         {formVisible && (
           <div className="header">

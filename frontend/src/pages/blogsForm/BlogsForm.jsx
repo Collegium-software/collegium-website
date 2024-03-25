@@ -109,7 +109,7 @@ const BlogsForm = () => {
       formDataToSend.append("date", formData.date);
       formDataToSend.append("label", formData.label);
 
-      await axios.post("http://localhost:3000/create", formDataToSend, {
+      await axios.post("/create", formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -164,15 +164,11 @@ const BlogsForm = () => {
       formDataToSendForUpdate.append("date", formData.date);
       formDataToSendForUpdate.append("label", formData.label);
 
-      await axios.patch(
-        `http://localhost:3000/update/${blogTitleValue}`,
-        formDataToSendForUpdate,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      await axios.patch(`/update/${blogTitleValue}`, formDataToSendForUpdate, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
 
       console.log("Blog updated successfully!");
       setPatchResponseOk(true);
@@ -227,9 +223,7 @@ const BlogsForm = () => {
     e.preventDefault();
 
     try {
-      await axios.delete(
-        `http://localhost:3000/delete/${blogTitleValueForDelete}`
-      );
+      await axios.delete(`/delete/${blogTitleValueForDelete}`);
 
       console.log("Blog deleted successfully!");
       setDeleteResponseOk(true);
