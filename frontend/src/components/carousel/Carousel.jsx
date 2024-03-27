@@ -24,13 +24,13 @@ const Carousel = () => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
       }
-    }, 15000);
+    }, 5000);
 
     const textIntervalId = setInterval(() => {
       setChangingTextIndex(
         (prevIndex) => (prevIndex + 1) % changingTexts.length
       );
-    }, 15000);
+    }, 5000);
 
     return () => {
       clearInterval(intervalId);
