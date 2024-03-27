@@ -17,6 +17,7 @@ import Vendors from "./pages/vendors/Vendors";
 import WhoWeAre from "./pages/Whoweare/WhoWeAre";
 import Blogs from "./pages/blogs/Blogs";
 import Navbar from "./components/navbar/Navbar";
+import InterimNavbar from "./components/navbar/InterimNavbar";
 
 import ContactUs from "./pages/contactUs/ContactUs";
 import CareersPage from "./pages/careers/CareersPage";
@@ -37,7 +38,11 @@ import AllBlogs from "./pages/blogs/AllBlogs";
 import SurveyForm from "./pages/surveyForm/SurveyForm";
 import SingleUserStoryPage from "./pages/userStory/singleUserStory/SingleUserStoryPage";
 import FAQ from "./pages/FAQ/FAQ";
-import Projectteams from "./pages/projecteam/Projectteam";
+
+import UnderConstruction from "./pages/underConstrution/UnderConstruction";
+import OwnersTeam from "./pages/projecteam/OwnersTeam";
+import PlatformLoginPage from "./pages/platform/PlatformLoginPage";
+import SContactUs from "./pages/contactUs/SContactUs";
 
 function App() {
   return (
@@ -48,12 +53,12 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/comparison" element={<Comparison />} />
         <Route path="/testimony" element={<Testimony1 />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects" element={<UnderConstruction />} />
         <Route path="/project1" element={<SingleProject />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/owners" element={<Owners />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
-        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/contactus" element={<SContactUs />} />
         <Route path="/userstories" element={<UsersStoriesPage />} />
         <Route path="/userstory1" element={<SingleUserStoryPage />} />
         <Route path="/admin/login" element={<Login />} />
@@ -71,11 +76,11 @@ function App() {
         <Route path="blogs/blog10" element={<BlogTenDetails />} />
         <Route path="blogs-forms" element={<BlogsForm />} />
         <Route path="/survey" element={<SurveyForm />} />
-
         <Route path="careers" element={<CareersPage />} />
         <Route path="/vendors" element={<Vendors />} />
-        <Route path="/projectteam" element={<Projectteams />} />
+        <Route path="/owners-team" element={<OwnersTeam />} />
         <Route path="/faqs" element={<FAQ />} />
+        <Route path="/platform/login" element={<PlatformLoginPage />} />
       </Routes>
     </Router>
   );
@@ -83,7 +88,7 @@ function App() {
 
 const Home = () => (
   <>
-    <Navbar background="transparent" color="white" />
+    <InterimNavbar background="transparent" color="white" />
     <Carousel />
     <Solutions />
     <Comparison />

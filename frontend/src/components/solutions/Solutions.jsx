@@ -2,9 +2,9 @@ import React from "react";
 import "./solution.css";
 import Button from "../button/Button";
 
-import Vendors from "../../images/home/vendors.jpeg";
-import ProjectTeamImage from "../../images/home/projectTeam.jpeg";
-import Owners from "../../images/home/owners.jpeg";
+import vendors from "../../images/home/vendors.png";
+import ownersteam from "../../images/home/ownersteam.jpeg";
+import owners from "../../images/home/owners.png";
 
 const Card = ({ imageUrl, label, description, to }) => {
   console.log("Rendering Card:", label);
@@ -16,11 +16,8 @@ const Card = ({ imageUrl, label, description, to }) => {
   return (
     <div className="card" style={cardStyle}>
       <div className="cardContent">
-        <div className="labelText">
-          <p>{description}</p>
-        </div>
         <div className="solutionButton">
-          <Button width="250px" label={label} to={to} />
+          <Button label={label} to={to} />
         </div>
       </div>
     </div>
@@ -38,26 +35,16 @@ const Header = ({ title }) => {
 const Solutions = () => {
   return (
     <div className="SolutionsPage">
-      <Header title="Solutions for you" />
+      <Header title="Solutions" />
       <div className="solutionsContainer">
+        <Card imageUrl={owners} description="" label="Owners" to="/owners" />
         <Card
-          imageUrl={Owners}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          label=" Owners "
-          to="/owners"
+          imageUrl={ownersteam}
+          description=""
+          label="Owners Team"
+          to="/owners-team"
         />
-        <Card
-          imageUrl={Vendors}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          label=" Vendors "
-          to="/vendors"
-        />
-        <Card
-          imageUrl={ProjectTeamImage}
-          description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-          label="Project Team"
-          to="/projectteam"
-        />
+        <Card imageUrl={vendors} description="" label="Vendors" to="/vendors" />
       </div>
     </div>
   );

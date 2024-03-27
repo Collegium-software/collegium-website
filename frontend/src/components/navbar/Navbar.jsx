@@ -276,10 +276,10 @@ const Navbar = (props) => {
             <li className="nav-link-menu">Careers</li>
           </a>
           <a
-            href="/admin/login"
+            href="/platform/login"
             style={isNavListVisible ? navStyleMobile : navStyle}
           >
-            <li className="nav-link-menu">Admin</li>
+            <li className="nav-link-menu">Platform</li>
           </a>
         </ul>
       </div>

@@ -1,14 +1,18 @@
+
 .testimony {
   display: flex;
   flex-direction: row; 
-  align-items:flex-end; 
+  align-items:center; 
   color: black;
-  padding: 2%;
+  padding: 4vw 3vw 4vw 3vw;
   text-align: center;
-  background: #F6FCFC;
+  background: white;
   justify-content:center;
   gap:2%;
  
+}
+.client {
+  margin-bottom: 1vw;
 }
 
 .testimony h2,
@@ -23,9 +27,16 @@
   width: 40%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vw;
+  gap: 1vw;
 
 }
-
+.testimonyContainer h1 {
+  margin: 0;
+  margin-bottom: 3vw;
+}
 
 
 
@@ -37,36 +48,41 @@
 }
 
 .testimonyImageContainer{
-  width:60%;
+  display: flex;
+  width:70%;
   /* margin-left: 2%; */
   overflow: hidden;
+  height: 40vw;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .testimonyImageContainer img {
 
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   
 
 }
 
 .testimonyText {
-  color: white;
-  background-color: #0A253B;
-  border: 0.2vw solid;
+  color: black;
+  /* background-color: #0A253B; */
+  border: 2px solid;
   border-image: linear-gradient(to right, #1882FF, #36EBCA);
   border-image-slice: 1; 
-
   text-align: left;
   /* margin: 2vh; */
-  padding: 5vh;
-  height: 30%;
+  padding: 1vw 2vw 1vw 2vw;
+  /* height: 30%; */
   position: relative;
 } 
 
 .testimonyButton {
   display: flex;
-  margin-top: 3vw;
+  margin-top: 1vw;
   margin-left: auto;
   justify-items: center;
   justify-content: right;
@@ -77,6 +93,7 @@
 
   .testimony{
   flex-direction:column;
+  gap: 0;
 
 
 }

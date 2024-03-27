@@ -7,6 +7,9 @@ const MONGODB_URI = process.env.MONGODB_URI;
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const fs = require("fs");
+const multer = require("multer");
+
 const corsOptions = {
   origin: "https://collegium.onrender.com",
   // Add more origins if needed, e.g., ['https://your-render-app.onrender.com', 'http://localhost:3000']
@@ -76,7 +79,47 @@ const client = new MongoClient(MONGODB_URI, {
   },
 });
 
-app.get("/api/blogs", async (req, res) => {
+const upload = multer({ dest: "uploads/" });
+
+//new blog creation:
+app.post("/create", upload.single("file"), async (req, res) => {
+  try {
+    // Connect to MongoDB
+    await client.connect();
+    const database = client.db();
+    const blogsCollection = database.collection("blogsData");
+
+    // Read the uploaded file
+    const imageBuffer = fs.readFileSync(req.file.path);
+
+    // Insert the image into MongoDB
+    const result = await blogsCollection.insertOne({
+      id: req.body.id,
+      title: req.body.title,
+      author: req.body.author,
+      description: req.body.description,
+      image: imageBuffer,
+      date: req.body.date,
+      button: {
+        label: req.body.label,
+        color: "black",
+        to: `/blogs/blog${req.body.id}`,
+      },
+    });
+
+    // Delete the temporary file
+    fs.unlinkSync(req.file.path);
+
+    res.status(200).send("Image uploaded successfully");
+  } catch (err) {
+    console.error("Error uploading image:", err);
+    res.status(500).send("Internal server error");
+  } finally {
+    await client.close();
+  }
+});
+
+app.get("/api/blogsData", async (req, res) => {
   try {
     await client.connect();
     await client.db("admin").command({ ping: 1 });
@@ -86,50 +129,70 @@ app.get("/api/blogs", async (req, res) => {
 
     const database = client.db();
     const blogCollection = database.collection("blogsData");
-    const blogsData = await blogCollection.find({}).toArray();
-    console.log("Blogs Data: ", blogsData);
+    const blogsData = await blogCollection.find().toArray();
+
+    console.log("Blogs Pictures Data: ", blogsData);
+
     res.json(blogsData);
   } catch (error) {
     console.log("Error fetching blogs data", error);
     res.status(500).json({ error: "Internal server error" });
   } finally {
+    // fs.unlinkSync(req.file.path);
     await client.close();
   }
 });
-app.post("/api/blogs", async (req, res) => {
+//end of pic upload test
+
+//new patch endpoint:
+app.patch("/update/:title", upload.single("image"), async (req, res) => {
   try {
     await client.connect();
     const database = client.db();
-    const blogsCollection = database.collection("blogsData");
+    const blogCollection = database.collection("blogsData");
 
-    const newBlog = req.body;
-    console.log("My data from form (a): ", newBlog);
-    const inputDate = new Date(newBlog.date + "T00:00:00-07:00");
-    const formattedDate = inputDate.toLocaleDateString("en-us", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-      timeZone: "America/Edmonton",
-    });
-    newBlog.date = formattedDate;
-    console.log("My data from form (b): ", newBlog);
-    const result = await blogsCollection.insertOne(newBlog);
-
-    if (result.acknowledged) {
-      res.status(201).send("Blog inserted successfully!");
-    } else {
-      // Handle the case where result.ops is undefined or empty
-      res.status(500).json({ error: "Unexpected result from the database" });
+    //preparing the update data:
+    const updateData = {
+      id: req.body.id,
+      title: req.body.title,
+      author: req.body.author,
+      description: req.body.description,
+      date: req.body.date,
+      button: {
+        label: req.body.label,
+        color: "black",
+        to: `/blogs/blog${req.body.id}`,
+      },
+    };
+    if (req.file) {
+      const imageBuffer = fs.readFileSync(req.file.path);
+      updateData.image = imageBuffer;
     }
+    // Update the blog instance
+    const result = await blogCollection.updateOne(
+      { title: req.params.title }, // Filter by title
+      { $set: updateData } // Set the updated data
+    );
+    if (result.matchedCount === 0) {
+      return res.status(404).send("Blog not found");
+    }
+
+    // Delete the temporary file
+    if (req.file) {
+      fs.unlinkSync(req.file.path);
+    }
+
+    res.status(200).send("Blog updated successfully");
   } catch (error) {
-    console.error("Error creating new blog:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    console.error("Error updating blog:", error);
+    res.status(500).send("Internal server error");
   } finally {
     await client.close();
   }
 });
+//end of new patch endpoint
 
-app.delete("/api/blogs/:title", async (req, res) => {
+app.delete("/delete/:title", async (req, res) => {
   try {
     await client.connect();
     const database = client.db();
@@ -146,38 +209,6 @@ app.delete("/api/blogs/:title", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   } finally {
     await client.close();
-  }
-});
-
-app.patch("/api/blogs/:title", async (req, res) => {
-  try {
-    await client.connect();
-    const database = client.db();
-    const blogCollection = database.collection("blogsData");
-    const blogTitle = req.params.title;
-
-    const existingBlog = await blogCollection.findOne({
-      title: blogTitle,
-    });
-    if (!existingBlog) {
-      return res.status(404).json({ error: "blog not found" });
-    }
-
-    const updatedBlog = { ...existingBlog, ...req.body };
-
-    const inputDate = new Date(updatedBlog.date + "T00:00:00-07:00");
-    const formattedDate = inputDate.toLocaleDateString("en-us", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-      timeZone: "America/Edmonton",
-    });
-    updatedBlog.date = formattedDate;
-    await blogCollection.updateOne({ title: blogTitle }, { $set: updatedBlog });
-
-    return res.status(200).json(updatedBlog);
-  } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
   }
 });
 

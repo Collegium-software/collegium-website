@@ -47,7 +47,10 @@ const BlogVertical = (props) => {
       <div className="blogslist-gradient">
         <div className="blogslist-gradient-mask">
           <div className="blogslist-pics">
-            <img src={blog.image} alt={blog.title} />
+            <img
+              src={`data:image/jpeg;base64,${blog.image}`}
+              alt={blog.title}
+            />
           </div>
           <div className="blogslist-text">
             <div className="blogslist-title">

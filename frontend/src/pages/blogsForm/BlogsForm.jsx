@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SFooter from "../../components/footer/SFooter";
 import AdminNavbar from "../../components/navbar/AdminNavbar";
+import axios from "axios";
+import InterimNavbarBlog from "../../components/navbar/InterimNavbarBlog";
 
 const BlogsForm = () => {
   const navigate = useNavigate();
@@ -34,6 +36,7 @@ const BlogsForm = () => {
   const [postResponseNotOk, setPostResponseNotOk] = useState(false);
   const [patchResponseOk, setPatchResponseOk] = useState(false);
   const [patchResponseNotOk, setPatchResponseNotOk] = useState(false);
+
   const getData = (e) => {
     e.preventDefault();
     let selectElement = document.getElementById("mySelect");
@@ -71,75 +74,61 @@ const BlogsForm = () => {
     setBlogTitleToUpdate("");
     setBlogTitleValueForDelete("");
   };
+  const [selectedFile, setSelectedFile] = useState(null);
   const [formData, setFormData] = useState({
     id: "",
-    image: "",
     title: "",
     author: "",
     description: "",
     date: "",
-    button: {
-      label: "",
-      color: "black",
-      to: "",
-    },
+    label: "",
   });
 
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+  };
+
   const handleChange = (e) => {
-    const blogId = parseInt(document.getElementById("blog-id").value, 10);
+    const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      id: blogId,
-      image: document.getElementById("blog-image-url").value,
-      title: document.getElementById("blog-title").value,
-      author: document.getElementById("blog-author").value,
-      description: document.getElementById("blog-description").value,
-      date: document.getElementById("blog-date").value,
-      button: {
-        label: document.getElementById("blog-button-label").value,
-        color: "black",
-        to: `/blogs/blog${blogId}`,
-      },
+      [name]: value,
     }));
   };
 
   //handling the creation of form:
   const handleCreate = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await fetch("/api/blogs", {
-        method: "POST",
+      const formDataToSend = new FormData();
+      formDataToSend.append("file", selectedFile);
+      formDataToSend.append("id", formData.id);
+      formDataToSend.append("title", formData.title);
+      formDataToSend.append("author", formData.author);
+      formDataToSend.append("description", formData.description);
+      formDataToSend.append("date", formData.date);
+      formDataToSend.append("label", formData.label);
+
+      await axios.post("/create", formDataToSend, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
         },
-        body: JSON.stringify(formData),
       });
-      if (response.ok) {
-        // Handle success, e.g., redirect or show a success message
-        console.log("Blog submitted successfully!");
-        setPostResponseOk(true);
-        setDisplayCreateForm(false);
-      } else {
-        // Handle error
-        console.error("Error submitting blog");
-        setPostResponseNotOk(true);
-      }
+
+      setPostResponseOk(true);
+      setDisplayCreateForm(false);
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error uploading image:", error);
+      setPostResponseNotOk(true);
+      setDisplayCreateForm(false);
     }
     setFormData({
       id: "",
-      image: "",
       title: "",
       author: "",
       description: "",
       date: "",
-      button: {
-        label: "",
-        color: "",
-        to: "",
-      },
+      label: "",
     });
     const form = document.getElementById("selection-form");
     form.reset();
@@ -166,27 +155,27 @@ const BlogsForm = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`/api/blogs/${blogTitleValue}`, {
-        method: "PATCH",
+      const formDataToSendForUpdate = new FormData();
+      formDataToSendForUpdate.append("image", selectedFile);
+      formDataToSendForUpdate.append("id", formData.id);
+      formDataToSendForUpdate.append("title", formData.title);
+      formDataToSendForUpdate.append("author", formData.author);
+      formDataToSendForUpdate.append("description", formData.description);
+      formDataToSendForUpdate.append("date", formData.date);
+      formDataToSendForUpdate.append("label", formData.label);
+
+      await axios.patch(`/update/${blogTitleValue}`, formDataToSendForUpdate, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
         },
-        body: JSON.stringify(formData),
       });
 
-      console.log("my updated form data: ", formData);
-      if (response.ok) {
-        // Handle success, e.g., redirect or show a success message
-        console.log("Blog updated successfully!");
-        setPatchResponseOk(true);
-        setDisplayUpdateForm(false);
-      } else {
-        // Handle error
-        console.error("Error updating blog");
-        setPatchResponseNotOk(true);
-      }
+      console.log("Blog updated successfully!");
+      setPatchResponseOk(true);
+      setDisplayUpdateForm(false);
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error updating blog");
+      setPatchResponseNotOk(true);
     }
     setFormData({
       id: "",
@@ -232,27 +221,17 @@ const BlogsForm = () => {
 
   const handleDelete = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(`/api/blogs/${blogTitleValueForDelete}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
 
-      if (response.ok) {
-        // Handle success, e.g., redirect or show a success message
-        console.log("Blog deleted successfully!");
-        setDeleteResponseOk(true);
-      } else {
-        // Handle error
-        console.error("Error deleting blog");
-        setDeleteResponseNotOk(true);
-      }
+    try {
+      await axios.delete(`/delete/${blogTitleValueForDelete}`);
+
+      console.log("Blog deleted successfully!");
+      setDeleteResponseOk(true);
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error deleting blog");
+      setDeleteResponseNotOk(true);
     }
-    console.log("Blog to be deleted!");
+
     setDisplayDeleteForm(false);
     setYesNoWindow(false);
     const form = document.getElementById("selection-form");
@@ -290,9 +269,10 @@ const BlogsForm = () => {
       console.error("Error while logging out ", error);
     }
   };
+
   return (
     <div className="blogform">
-      <AdminNavbar background="#0a253b" color="white" />
+      <InterimNavbarBlog background="#0a253b" color="white" />
       <div className="fblogs-hero">
         <img src={blogsHero} alt="blogs-hero" />
         <div className="fblogs-hero-text">
@@ -342,6 +322,7 @@ const BlogsForm = () => {
               <input
                 type="number"
                 id="blog-id"
+                name="id"
                 value={formData.id}
                 onChange={handleChange}
                 required
@@ -349,15 +330,9 @@ const BlogsForm = () => {
             </label>
 
             <label htmlFor="blog-image-url">
-              Blog Image URL:
+              Blog Image Upload:
               <br />
-              <input
-                type="text"
-                id="blog-image-url"
-                onChange={handleChange}
-                value={formData.image}
-                required
-              />
+              <input type="file" onChange={handleFileChange} />
             </label>
 
             <label htmlFor="blog-title">
@@ -366,6 +341,7 @@ const BlogsForm = () => {
               <input
                 type="text"
                 id="blog-title"
+                name="title"
                 onChange={handleChange}
                 value={formData.title}
                 required
@@ -378,6 +354,7 @@ const BlogsForm = () => {
               <input
                 type="text"
                 id="blog-author"
+                name="author"
                 onChange={handleChange}
                 value={formData.author}
                 required
@@ -393,6 +370,7 @@ const BlogsForm = () => {
               </span>
               <textarea
                 id="blog-description"
+                name="description"
                 onChange={handleChange}
                 value={formData.description}
                 required
@@ -405,6 +383,7 @@ const BlogsForm = () => {
               <input
                 type="date"
                 id="blog-date"
+                name="date"
                 onChange={handleChange}
                 value={formData.date}
                 required
@@ -417,8 +396,9 @@ const BlogsForm = () => {
               <input
                 type="text"
                 id="blog-button-label"
+                name="label"
                 onChange={handleChange}
-                value={formData.button.label}
+                value={formData.label}
                 required
               />
             </label>
@@ -464,15 +444,13 @@ const BlogsForm = () => {
             className="create-update-form"
             id="create-update-form"
           >
-            <div className="update-guideline">
-              <p>Update the field(s) with new values: </p>
-            </div>
             <label htmlFor="blog-id">
               Blog ID (number):
               <br />
               <input
                 type="number"
                 id="blog-id"
+                name="id"
                 value={formData.id}
                 onChange={handleChange}
                 required
@@ -480,15 +458,9 @@ const BlogsForm = () => {
             </label>
 
             <label htmlFor="blog-image-url">
-              Blog Image URL (4x3 aspect ratio):
+              Blog Image Upload:
               <br />
-              <input
-                type="text"
-                id="blog-image-url"
-                onChange={handleChange}
-                value={formData.image}
-                required
-              />
+              <input type="file" onChange={handleFileChange} />
             </label>
 
             <label htmlFor="blog-title">
@@ -497,22 +469,26 @@ const BlogsForm = () => {
               <input
                 type="text"
                 id="blog-title"
+                name="title"
                 onChange={handleChange}
                 value={formData.title}
                 required
               />
             </label>
+
             <label htmlFor="blog-author">
               Blog Author:
               <br />
               <input
                 type="text"
                 id="blog-author"
+                name="author"
                 onChange={handleChange}
                 value={formData.author}
                 required
               />
             </label>
+
             <label htmlFor="blog-description">
               Blog Description: <br />
               <span>
@@ -522,6 +498,7 @@ const BlogsForm = () => {
               </span>
               <textarea
                 id="blog-description"
+                name="description"
                 onChange={handleChange}
                 value={formData.description}
                 required
@@ -534,6 +511,7 @@ const BlogsForm = () => {
               <input
                 type="date"
                 id="blog-date"
+                name="date"
                 onChange={handleChange}
                 value={formData.date}
                 required
@@ -546,8 +524,9 @@ const BlogsForm = () => {
               <input
                 type="text"
                 id="blog-button-label"
+                name="label"
                 onChange={handleChange}
-                value={formData.button.label}
+                value={formData.label}
                 required
               />
             </label>

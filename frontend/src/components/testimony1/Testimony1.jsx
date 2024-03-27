@@ -1,32 +1,33 @@
 import React from "react";
 import "../../components/testimony1/testimony1.css";
 import Button from "../button/Button";
-import testimonyPic from "../../images/testimony/testimonials2.jpeg"
-import CustomerPic from "../../images/testimony/CustomerPic.png"
+import testimonyPic from "../../images/testimony/testimonials2.jpeg";
+import CustomerPic from "../../images/testimony/CustomerPic.png";
+import userStory from "../../images/testimony/userStory.jpg";
+import customer from "../../images/testimony/customer.jpg";
 
 const Testimony1 = () => (
   <div className="testimony">
     <div className="testimonyContainer">
       <h1>User's Story</h1>
       <div className="client">
-        <img className="clientImage" src={CustomerPic} alt="Customer" />
-        <h3>Alan Main</h3>
-        <h4>CEO of “Calgary Construction Co"</h4>
+        <img className="clientImage" src={customer} alt="Customer" />
+        <h3>Andrew Bowerbank</h3>
+        <h4>CEO of Cetana Group</h4>
       </div>
       <div className="testimonyText">
         <p>
-          From the very first meeting, the team at Collegium embraced my vision
-          with enthusiasm. Their collaborative spirit turned my ideas into
-          detailed plans, weaving innovation and functionality into every aspect
-          of the project.
+          "We are thrilled with our partnership with Collegium. <br />
+          <br />
+          Traditional approaches to Design & Construction fail to deliver on
+          cost, schedule, and sustainability. Cetana needs to deliver on all
+          three for our Mass Timber, Net-Zero Carbon developments to be
+          successful. That’s why we use Collegium.”
         </p>
-        <div className="testimonyButton">
-          <Button label="Read More" to="/userstories"/>
-        </div>
       </div>
     </div>
     <div className="testimonyImageContainer">
-      <img className="testimonyImage" src={testimonyPic} alt="Project" />
+      <img className="testimonyImage" src={userStory} alt="Project" />
     </div>
   </div>
 );

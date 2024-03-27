@@ -1,0 +1,11 @@
+.under-construction {
+    color: black;
+}
+.underConstruction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 50vh;
+    margin: auto;
+}

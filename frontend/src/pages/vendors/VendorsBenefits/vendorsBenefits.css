@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #0a253b;
-  color:white;
+  background-color: white;
+  color:black;
 }
 
 .vendors-benefits-Container {

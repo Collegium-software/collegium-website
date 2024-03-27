@@ -22,6 +22,7 @@
     align-items: flex-start;
     padding: 3vw 4vw 0vw 4vw;
     box-sizing: border-box;
+    /* gap: 18vw; */
     /* border: solid yellow; */
 }
 .sfooter-collegium {
@@ -54,11 +55,13 @@
 .sfooter-socialmedia {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     gap: 1.5vw;
     margin-top: 0vw;
     margin-bottom: 2vw;
+    width: 100%;
+    font-size: 1.1vw;
     /* box-sizing: border-box; */
 }
 .smdia-icons {
@@ -72,6 +75,8 @@
 .smdia-icons img {
     width: 100%;
     object-fit: cover;
+
+
 }
 .smdia-icons img:hover {
     transform: scale(1.2);
@@ -132,6 +137,7 @@
     }
     .sfooter-socialmedia {
         gap: 20px;
+        font-size: 12px;
     }
     .smdia-icons {
         width: 16px;
@@ -142,6 +148,11 @@
         margin-top: 10px;
 
     }
+
+    .sfooter-links {
+        flex-direction: column;
+    }
+
 
     .sfooter-about h5, .sfooter-contacts h5{
         margin-top: 10px;
@@ -163,7 +174,8 @@
     }
     .sfooter-about .sfooter-links li{
         font-size: 12px;
-        padding: 0;
+        padding-left: 15px;
+        margin-bottom: 0;
         
     }
 
