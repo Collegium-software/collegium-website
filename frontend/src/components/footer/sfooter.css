@@ -149,6 +149,11 @@
 
     }
 
+    .sfooter-links {
+        flex-direction: column;
+    }
+
+
     .sfooter-about h5, .sfooter-contacts h5{
         margin-top: 10px;
         font-size: 14px;
@@ -169,7 +174,8 @@
     }
     .sfooter-about .sfooter-links li{
         font-size: 12px;
-        padding: 0;
+        padding-left: 15px;
+        margin-bottom: 0;
         
     }
 

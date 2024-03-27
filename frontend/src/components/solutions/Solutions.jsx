@@ -2,9 +2,9 @@ import React from "react";
 import "./solution.css";
 import Button from "../button/Button";
 
-import Vendors from "../../images/home/vendors.jpeg";
-import ProjectTeamImage from "../../images/home/projectTeam.jpeg";
-import Owners from "../../images/home/owners.jpeg";
+import vendors from "../../images/home/vendors.png";
+import ownersteam from "../../images/home/ownersteam.jpeg";
+import owners from "../../images/home/owners.png";
 
 const Card = ({ imageUrl, label, description, to }) => {
   console.log("Rendering Card:", label);
@@ -17,7 +17,7 @@ const Card = ({ imageUrl, label, description, to }) => {
     <div className="card" style={cardStyle}>
       <div className="cardContent">
         <div className="solutionButton">
-          <Button width="250px" label={label} to={to} />
+          <Button label={label} to={to} />
         </div>
       </div>
     </div>
@@ -37,19 +37,14 @@ const Solutions = () => {
     <div className="SolutionsPage">
       <Header title="Solutions" />
       <div className="solutionsContainer">
-        <Card imageUrl={Owners} description="" label="Owners" to="/owners" />
+        <Card imageUrl={owners} description="" label="Owners" to="/owners" />
         <Card
-          imageUrl={Vendors}
+          imageUrl={ownersteam}
           description=""
           label="Owners Team"
           to="/owners-team"
         />
-        <Card
-          imageUrl={ProjectTeamImage}
-          description=""
-          label="Vendors"
-          to="/vendors"
-        />
+        <Card imageUrl={vendors} description="" label="Vendors" to="/vendors" />
       </div>
     </div>
   );

@@ -74,7 +74,7 @@ const AllBlogs = () => {
     <>
       <InterimNavbarBlog background="#0a253b" color="white" />
       <BlogsHero
-        route="Blogs/All- Blogs"
+        route="Blogs/All Blogs"
         title="All Blogs"
         subtitle="Insights & Updates"
       />

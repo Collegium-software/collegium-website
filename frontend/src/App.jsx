@@ -42,6 +42,7 @@ import FAQ from "./pages/FAQ/FAQ";
 import UnderConstruction from "./pages/underConstrution/UnderConstruction";
 import OwnersTeam from "./pages/projecteam/OwnersTeam";
 import PlatformLoginPage from "./pages/platform/PlatformLoginPage";
+import SContactUs from "./pages/contactUs/SContactUs";
 
 function App() {
   return (
@@ -57,7 +58,7 @@ function App() {
         <Route path="/footer" element={<Footer />} />
         <Route path="/owners" element={<Owners />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
-        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/contactus" element={<SContactUs />} />
         <Route path="/userstories" element={<UsersStoriesPage />} />
         <Route path="/userstory1" element={<SingleUserStoryPage />} />
         <Route path="/admin/login" element={<Login />} />

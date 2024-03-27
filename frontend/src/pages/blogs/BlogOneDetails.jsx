@@ -64,7 +64,7 @@ const BlogOneDetails = () => {
               <div className="blogpageFullArticle-title">
                 <h2>{allBlogs[0].title}</h2>
                 <p>
-                  <strong>Written by: {allBlogs[0].author}</strong>
+                  <strong>Written by:</strong> {allBlogs[0].author}
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{allBlogs[0].date}
                 </p>
               </div>
@@ -73,8 +73,8 @@ const BlogOneDetails = () => {
               </div>
             </div>
             <div className="recent-posts">
-              <h1>Other Blogs:</h1>
-              <div className="blogs">
+              <h1>Other Blogs</h1>
+              <div className="recent-blogs">
                 {HToV &&
                   filteredBlogs.slice(0, 3).map((blog) => (
                     <div key={blog.id}>

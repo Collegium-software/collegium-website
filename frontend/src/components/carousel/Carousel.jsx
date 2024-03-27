@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "../carousel/carousel.css";
 import Button from "../button/Button";
 
-import image1 from "../../images/drmakete-lab-hsg538WrP0Y-unsplash.png";
-import image2 from "../../images/alex-padurariu-ZKBQmgMyf8s-unsplash.png";
-import image3 from "../../images/carousel/image3.png";
+import image1 from "../../images/carousel/image1_.png";
+import image2 from "../../images/carousel/image2_.png";
+import image3 from "../../images/carousel/image3_.png";
 
 const Carousel = () => {
   const sliderRef = useRef(null);
@@ -24,13 +24,13 @@ const Carousel = () => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
       }
-    }, 5000);
+    }, 15000);
 
     const textIntervalId = setInterval(() => {
       setChangingTextIndex(
         (prevIndex) => (prevIndex + 1) % changingTexts.length
       );
-    }, 5000);
+    }, 15000);
 
     return () => {
       clearInterval(intervalId);
@@ -39,7 +39,7 @@ const Carousel = () => {
   }, [changingTexts.length]);
 
   const settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     speed: 2000,
@@ -51,38 +51,48 @@ const Carousel = () => {
 
   return (
     <div className="changing-text-container">
-      <Slider ref={sliderRef} {...settings}>
-        {images.map((img, index) => (
-          <div key={index} className="carousel-image-container">
-            <img
-              src={img}
-              alt={`Slide ${index + 1}`}
-              className="carousel-image"
-            />
-          </div>
-        ))}
-      </Slider>
-      <h1 className="changing-text">{changingTexts[changingTextIndex]}</h1>
-      {changingTexts[changingTextIndex] ===
-      "A Turnkey Real Estate Development Platform." ? (
-        <>
-          <h3 className="mySpan">
-            Collegium is the Digital Antithesis of Traditional Design &
-            Construction.
-          </h3>
-        </>
-      ) : (
-        <p></p>
-      )}
+      <div className="carousel-mask">
+        <Slider ref={sliderRef} {...settings}>
+          {images.map((img, index) => (
+            <div key={index} className="carousel-image-container">
+              <img
+                src={img}
+                alt={`Slide ${index + 1}`}
+                className="carousel-image"
+              />
+            </div>
+          ))}
+        </Slider>
+        {changingTexts[changingTextIndex] ===
+        "A Turnkey Real Estate Development Platform." ? (
+          <h1 className="changing-text-first">
+            {changingTexts[changingTextIndex]}
+          </h1>
+        ) : (
+          <h1 className="changing-text">{changingTexts[changingTextIndex]}</h1>
+        )}
 
-      {changingTexts[changingTextIndex] ===
-      "Buyers Guide. Is a Collegium project right for you?" ? (
-        <div className="herButton">
-          <Button label="Take the Survey" to="/survey" />
-        </div>
-      ) : (
-        <div className="herButton"></div>
-      )}
+        {changingTexts[changingTextIndex] ===
+        "A Turnkey Real Estate Development Platform." ? (
+          <>
+            <h3 className="mySpan">
+              Collegium is the Digital Antithesis of Traditional Design &
+              Construction.
+            </h3>
+          </>
+        ) : (
+          <p></p>
+        )}
+
+        {changingTexts[changingTextIndex] ===
+        "Buyers Guide. Is a Collegium project right for you?" ? (
+          <div className="herButton">
+            <Button label="Take the Survey" to="/survey" />
+          </div>
+        ) : (
+          <div className="herButton"></div>
+        )}
+      </div>
     </div>
   );
 };
