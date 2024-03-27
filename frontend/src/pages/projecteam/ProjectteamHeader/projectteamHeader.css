@@ -1,17 +1,17 @@
-.projectteam-Header-Page { /* Updated class name */
+.projectteam-Header-Page {
   display: flex;
   justify-content: left;
   align-items: center;
-  color:white;
-  background-image: url(../../../images/projectteam/projectteamHeader.jpeg); /* Updated path */
+  color: white;
+  background-image: url(../../../images/projectteam/projectteamHeader.jpeg);
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
   box-sizing: border-box;
   padding-top: 4vw;
   padding-bottom: 4vw;
- filter: grayscale(90%);
 }
+
 
 .projectteamHeader { /* Updated class name */
   width: 50vw;
@@ -54,6 +54,7 @@
   height: 30%;
   left: 60%;
   top: 80%;
+  filter: none;
 }
 
 @media screen and (max-width: 768px) {

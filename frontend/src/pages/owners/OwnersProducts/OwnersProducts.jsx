@@ -18,46 +18,48 @@ const Product = ({ id, imageUrl, title, description }) => (
     <p>{description}</p>
   </div>
 );
-
 const OwnersProducts = () => {
   const productsData = [
     {
       id: 1,
       imageUrl: TenderManagement,
       title: "Tender Management",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Streamlining the tendering process from procurement to contract award to help secure the best contracts for your projects.",
     },
+    
     {
       id: 2,
       imageUrl: InvoiceManagement,
       title: "Invoice Management",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Handling invoice processing and tracking to ensure accurate and timely payments, minimizing errors and delays.",
     },
     {
       id: 3,
       imageUrl: ProjectFinancial,
       title: "Project Financial",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Providing comprehensive financial oversight, from budgeting to expense tracking, to ensure project profitability and cost control.",
     },
     {
       id: 4,
       imageUrl:ProjectManagement,
       title: " Project Management",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Managing projects from start to finish with industry-leading methodologies and tools, ensuring on-time delivery and within budget.",
     },
     {
       id: 5,
       imageUrl: QualitySafety,
       title: "Quality & Safety",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Ensuring adherence to quality standards and safety protocols throughout the project lifecycle to minimize risks and deliver high-quality outcomes.",
     },
     {
       id: 6,
       imageUrl: Analytics,
       title: "Analytics",
-      description: "Vitae elit lacus lobortis aenean diam. Quisque tincidunt. Vitae elit lacus lobortis aenean diam. Quisque tincidunt.",
+      description: "Leveraging data analysis techniques to extract valuable insights from project data, empowering informed decision-making and continuous improvement.",
     }
   ];
+
+
 
   return (
     <div className="owners-Products-Page">

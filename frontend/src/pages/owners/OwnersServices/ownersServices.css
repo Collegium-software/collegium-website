@@ -75,7 +75,7 @@
   border-image-slice: 1;
   background-image: url('../../../images/owners/ownersGraph.png');
   background-size: cover; 
-  background-position: center; /* This centers the background image */
+  /* background-position: center;  */
 }
 
 
