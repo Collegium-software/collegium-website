@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "../../components/navbar/Navbar";
 
 import ProjectteamsHeader from "./ProjectteamHeader/ProjectteamHeader";
 import ProjectteamsBenefits from "./projectteamBenefits/ProjectteamBenefits";
@@ -20,7 +19,7 @@ const OwnersTeam = () => {
 
   return (
     <>
-      <InterimNavbar background="white" color="black" h3Color="black" />
+      <InterimNavbar background="white" color="black" />
       <ProjectteamsHeader />
       <div className="contact-card-div">
         <ContactCard />

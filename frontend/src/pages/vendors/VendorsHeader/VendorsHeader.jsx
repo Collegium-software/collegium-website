@@ -4,7 +4,6 @@ import Button from "../../../components/button/Button";
 
 const VendorHeader = ({ title1, title2, description, label }) => (
   <header className="vendorsHeader">
-    <h4 className="route">Home/Vendors</h4>
     <h1 className="title">{title1}</h1>
     <h3 className="subtitle-">{title2}</h3>
     <p>{description}</p>

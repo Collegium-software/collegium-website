@@ -88,7 +88,7 @@ function App() {
 
 const Home = () => (
   <>
-    <InterimNavbar background="transparent" color="white" />
+    <InterimNavbar background="white" color="black" />
     <Carousel />
     <Solutions />
     <Comparison />

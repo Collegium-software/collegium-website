@@ -2,7 +2,6 @@
   display: flex;
   justify-content: left;
   align-items: center;
-  color: white;
   background-image: url(../../../images/projectteam/projectteamHeader.jpeg);
   background-size: cover; 
   background-position: center;
@@ -10,8 +9,20 @@
   box-sizing: border-box;
   padding-top: 4vw;
   padding-bottom: 4vw;
+  height: 40vw;
 }
-
+.projectteam-mask {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  height: 40vw;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(10, 37, 59, 0.6) 30%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0.3) 100%);
+}
 
 .projectteamHeader { /* Updated class name */
   width: 50vw;
@@ -58,6 +69,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .projectteam-Header-Page, .projectteam-mask {
+    height: 300px;
+  }
   .projectteamHeader { /* Updated class name */
     text-align: left;
     align-items:left;

@@ -3,13 +3,14 @@
     justify-content: left;
     align-items: center;
     color:white;
-    background-image: url(../../../images/owners/ownersHeader.png);
+    background-image: url("../../../images/owners/ownersHeader.png");
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
     box-sizing: border-box;
     padding-top: 4vw;
     padding-bottom: 4vw;
+    height: 40vw;
   }
   
 
@@ -53,17 +54,15 @@
   left: 60%;
   top: 80%;
 }
-  
-
-
-
 
 @media screen and (max-width: 768px) {
-    
+  .owners-Header-Page{
+    height: 300px;
+  }
   .ownersHeader{
       text-align: left;
       align-items:left;
-      width: 70%;
+      width: 90%;
   }
   .route {
       font-size: 10px;

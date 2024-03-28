@@ -1,5 +1,3 @@
-
-
 .owners-benefits-Page {
   display: flex;
   flex-direction: column;
@@ -8,7 +6,7 @@
   color:black;
 }
 
-.owners-benefits-Container {
+.owners-benefits-cards {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start; 
@@ -16,8 +14,8 @@
   padding: 10vw 0vw;
 }
 
-.benefitsContainer,
-.imageContainer {
+.ownersBenefitsContainer,
+.ownersImageContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,32 +23,33 @@
   width: 25vw;
 }
 
-.benefitsContainer p {
+.ownersBenefitsContainer p {
   font-size: 1.2vw;
   padding-top:1vw;
   margin:0vw;
-  
+  cursor: pointer;
 }
 
-.imageContainer {
+.ownersImageContainer {
   position: relative;
   border: 0.2vw solid;
   border-image: linear-gradient(to right, #1882FF, #36EBCA);
   border-image-slice: 1;
   background-size: cover;
   background-position: center;
-  height: 31vw;
-  width:99.8%;
+  height: 30vw;
+  border-width: 1px;
+  cursor: pointer;
+
 }
 
 
-
-.image-label {
+.ownersImage-label {
   position: absolute;
   bottom: 0.01%;
   left: 0%;
   width: 100%;
-  height: 30%;
+  height: 20%;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
@@ -60,31 +59,102 @@
   font-size: 1.6vw;
   border:none;
 }
+.popout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
 
+.popout-content {
+  background-color: white;
+  padding: 2vw 5vw 2vw 5vw;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  height: 40vw;
+  text-align: justify;
+  overflow-y: auto;
+}
+.popout-content::-webkit-scrollbar {
+  display: none; 
+}
+.popout-content p {
+  font-size: 1.2vw;
+  min-height: 30vw;
+}
+.popout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2vw;
+}
+.popout-button button {
+  background-color: red;
+  width: 7vw;
+  height: 2.5vw;
+  color: white;
+  font-size: 1vw;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0px 0px 10px rgba(10, 37, 59, 0.5);
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
-  .owners-benefits-Container {
+  .owners-benefits-Page {
+    width: 90%;
+    margin: auto;
+  }
+  .owners-benefits-cards {
     flex-direction: column;
     align-items: center;
-    padding-top: 5vw;
-    padding-bottom: 5vw; 
+    width: 100%;
+    padding: 5px 0 20px 0;
   }
 
-  .benefitsContainer{
-    width: 300px;  
-    max-width: none; 
+  .ownersBenefitsContainer,
+  .ownersImageContainer {
+    width: 100%;  
+    height: 300px;
 
   }
-  .imageContainer {
-    width:  300px;  
-    max-width: none; 
-  }
-
-  .benefitsContainer p  {
-    width: 300px;
+  .ownersBenefitsContainer p  {
+    width: 90%;
+    margin: auto;
     font-size: 12px;
     margin-bottom:30px;
-}
+  }
+  .ownersImage-label {
+  font-size: 16px;
+  }
+  .popout-content {
+    height: 40%;
+    padding: 15px 25px 15px 25px;
+  }
+  .popout-content h2 {
+    font-size: 16px;
+  }
+  .popout-content p {
+    font-size: 12px;
+    min-height: 200px;
+  }
+  .popout-button button {
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+  }
 }
  
 

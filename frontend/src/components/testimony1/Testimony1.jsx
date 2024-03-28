@@ -1,15 +1,12 @@
 import React from "react";
 import "../../components/testimony1/testimony1.css";
-import Button from "../button/Button";
-import testimonyPic from "../../images/testimony/testimonials2.jpeg";
-import CustomerPic from "../../images/testimony/CustomerPic.png";
 import userStory from "../../images/testimony/userStory.jpg";
 import customer from "../../images/testimony/customer.jpg";
 
 const Testimony1 = () => (
   <div className="testimony">
     <div className="testimonyContainer">
-      <h1>User's Story</h1>
+      <h1>Testimony</h1>
       <div className="client">
         <img className="clientImage" src={customer} alt="Customer" />
         <h3>Andrew Bowerbank</h3>
