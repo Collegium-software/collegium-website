@@ -2,9 +2,9 @@ import React from "react";
 import "./ownersBenefits.css";
 import { useState } from "react";
 
-import OwnersPic1 from "../../../images/owners/ownersProjectPic1.png";
-import OwnersPic2 from "../../../images/owners/ownersProjectPic2.png";
-import OwnersPic3 from "../../../images/owners/ownersProjectPic3.png";
+import OwnersPic1 from "../../../images/owners/owners1.jpg";
+import OwnersPic2 from "../../../images/owners/owners2.jpg";
+import OwnersPic3 from "../../../images/owners/owners3.jpg";
 
 const OwnersBenefits = () => {
   const BenefitsContainer = ({ imageUrl, label, description, func }) => (
@@ -20,13 +20,6 @@ const OwnersBenefits = () => {
       <p onClick={func}>{description}</p>
     </div>
   );
-
-  const cardTwoPopOutWindow = () => {
-    console.log("Card 2!");
-  };
-  const cardThreePopOutWindow = () => {
-    console.log("Card 3!");
-  };
 
   const CardOnePopoutWindow = ({ onClose }) => {
     return (
@@ -53,10 +46,7 @@ const OwnersBenefits = () => {
             tempora incidunt ut labore et dolore magnam aliquam quaerat
             voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
             ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-            consequatur? <br />
-            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-            quo voluptas nulla pariatur?
+            consequatur?
           </p>
           <div className="popout-button">
             <button onClick={onClose}>Close</button>
@@ -65,10 +55,86 @@ const OwnersBenefits = () => {
       </div>
     );
   };
-  const [isPopoutVisible, setIsPopoutVisible] = useState(false);
+  const CardTwoPopoutWindow = ({ onClose }) => {
+    return (
+      <div className="popout-overlay">
+        <div className="popout-content">
+          <h2>Streamlined Scheduling</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+            eos qui ratione voluptatem sequi nesciunt. <br /> Neque porro
+            quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+            labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+            minima veniam, quis nostrum exercitationem ullam corporis suscipit
+            laboriosam, nisi ut aliquid ex ea commodi consequatur? <br />
+            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+            quo voluptas nulla pariatur?
+            <br /> Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+            amet, consectetur, adipisci velit, sed quia non numquam eius modi
+            tempora incidunt ut labore et dolore magnam aliquam quaerat
+            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+            ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+            consequatur?
+          </p>
+          <div className="popout-button">
+            <button onClick={onClose}>Close</button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const CardThreePopoutWindow = ({ onClose }) => {
+    return (
+      <div className="popout-overlay">
+        <div className="popout-content">
+          <h2>Proactive Risk Mitigation</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+            eos qui ratione voluptatem sequi nesciunt. <br /> Neque porro
+            quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+            labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+            minima veniam, quis nostrum exercitationem ullam corporis suscipit
+            laboriosam, nisi ut aliquid ex ea commodi consequatur? <br />
+            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
+            quo voluptas nulla pariatur?
+            <br /> Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+            amet, consectetur, adipisci velit, sed quia non numquam eius modi
+            tempora incidunt ut labore et dolore magnam aliquam quaerat
+            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+            ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+            consequatur?
+          </p>
+          <div className="popout-button">
+            <button onClick={onClose}>Close</button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const [isPopoutOneVisible, setIsPopoutOneVisible] = useState(false);
+  const [isPopoutTwoVisible, setIsPopoutTwoVisible] = useState(false);
+  const [isPopoutThreeVisible, setIsPopoutThreeVisible] = useState(false);
 
-  const togglePopout = () => {
-    setIsPopoutVisible(!isPopoutVisible);
+  const togglePopoutOne = () => {
+    setIsPopoutOneVisible(!isPopoutOneVisible);
+  };
+  const togglePopoutTwo = () => {
+    setIsPopoutTwoVisible(!isPopoutTwoVisible);
+  };
+  const togglePopoutThree = () => {
+    setIsPopoutThreeVisible(!isPopoutThreeVisible);
   };
   return (
     <div className="owners-benefits-Page">
@@ -77,24 +143,36 @@ const OwnersBenefits = () => {
           imageUrl={OwnersPic1}
           label="Cost Optimization"
           description="Implementing strategic measures to optimize costs, unlocking new avenues for financial efficiency and resource utilization."
-          func={togglePopout}
+          func={togglePopoutOne}
         />
         <BenefitsContainer
           imageUrl={OwnersPic2}
           label="Streamlined Scheduling"
           description="Accelerating project timelines, streamlining scheduling processes, and ensuring resource optimization."
-          func={cardTwoPopOutWindow}
+          func={togglePopoutTwo}
         />
         <BenefitsContainer
           imageUrl={OwnersPic3}
           label="Proactive Risk Mitigation"
           description="Mitigating potential risks safeguarding your projects and
         ensuring a smoother development process"
-          func={cardThreePopOutWindow}
+          func={togglePopoutThree}
         />
       </div>
       <div>
-        {isPopoutVisible && <CardOnePopoutWindow onClose={togglePopout} />}
+        {isPopoutOneVisible && (
+          <CardOnePopoutWindow onClose={togglePopoutOne} />
+        )}
+      </div>
+      <div>
+        {isPopoutTwoVisible && (
+          <CardTwoPopoutWindow onClose={togglePopoutTwo} />
+        )}
+      </div>
+      <div>
+        {isPopoutThreeVisible && (
+          <CardThreePopoutWindow onClose={togglePopoutThree} />
+        )}
       </div>
     </div>
   );

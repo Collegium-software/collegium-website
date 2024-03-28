@@ -109,6 +109,9 @@
   box-shadow: 0px 0px 10px rgba(10, 37, 59, 0.5);
   cursor: pointer;
 }
+.popout-button button:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
 
 @media (max-width: 768px) {
   .owners-benefits-Page {
@@ -138,7 +141,7 @@
   font-size: 16px;
   }
   .popout-content {
-    height: 40%;
+    height: 60%;
     padding: 15px 25px 15px 25px;
   }
   .popout-content h2 {

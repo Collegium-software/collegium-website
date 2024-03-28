@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 
 import ProjectteamsHeader from "./ProjectteamHeader/ProjectteamHeader";
-import ProjectteamsBenefits from "./projectteamBenefits/ProjectteamBenefits";
-import ProjectteamsProducts from "./ProjectteamProducts/ProjectteamProducts";
-import ProjectteamsTestimony from "./ProjectteamTestimony/ProjectteamTestimony";
-import ProjectteamServices from "./ProjectteamServices/ProjectteamServices";
+import ProjectteamBenefits from "./projectteamBenefits/ProjectteamBenefits";
+// import ProjectteamsProducts from "./ProjectteamProducts/ProjectteamProducts";
+// import ProjectteamsTestimony from "./ProjectteamTestimony/ProjectteamTestimony";
+// import ProjectteamServices from "./ProjectteamServices/ProjectteamServices";
+
 import SFooter from "../../components/footer/SFooter";
 import ContactCard from "../../components/contactCard/SadiqContactCard";
 import InterimNavbar from "../../components/navbar/InterimNavbar";
@@ -24,7 +25,8 @@ const OwnersTeam = () => {
       <div className="contact-card-div">
         <ContactCard />
       </div>
-      <ProjectteamsBenefits />
+      {/* <ProjectteamsBenefit /> */}
+      <ProjectteamBenefits />
       {/* <ProjectteamsTestimony />
       <ProjectteamServices />
       <ProjectteamsProducts /> */}
