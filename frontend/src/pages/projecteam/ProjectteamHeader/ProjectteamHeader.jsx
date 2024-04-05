@@ -19,7 +19,7 @@ const ProjectteamsHeader = () => {
       <div className="projectteam-mask">
         <ProjectteamHeader
           title1="Owners Team"
-          title2="Enhance, Empower,and Excel"
+          title2="Enhance, Empower, and Excel"
           description="Empower your team to excel in today's competitive landscape, unlocking new opportunities for growth and innovation."
           label="Contact Us"
         />

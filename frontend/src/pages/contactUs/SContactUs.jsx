@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./scontactus.css";
 import contactUs from "../../images/contactUs/contactUs.jpg";
 import emailjs from "emailjs-com";
@@ -56,6 +56,24 @@ const SContactUs = () => {
 
   const handleContactFormChange = (e) => {
     e.preventDefault();
+    const { id, value } = e.target;
+    const blockedDomains = [
+      "gmail.com",
+      "yahoo.com",
+      "yahoomail.com",
+      "hotmail.com",
+      "outlook.com",
+      "aol.com",
+      "mail.com",
+      "yandex.com",
+    ];
+    if (id === "email") {
+      const domain = value.substring(value.lastIndexOf("@") + 1);
+      if (blockedDomains.includes(domain)) {
+        alert(`${domain} email address are not allowed.`);
+        return;
+      }
+    }
     setUserDetails((prevDetails) => ({
       ...prevDetails,
       fullName: document.getElementById("fullName").value,
@@ -65,6 +83,7 @@ const SContactUs = () => {
       description: document.getElementById("description").value,
     }));
   };
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleUserTypeChange = (typeOption) => {
     setUserType((prevType) => {
@@ -77,8 +96,8 @@ const SContactUs = () => {
       }
     });
   };
-  const handleContactUsFormSubmit = () => {
-    // e.preventDefault();
+  const handleContactUsFormSubmit = (e) => {
+    e.preventDefault();
     console.log("Entered details: ", userDetails);
     console.log(
       "User Type: ",
@@ -107,6 +126,15 @@ const SContactUs = () => {
         )
         .then((result) => {
           console.log(result.text);
+          setUserDetails({
+            fullName: "",
+            company: "",
+            email: "",
+            phone: "",
+            description: "",
+          });
+          setUserType([]);
+          setEmailSent(true);
         })
         .catch((error) => {
           console.log(error.text);
@@ -117,7 +145,7 @@ const SContactUs = () => {
   const UserTypeOptions = ({ option }) => {
     const optionId = option.id;
     return (
-      <>
+      <div className="checkboxes">
         <input
           type="checkbox"
           id={`option-${optionId}`}
@@ -126,31 +154,30 @@ const SContactUs = () => {
           checked={userType.includes(option.userTypeOption)}
           onChange={() => handleUserTypeChange(option.userTypeOption)}
         />
-        <label>
+        <label htmlFor={`option-${optionId}`}>
           {option.userTypeOption}
           <br />
         </label>
-      </>
+      </div>
     );
+  };
+  const hideEmailSent = () => {
+    setEmailSent(false);
   };
   return (
     <>
-      <InterimNavbar background="#0a253b" color="white" />
-      <div className="contactUs-hero">
-        <img src={contactUs} alt="contactUs-hero" />
-        <div className="contactUs-hero-text">
-          <div className="contactUs-route">
-            <p>Home / Contact Us</p>
-          </div>
-          <div className="contactUs-title">
+      <InterimNavbar background="white" color="black" />
+      <div className="contactus-hero">
+        <img src={contactUs} alt="contactus-hero" />
+        <div className="contactus-hero-text">
+          <div className="contactus-title">
             <h2>Contact Us</h2>
           </div>
-          <div className="contactUs-subtitle">
-            <p>Connect with Us Today</p>
+          <div className="contactus-subtitle">
+            <p>Learn more about Collegium services</p>
           </div>
         </div>
       </div>
-
       <div className="form-container">
         <form
           className="contact-form"
@@ -158,59 +185,60 @@ const SContactUs = () => {
           onSubmit={handleContactUsFormSubmit}
         >
           <div className="user-info-first">
-            <div className="input-divs">
-              <label>Full Name *</label>
-              <input
-                id="fullName"
-                type="text"
-                value={userDetails.fullName}
-                onChange={handleContactFormChange}
-                required
-              />
+            <div className="first-column">
+              <div className="input-divs">
+                <label>Full Name *</label>
+                <input
+                  id="fullName"
+                  type="text"
+                  value={userDetails.fullName}
+                  onChange={handleContactFormChange}
+                  required
+                />
+              </div>
+              <div className="input-divs">
+                <label>Company Name *</label>
+                <input
+                  id="company"
+                  type="text"
+                  value={userDetails.company}
+                  onChange={handleContactFormChange}
+                  required
+                />
+              </div>
             </div>
-            <div className="input-divs">
-              <label>Company Name *</label>
-              <input
-                id="company"
-                type="text"
-                value={userDetails.company}
-                onChange={handleContactFormChange}
-                required
-              />
-            </div>
-            <div className="input-divs">
-              <label>Email (Business Email) *</label>
-              <input
-                id="email"
-                type="email"
-                value={userDetails.email}
-                onChange={handleContactFormChange}
-                required
-              />
-            </div>
-            <div className="input-divs">
-              <label>Phone Number *</label>
-              <input
-                id="phone"
-                type="text"
-                value={userDetails.phone}
-                onChange={handleContactFormChange}
-                required
-                maxLength="13"
-              />
+            <div className="second-column">
+              <div className="input-divs">
+                <label>Email (Business Email) *</label>
+                <input
+                  id="email"
+                  type="email"
+                  value={userDetails.email}
+                  onChange={handleContactFormChange}
+                  required
+                />
+              </div>
+              <div className="input-divs">
+                <label>Phone Number *</label>
+                <input
+                  id="phone"
+                  type="text"
+                  value={userDetails.phone}
+                  onChange={handleContactFormChange}
+                  required
+                  maxLength="13"
+                />
+              </div>
             </div>
           </div>
-          <div className="user-info-second">
-            <label>
-              How can we help you? *
-              <br />
-              <textarea
-                id="description"
-                value={userDetails.description}
-                onChange={handleContactFormChange}
-                required
-              />
-            </label>
+          <div className="user-info-textarea">
+            <label>How can we help you? *</label>
+            <textarea
+              id="description"
+              value={userDetails.description}
+              onChange={handleContactFormChange}
+              required
+            />
           </div>
 
           <div div className="company-category">
@@ -225,10 +253,24 @@ const SContactUs = () => {
               <UserTypeOptions key={index2} option={option} />
             ))}
           </div>
-          <button type="submit">Submit</button>
+          <div className="form-button">
+            <button type="submit">Submit</button>
+          </div>
         </form>
       </div>
       <SFooter />
+      {emailSent && (
+        <div className="email-sent-popout">
+          <div className="email-sent-contents">
+            <p>
+              Thank you! <br /> <br />
+              Your submission has been received successfully. We will get back
+              to you soon!
+            </p>
+            <button onClick={hideEmailSent}>Close</button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
