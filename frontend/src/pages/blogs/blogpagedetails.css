@@ -73,6 +73,7 @@
     font-size: 1.2vw;
     margin-top: 0.3vw;
     text-align: justify;
+    hyphens: auto;
     
 }
 .blogpageFullArticle-description h2{

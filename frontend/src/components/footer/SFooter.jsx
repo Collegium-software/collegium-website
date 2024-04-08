@@ -55,8 +55,8 @@ const SFooter = () => {
             </div>
             <div className="collegium-slogan">
               <p>
-                At Collegium, our commitment is to drive efficiency and //
-                collaboration in the construction ecosystem.
+                At Collegium, we concentrate on minimizing costs and timelines,
+                aiming to improve life cycle cash flows for building owner.
               </p>
             </div>
             <div className="sfooter-socialmedia">

@@ -1,19 +1,30 @@
-.vendors-Header-Page{
+.vendors-Header-Page {
   display: flex;
   justify-content: left;
   align-items: center;
-  color:white;
-  background-image: url(../../../images/vendors/vendorsHeader.png);
+  background-image: url("../../../images/vendors/vendorsheader.jpeg");
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
   box-sizing: border-box;
   padding-top: 4vw;
   padding-bottom: 4vw;
+  height: 40vw;
+}
+.vendors-mask {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  height: 40vw;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(10, 37, 59, 0.6) 30%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0.3) 100%);
 }
 
-
-.vendorsHeader{
+.vendorsHeader { /* Updated class name */
   width: 50vw;
   display: flex;
   flex-direction: column;
@@ -23,57 +34,61 @@
   padding-left: 16vw;
 }
 
-.vendorsHeader h1 {
+.vendorsHeader h1 { /* Updated class name */
   font-size: 3vw;
   font-weight: bolder;
   margin-bottom: 0;
 }
-.vendorsHeader h3{
+
+.vendorsHeader h3 { /* Updated class name */
   margin-top: 0.5vw;
   margin-bottom: 2vw;
   font-size: 1.8vw;
 }
 
-.vendorsHeader h4{
+.vendorsHeader h4 { /* Updated class name */
   font-size: 1vw;
   padding-bottom:1vw;
 }
-.vendorsHeader p {
+
+.vendorsHeader p { /* Updated class name */
   line-height: 2vw;
   font-size: 1.2vw;
 }
 
-.vendorsHeaderButton {
+.vendorsHeaderButton { /* Updated class name */
   margin-top: 2vw;
 }
 
-.vendorsHeaderCard {
+.vendorsHeaderCard { /* Updated class name */
   position: absolute;
   height: 30%;
   left: 60%;
   top: 80%;
+  filter: none;
 }
 
 @media screen and (max-width: 768px) {
-  
-  .vendorsHeader{
+  .vendors-Header-Page, .vendors-mask {
+    height: 300px;
+  }
+  .vendorsHeader { /* Updated class name */
     text-align: left;
     align-items:left;
     width: 70%;
   }
-  .route {
-    font-size: 10px;
-  }
-  .vendorsHeader h1{
+
+
+  .vendorsHeader h1 { /* Updated class name */
     font-size: 25px;
   }
-  .vendorsHeader h3{
+
+  .vendorsHeader h3 { /* Updated class name */
     font-size: 15px;
   }
 
-  .vendorsHeader p {
+  .vendorsHeader p { /* Updated class name */
     line-height: 16px;
     font-size: 12px;
   }
-
 }

@@ -1,12 +1,12 @@
-.projectteams-benefits-Page {
+.ownersTeam-benefits-Page {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
+  background-color:white;
   color:black;
 }
 
-.projectteams-benefits-Container {
+.ownersTeam-benefits-cards {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start; 
@@ -14,8 +14,8 @@
   padding: 10vw 0vw;
 }
 
-.projectteamsContainer,
-.imageContainer {
+.ownersTeamBenefitsContainer,
+.ownersTeamImageContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,29 +23,42 @@
   width: 25vw;
 }
 
-.projectteamsContainer p {
+.ownersTeamBenefitsContainer p {
   font-size: 1.2vw;
   padding-top:1vw;
   margin:0vw;
+  cursor: pointer;
+  text-align: justify;
+  hyphens: auto;
+  height: 10vw;
+  /* border: solid red; */
 }
-
-.imageContainer {
+.ownersTeamBenefitsContainer span {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
+.ownersTeamImageContainer {
   position: relative;
-  border: 0.2vw solid;
-  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border: 1px solid;
+  /* border-image: linear-gradient(to right, #1882FF, #36EBCA); */
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-image-slice: 1;
   background-size: cover;
   background-position: center;
-  height: 31vw;
-  width:99.8%;
+  height: 30vw;
+  border-width: 1px;
+  cursor: pointer;
+
 }
 
-.image-label {
+
+.ownersTeamImage-label {
   position: absolute;
   bottom: 0.01%;
   left: 0%;
   width: 100%;
-  height: 30%;
+  height: 20%;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
@@ -55,28 +68,105 @@
   font-size: 1.6vw;
   border:none;
 }
+.ownersTeamPopout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.ownersTeamPopout-content {
+  background-color: white;
+  padding: 2vw 5vw 2vw 5vw;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  height: 40vw;
+  text-align: justify;
+  hyphens: auto;
+  overflow-y: auto;
+}
+
+.ownersTeamPopout-content p {
+  font-size: 1.2vw;
+  min-height: 30vw;
+}
+.ownersTeamPopout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2vw;
+}
+.ownersTeamPopout-button button {
+  background-color: red;
+  width: 7vw;
+  height: 2.5vw;
+  color: white;
+  font-size: 1vw;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0px 0px 10px rgba(10, 37, 59, 0.5);
+  cursor: pointer;
+}
+.ownersTeamPopout-button button:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
 
 @media (max-width: 768px) {
-  .projectteams-benefits-Container {
+  .ownersTeam-benefits-Page {
+    width: 90%;
+    margin: auto;
+  }
+  .ownersTeam-benefits-cards {
     flex-direction: column;
     align-items: center;
-    padding-top: 5vw;
-    padding-bottom: 5vw; 
+    width: 100%;
+    padding: 5px 0 20px 0;
+    gap: 30px;
   }
 
-  .projectteamsContainer {
-    width: 300px;  
-    max-width: none; 
-  }
+  .ownersTeamBenefitsContainer,
+  .ownersTeamImageContainer {
+    width: 100%;  
+    height: 300px;
 
-  .imageContainer {
-    width:  300px;  
-    max-width: none; 
   }
-
-  .projectteamsContainer p {
-    width: 300px;
+  .ownersTeamBenefitsContainer p  {
+    width: 90%;
+    margin: auto;
     font-size: 12px;
     margin-bottom:30px;
   }
+  .ownersTeamImage-label {
+  font-size: 16px;
+  }
+  .ownersTeamPopout-content {
+    height: 60%;
+    padding: 15px 25px 15px 25px;
+  }
+  .ownersTeamPopout-content h2 {
+    font-size: 16px;
+  }
+  .ownersTeamPopout-content p {
+    font-size: 12px;
+    min-height: 200px;
+  }
+  .ownersTeamPopout-button button {
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+  }
 }
+ 
+

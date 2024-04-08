@@ -69,7 +69,10 @@ const BlogSixDetails = () => {
                 </p>
               </div>
               <div className="blogpageFullArticle-description">
-                <p>{allBlogs[5].description}</p>
+                <p
+                  dangerouslySetInnerHTML={{ __html: allBlogs[5].description }}
+                />
+                {/* <p>{allBlogs[5].description}</p> */}
               </div>
             </div>
             <div className="recent-posts">

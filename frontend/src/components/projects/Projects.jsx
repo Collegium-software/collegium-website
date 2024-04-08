@@ -1,14 +1,12 @@
 import "./projects.css";
 import Button from "../button/Button";
-import ProjectPic1 from "../../images/projectPic1.png";
-import ProjectPic2 from "../../images/projectPic2.png";
-import ProjectPic3 from "../../images/projectPic3.png";
+
 import project1 from "../../images/projects/project1.png";
 import project2 from "../../images/projects/project2.jpg";
 import project3 from "../../images/projects/project3.jpg";
 
 const Container = ({ imageUrl, label, description }) => {
-  console.log("Rendering Card:", label); // Log a message when the Card component renders
+  // console.log("Rendering Card:", label);
   return (
     <div className="container">
       <div
@@ -24,8 +22,8 @@ const Container = ({ imageUrl, label, description }) => {
 const Header = ({ title1, title2, label }) => {
   return (
     <header className="projectsHeader">
-      <h1>{title1}</h1>
-      <h2>{title2}</h2>
+      <h2>{title1}</h2>
+      <h3>{title2}</h3>
       <div className="projectButton">
         <Button color="black" label="Browse All Project" to="/projects" />
       </div>

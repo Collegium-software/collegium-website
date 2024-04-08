@@ -91,8 +91,8 @@ const Home = () => (
     <InterimNavbar background="transparent" color="white" />
     <Carousel />
     <Solutions />
-    <Comparison />
-    <Projects />
+    {/* <Comparison /> */}
+    {/* <Projects /> */}
     <Blog />
     <Testimony1 />
     <Footer />

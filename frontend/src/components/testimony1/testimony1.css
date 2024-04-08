@@ -33,9 +33,10 @@
   gap: 1vw;
 
 }
-.testimonyContainer h1 {
+.testimonyContainer h2 {
   margin: 0;
   margin-bottom: 3vw;
+  font-size: 2.5vw;
 }
 
 
@@ -70,8 +71,9 @@
 .testimonyText {
   color: black;
   /* background-color: #0A253B; */
-  border: 2px solid;
-  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border: 1px solid;
+  /* border-image: linear-gradient(to right, #1882FF, #36EBCA); */
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-image-slice: 1; 
   text-align: left;
   /* margin: 2vh; */
@@ -99,10 +101,13 @@
 }
 
 .testimonyContainer{
-width:fit-content ;
-height: auto;
-margin: 5%;
+  width:fit-content ;
+  height: auto;
+  margin: 5%;
 
+}
+.testimonyContainer h2{
+  font-size: 20px;
 }
 
 .testimonyImageContainer {

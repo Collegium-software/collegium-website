@@ -9,6 +9,7 @@
 }
 .blogslist-gradient {
     background: linear-gradient(to bottom, #1882FF, #36EBCA); 
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,12 +7,6 @@ import emailjs from "emailjs-com";
 import InterimNavbar from "../../components/navbar/InterimNavbar";
 
 const SurveyForm = () => {
-  // useEffect(() => {
-  //   const locationReset = () => {
-  //     window.scrollTo(0, 0);
-  //   };
-  //   locationReset();
-  // });
   const [responses, setResponses] = useState({});
   const [userDetails, setUserDetails] = useState({
     name: "",
@@ -29,6 +23,26 @@ const SurveyForm = () => {
     }));
   };
   const handleUserDetailsChange = (e) => {
+    const { id, value } = e.target;
+    const blockedDomains = [
+      "gmail.com",
+      "yahoo.com",
+      "yahoomail.com",
+      "hotmail.com",
+      "outlook.com",
+      "aol.com",
+      "mail.com",
+      "yandex.com",
+    ];
+    if (id === "user-email") {
+      const domain = value.substring(value.lastIndexOf("@") + 1);
+      if (blockedDomains.includes(domain)) {
+        alert(
+          `Please input your company's email address, ${domain} email address is not allowed.`
+        );
+        return;
+      }
+    }
     setUserDetails((prevDetails) => ({
       ...prevDetails,
       name: document.getElementById("user-name").value,
@@ -147,12 +161,18 @@ const SurveyForm = () => {
 
     if (counts.Yes >= 8) {
       setResultHigh(true);
+      setResultMedium(false);
+      setResultLow(false);
     } else if (counts.Yes <= 7 && counts.Yes >= 6) {
       setResultMedium(true);
+      setResultHigh(false);
+      setResultLow(false);
     } else if (counts.Yes <= 5) {
       setResultLow(true);
+      setResultHigh(false);
+      setResultMedium(false);
     }
-    setFormVisible(false);
+    // setFormVisible(false);
     setResultVisible(true);
     sendEmail();
   };
@@ -173,10 +193,10 @@ const SurveyForm = () => {
     console.log("data to be sent: ", data);
     emailjs
       .send(
-        "collegium",
-        "template_wsk4b1q",
+        "service_cb7ru17",
+        "template_3tke4lf",
         { message: data },
-        "IxX0NQppbii2VWyK8"
+        "oo2yhgSjBTsgG_3F5"
       )
       .then((result) => {
         console.log(result.text);
@@ -185,9 +205,14 @@ const SurveyForm = () => {
         console.log(error.text);
       });
   };
+  const closeResultPopout = () => {
+    setResultVisible(false);
+    window.scrollTo(0, 0);
+    window.location.reload();
+  };
   return (
-    <>
-      <InterimNavbar background="white" color="black" />
+    <div className="survey-section">
+      <InterimNavbar background="transparent" color="black" />
       <div className="survey">
         {formVisible && (
           <div className="header">
@@ -266,8 +291,10 @@ const SurveyForm = () => {
             </div>
           </form>
         )}
-        {resultVisible && (
-          <div className="survey-result">
+      </div>
+      {resultVisible && (
+        <div className="survey-result">
+          <div className="result-popout">
             <h3>{match}% Match!</h3>
             {resultHigh && (
               <div className="survey-result-high">
@@ -275,6 +302,7 @@ const SurveyForm = () => {
                   Perfect {userDetails.name}! You are an excellent fit for
                   Collegium projects. We will contact you for the next steps!
                 </p>
+                <button onClick={closeResultPopout}>Close</button>
               </div>
             )}
             {resultMedium && (
@@ -284,7 +312,10 @@ const SurveyForm = () => {
                   your project. Would you like us to reach out to you? Feel free
                   to visit our Contact Us page and send us a message.
                 </p>
-                <button onClick={handleContactButton}>Contact Us</button>
+                <div className="buttons">
+                  <button onClick={handleContactButton}>Contact Us</button>
+                  <button onClick={closeResultPopout}>Close</button>
+                </div>
               </div>
             )}
             {resultLow && (
@@ -295,14 +326,17 @@ const SurveyForm = () => {
                   like us to reach out to you? Feel free to visit our Contact Us
                   page and send us a message.
                 </p>
-                <button onClick={handleContactButton}>Contact Us</button>
+                <div className="buttons">
+                  <button onClick={handleContactButton}>Contact Us</button>
+                  <button onClick={closeResultPopout}>Close</button>
+                </div>
               </div>
             )}
           </div>
-        )}
-      </div>
+        </div>
+      )}
       <SFooter />
-    </>
+    </div>
   );
 };
 

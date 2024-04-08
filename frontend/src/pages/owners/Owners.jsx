@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
+// import Navbar from "../../components/navbar/Navbar";
 import OwnersBenefits from "./OwnersBenefits/OwnersBenefits";
 import SFooter from "../../components/footer/SFooter";
-import OwnersServices from "./OwnersServices/OwnersServices";
-import OwnersTestimony from "./OwnersTestimony/OwnersTestimony";
-import OwnersProducts from "./OwnersProducts/OwnersProducts";
+// import OwnersServices from "./OwnersServices/OwnersServices";
+// import OwnersTestimony from "./OwnersTestimony/OwnersTestimony";
+// import OwnersProducts from "./OwnersProducts/OwnersProducts";
 import OwnerHeader from "./OwnersHeader/OwnersHeader";
 import { useEffect } from "react";
 import ContactCard from "../../components/contactCard/SadiqContactCard";
@@ -12,6 +12,10 @@ import InterimNavbar from "../../components/navbar/InterimNavbar";
 
 const Owners = () => {
   useEffect(() => {
+    const locationReset = () => {
+      window.scrollTo(0, 0);
+    };
+    locationReset();
     document.body.style.backgroundColor = "White";
     return () => {
       document.body.style.backgroundColor = "";

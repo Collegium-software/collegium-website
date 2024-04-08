@@ -3,7 +3,8 @@
     margin-top: 3vw;
 }
 .myBlog-gradient {
-    background: linear-gradient(to right, #1882FF, #36EBCA); 
+    /* background: linear-gradient(to right, #1882FF, #36EBCA);  */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +28,7 @@
     width: 50%;
     justify-content: center;
     align-items: center;
-    height: 28vw;
+    height: 34vw;
     
 }
 .myBlog-image img {
@@ -43,7 +44,7 @@
     align-items: left;
     padding: 2vw 6vw 0vw 6vw;
     box-sizing: border-box;
-    height: 28vw;
+    height: 34vw;
 }
 .myBlog-text .date-created {
     font-size: 1.2vw;
@@ -52,13 +53,15 @@
     font-size: 1.7vw;
 }
 .myBlog-text .myBlog-description {
-    max-height: 120px;
-    min-height: 120px;
+    max-height: 180px;
+    min-height: 180px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: justify;
+    hyphens: auto;
     font-size: 1.2vw;
     margin-top: 0;
+    
 }
 .myBlog-text .myBlog-author {
     font-size: 1.2vw;

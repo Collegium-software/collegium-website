@@ -57,7 +57,11 @@ const AllBlogs = () => {
             <p className="date-created">Date created: &emsp;{blog.date}</p>
             <h2 className="myBlog-title">{blog.title}</h2>
             <p className="myBlog-author">Written by:&emsp;{blog.author}</p>
-            <p className="myBlog-description">{blog.description}</p>
+            <p
+              className="myBlog-description"
+              dangerouslySetInnerHTML={{ __html: blog.description }}
+            />
+            {/* <p className="myBlog-description">{blog.description}</p> */}
             <div className="myBlog-button">
               <Button
                 label={blog.button.label}
