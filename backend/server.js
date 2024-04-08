@@ -4,6 +4,8 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const MONGODB_URI = process.env.MONGODB_URI;
+const USER_NAME = process.env.USER_NAME;
+const PASSWORD = process.env.PASSWORD;
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -32,8 +34,8 @@ app.use(
 );
 //dummy username and  password
 const dummyUser = {
-  username: "admin@collegium.com",
-  password: "@collegium123",
+  username: USER_NAME,
+  password: PASSWORD,
 };
 //route for login page:
 app.post("/admin/login", (req, res) => {
