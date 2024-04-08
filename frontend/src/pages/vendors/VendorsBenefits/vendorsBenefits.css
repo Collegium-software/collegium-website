@@ -4,6 +4,7 @@
   justify-content: center;
   background-color:white;
   color:black;
+
 }
 
 .vendor-benefits-cards {
@@ -12,6 +13,7 @@
   align-items: flex-start; 
   flex-direction: row;
   padding: 10vw 0vw;
+
 }
 
 .vendorBenefitsContainer,
@@ -28,12 +30,21 @@
   padding-top:1vw;
   margin:0vw;
   cursor: pointer;
+  text-align: justify;
+  hyphens: auto;
+  height: 10vw;
+  /* border: solid red; */
 }
-
+.vendorBenefitsContainer span {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
 .vendorImageContainer {
   position: relative;
-  border: 0.2vw solid;
-  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border: 1px solid;
+  /* border-image: linear-gradient(to right, #1882FF, #36EBCA); */
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-image-slice: 1;
   background-size: cover;
   background-position: center;
@@ -80,11 +91,10 @@
   width: 70%;
   height: 40vw;
   text-align: justify;
+  hyphens: auto;
   overflow-y: auto;
 }
-.vendorPopout-content::-webkit-scrollbar {
-  display: none; 
-}
+
 .vendorPopout-content p {
   font-size: 1.2vw;
   min-height: 30vw;
@@ -123,6 +133,7 @@
     align-items: center;
     width: 100%;
     padding: 5px 0 20px 0;
+    gap: 30px;
   }
 
   .vendorBenefitsContainer,

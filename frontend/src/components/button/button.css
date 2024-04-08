@@ -7,8 +7,9 @@
 }
 .myBttn, .myBttn-reflection {
   background: transparent;
-  border: 2px solid transparent;
-  border-image: linear-gradient(to right, #1882FF, #36EBCA); 
+  border: 1px solid transparent;
+  /* border-image: linear-gradient(to right, #1882FF, #36EBCA);  */
+  border-image: linear-gradient(to right, #fff, #fff);
   border-image-slice: 1; 
   color: white; 
   font-size: 1.3vw;

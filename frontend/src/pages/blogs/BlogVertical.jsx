@@ -60,7 +60,8 @@ const BlogVertical = (props) => {
               <p>Written by:&emsp;{blog.author}</p>
             </div>
             <div className="blogslist-description">
-              <p>{blog.description}</p>
+              <p dangerouslySetInnerHTML={{ __html: blog.description }} />
+              {/* <p>{blog.description}</p> */}
             </div>
           </div>
           <div className="blogslist-date-button">

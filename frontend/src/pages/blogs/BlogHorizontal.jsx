@@ -52,7 +52,7 @@ const BlogHorizontal = (props) => {
             <p>Written by:&emsp; {hblog.author}</p>
           </div>
           <div className="blogHorizontal-description">
-            <p>{hblog.description}</p>
+            <p dangerouslySetInnerHTML={{ __html: hblog.description }} />
           </div>
           <div className="blogHorizontal-date-button">
             <p>{hblog.date}</p>

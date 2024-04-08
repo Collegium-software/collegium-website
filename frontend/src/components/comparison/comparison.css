@@ -1,204 +1,102 @@
+.comparisonSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a253b;
+  padding: 4vw 0vw 4vw 0vw;
+}
 .comparison-container{
-  /* height: 100vh; */
-  width: auto;
-  display:grid;
-  text-align: left;
-  grid-template-columns:  1fr 1fr 1fr;
-  gap:1vw;
-  background-color: #0A253B;
-  padding: 1%;
-   /* padding: 1%; */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:3vw;
+  padding: 0vw 3vw 0vw 3vw;
+
   } 
- 
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    width: 50%;
+    height: 30vw;
+    position: relative;
+    padding: 0vw 3vw 0vw 3vw;
+    /* border: solid yellow; */
+  }
+  .text-container h2 {
+    font-size: 2.5vw;
+    margin-top: 0;
+    margin-bottom: 2vw;
+  }
+  .text-container p {
+    font-size:1.2vw;
+    height: 15vw;
+    max-height: 15vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    hyphens: auto;
+  }
 
-  .title-why-different{
-    color: white;
-    /* margin-bottom: 5%; */
-    padding: 0;
-     }
-
-  
-
-    .text-container-why-different{
-      text-align:left;
-      padding: 3%;
-   
-    }
-    
-    h1.title-why-different {
-      margin: 0;
-      padding-top: 0;
-   
-    }
-
-    .text-why-different{
-     color: #E0FBFC;
-    
-      }
-
-      .comparison-container li{
-      margin-top: 7%;
-      text-align:left;
-      }
-
-      .comparison-container ul{
-       padding-left: 10%;
-        }
-
-      .white-container{
-        /* background-image: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%); */
-        background-image:url("../../images/comparison/blue-texture1.jpeg");
-        background-size: cover;
-        background-repeat: no-repeat; /* This ensures the image is not repeated */
-        background-position: center;
-        position: relative;
-
-
-        background-color: #E0FBFC;
-        color:black;
-        border: solid;
-        padding: 1vw;
-        
-        border-width: 0.2vw;
-        border-image:  linear-gradient(to right, #1882FF, #36EBCA);
-        border-image-slice: 1; 
-        margin-top: 10%;
-        margin-bottom: 10%;
-         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    
-      }
-
-      /* .comparison-overlay{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-
-      } */
-
-      .white-container li {
-        color: black;
-      }  
-      .dark-container{
-        /* background-image:linear-gradient( #1FC1C3,#0F0F0F); */
-
-        background-image:url("../../images/comparison/darkBgr2.jpeg"); 
-        background-size: cover;
-        background-color:#0F0F0F;
-        color: white;
-        padding: 1vw;
-        border: solid;
-        border-width: 0.2vw;
-        border-image:  linear-gradient(to right, #1882FF, #36EBCA);
-        border-image-slice: 1; 
-        margin-top: 10%;
-        margin-bottom: 10%;
-         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-        }
-     
-        .comparisonButton {
-          display: flex;
-          justify-content: flex-end;
-          margin-top: 10%;
-        }
-            
-     
-        .text-container{
-          height:auto;
-           display: grid;
-           gap:0.5vw;
-           margin-top: 10%;
-           margin-bottom: 10%;
-           margin-left: 5%;
-           margin-right: 5%;
-           
-         }
-
-     
-  @media only screen and (max-width: 768px) {
-    .comparison-container{
-    height: auto;
-    grid-template-columns:none;
-    padding-top: 1%;
-       }
-
-.text-container{
-  height:auto;
-   display: grid;
-   gap:0.5vw;
-   
+ .comparison-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 30vw;
+  border: 1px solid;
+    border-image: linear-gradient(to right, #1882FF, #36EBCA);
+    border-image-slice: 1;
+  /* border: solid yellow; */
  }
-
- .text-container h1{
- width: auto;
+ .comparison-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
  }
+ .comparisonButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 
-.text-container-why-different{
-  padding-top: 2%;
-  padding-bottom: 10%;
-  padding-left: 8%;
-  padding-right: 8%;
-
-}
-
-.white-container{
-  height:auto;
-  width: auto;
-  
-  padding:10%;
-  
-  margin: 0 8% 0 8%;
- 
-  }
-
-.dark-container{
-  height:auto;
-  width: auto;
-
-  padding:10%;
-
-  margin: 0 8% 8% 8%;
- 
-}
-
-.white-dark-container{
-  margin-left:0;
-  margin-bottom: 1%;
-  grid-template-columns:none
- 
-}
-
-.comparisonButton {
- margin-top: 10%;
  }
+     
+@media only screen and (max-width: 768px) {
+  .comparison-container {
+    flex-direction: column;
+    width: 70%;
+    padding: 20px 0 20px 0;
+    height: 100%;
+    /* gap: 50px; */
+    /* border: solid yellow; */
 
- .title-why-different {
-    margin-top: 5%;
-    margin-bottom: 5%;
   }
-  h1.title-why-different {
-    margin-bottom: 2%;
+  .text-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
   }
-  .text-container{
-    margin-left: 8%;
-    margin-right: 8%;
-  }
-
-  .comparison-container p,
-  .comparison-container h3,
-  .comparison-container h4,
-  .comparison-container ul
-  {
-  font-size: 12px;
-  }
+  .text-container h2 {
+    font-size: 20px;
   
-  .comparison-container h1{
-    font-size: 16px;
   }
+  .text-container p {
+    font-size:12px;
+    min-height: 150px;
 
-
-
+  
+  }
+  .comparison-picture {
+    width: 100%;
+    min-height: 150px;
+  }
+  .comparisonButton {
+    position: unset;
+  }
 }
  

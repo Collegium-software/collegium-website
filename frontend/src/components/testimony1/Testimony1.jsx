@@ -6,7 +6,7 @@ import customer from "../../images/testimony/customer.jpg";
 const Testimony1 = () => (
   <div className="testimony">
     <div className="testimonyContainer">
-      <h1>Testimony</h1>
+      <h2>Testimony</h2>
       <div className="client">
         <img className="clientImage" src={customer} alt="Customer" />
         <h3>Andrew Bowerbank</h3>

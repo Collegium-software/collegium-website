@@ -7,13 +7,17 @@
   margin-top: 5vh;
 }
 
-.projectsHeader h1 {
+.projectsHeader h2 {
   font-size: 2.5vw;
   margin-bottom: 1vw;
+  width: 100%;
+  text-align: center;
 }
-.projectsHeader h2 {
+.projectsHeader h3 {
   font-size: 1.8vw;
   margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -76,11 +80,11 @@
       width: 100%;
       text-align: center;}
 
-    .projectsHeader h1 {
-        font-size: 25px;
+    .projectsHeader h2 {
+        font-size: 20px;
     }
-    .projectsHeader h2{
-        font-size: 18px;
+    .projectsHeader h3{
+        font-size: 12px;
     }
 
     .projectsContainer {
@@ -96,6 +100,7 @@
   
     .image-Container {
       width: 100%;
+      height: 200px;
     }
   
     .container h4 {

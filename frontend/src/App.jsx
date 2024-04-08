@@ -88,11 +88,11 @@ function App() {
 
 const Home = () => (
   <>
-    <InterimNavbar background="white" color="black" />
+    <InterimNavbar background="transparent" color="white" />
     <Carousel />
     <Solutions />
-    <Comparison />
-    <Projects />
+    {/* <Comparison /> */}
+    {/* <Projects /> */}
     <Blog />
     <Testimony1 />
     <Footer />

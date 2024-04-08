@@ -28,12 +28,21 @@
   padding-top:1vw;
   margin:0vw;
   cursor: pointer;
+  text-align: justify;
+  hyphens: auto;
+  height: 15vw;
+  /* border: solid red; */
 }
-
+.ownersBenefitsContainer span {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
 .ownersImageContainer {
   position: relative;
-  border: 0.2vw solid;
-  border-image: linear-gradient(to right, #1882FF, #36EBCA);
+  border: 1px solid;
+  /* border-image: linear-gradient(to right, #1882FF, #36EBCA); */
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-image-slice: 1;
   background-size: cover;
   background-position: center;
@@ -59,6 +68,13 @@
   font-size: 1.6vw;
   border:none;
 }
+.readmore-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+
+}
 .popout-overlay {
   position: fixed;
   top: 0;
@@ -80,11 +96,12 @@
   width: 70%;
   height: 40vw;
   text-align: justify;
+  hyphens: auto;
   overflow-y: auto;
 }
-.popout-content::-webkit-scrollbar {
+/* .popout-content::-webkit-scrollbar {
   display: none; 
-}
+} */
 .popout-content p {
   font-size: 1.2vw;
   min-height: 30vw;
@@ -95,6 +112,7 @@
   align-items: center;
   width: 100%;
   margin-top: 2vw;
+
 }
 .popout-button button {
   background-color: red;
@@ -123,6 +141,7 @@
     align-items: center;
     width: 100%;
     padding: 5px 0 20px 0;
+    gap: 30px;
   }
 
   .ownersBenefitsContainer,

@@ -6,7 +6,7 @@ import "../carousel/carousel.css";
 import Button from "../button/Button";
 
 import image1 from "../../images/carousel/image1_.png";
-import image2 from "../../images/carousel/image2_.png";
+import image2 from "../../images/carousel/image2_.jpeg";
 import image3 from "../../images/carousel/image3_.png";
 
 const Carousel = () => {
@@ -15,8 +15,8 @@ const Carousel = () => {
   const [changingTextIndex, setChangingTextIndex] = useState(0);
   const changingTexts = [
     "A Turnkey Real Estate Development Platform.",
-    "Collapsing Cost, Schedule, and Risk using Collegium.",
-    "Buyers Guide. Is a Collegium project right for you?",
+    "Collegium employs digital tools to make buildings more cost-effective, faster with less risk.",
+    "Is a Collegium project right for you?",
   ];
 
   useEffect(() => {
@@ -76,8 +76,8 @@ const Carousel = () => {
         "A Turnkey Real Estate Development Platform." ? (
           <>
             <h3 className="mySpan">
-              Collegium is the Digital Antithesis of Traditional Design &
-              Construction.
+              Collegium stands as an antithesis, revolutionizing building
+              industry norms digitally.
             </h3>
           </>
         ) : (
@@ -85,7 +85,7 @@ const Carousel = () => {
         )}
 
         {changingTexts[changingTextIndex] ===
-        "Buyers Guide. Is a Collegium project right for you?" ? (
+        "Is a Collegium project right for you?" ? (
           <div className="herButton">
             <Button label="Take the Survey" to="/survey" />
           </div>

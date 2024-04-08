@@ -7,7 +7,7 @@ import ownersteam from "../../images/home/ownersteam.jpeg";
 import owners from "../../images/home/owners.png";
 
 const Card = ({ imageUrl, label, description, to }) => {
-  console.log("Rendering Card:", label);
+  // console.log("Rendering Card:", label);
   const cardStyle = {
     backgroundImage: `url(${imageUrl})`,
     backgroundSize: "cover",
@@ -17,7 +17,7 @@ const Card = ({ imageUrl, label, description, to }) => {
     <div className="card" style={cardStyle}>
       <div className="cardContent">
         <div className="solutionButton">
-          <Button label={label} to={to} />
+          <Button label={label} to={to} width="180px" />
         </div>
       </div>
     </div>

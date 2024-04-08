@@ -70,7 +70,9 @@ const SContactUs = () => {
     if (id === "email") {
       const domain = value.substring(value.lastIndexOf("@") + 1);
       if (blockedDomains.includes(domain)) {
-        alert(`${domain} email address are not allowed.`);
+        alert(
+          `Please input your company's email address, ${domain} domain is not allowed.`
+        );
         return;
       }
     }
