@@ -49,18 +49,18 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/solutions" element={<Solutions />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/comparison" element={<Comparison />} />
-        <Route path="/testimony" element={<Testimony1 />} />
-        <Route path="/projects" element={<UnderConstruction />} />
-        <Route path="/project1" element={<SingleProject />} />
-        <Route path="/footer" element={<Footer />} />
+        {/* <Route path="/solutions" element={<Solutions />} /> */}
+        {/* <Route path="/blog" element={<Blog />} /> */}
+        {/* <Route path="/comparison" element={<Comparison />} /> */}
+        {/* <Route path="/testimony" element={<Testimony1 />} /> */}
+        {/* <Route path="/projects" element={<UnderConstruction />} /> */}
+        {/* <Route path="/project1" element={<SingleProject />} /> */}
+        {/* <Route path="/footer" element={<Footer />} /> */}
         <Route path="/owners" element={<Owners />} />
-        <Route path="/who-we-are" element={<WhoWeAre />} />
+        {/* <Route path="/who-we-are" element={<WhoWeAre />} /> */}
         <Route path="/contactus" element={<SContactUs />} />
-        <Route path="/userstories" element={<UsersStoriesPage />} />
-        <Route path="/userstory1" element={<SingleUserStoryPage />} />
+        {/* <Route path="/userstories" element={<UsersStoriesPage />} /> */}
+        {/* <Route path="/userstory1" element={<SingleUserStoryPage />} /> */}
         <Route path="/admin/login" element={<Login />} />
         <Route path="/blogs/all-blogs" element={<AllBlogs />} />
         <Route path="/blogs" element={<Blogs />} />
@@ -76,10 +76,10 @@ function App() {
         <Route path="blogs/blog10" element={<BlogTenDetails />} />
         <Route path="blogs-forms" element={<BlogsForm />} />
         <Route path="/survey" element={<SurveyForm />} />
-        <Route path="careers" element={<CareersPage />} />
+        {/* <Route path="careers" element={<CareersPage />} /> */}
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/owners-team" element={<OwnersTeam />} />
-        <Route path="/faqs" element={<FAQ />} />
+        {/* <Route path="/faqs" element={<FAQ />} /> */}
         <Route path="/platform/login" element={<PlatformLoginPage />} />
       </Routes>
     </Router>
