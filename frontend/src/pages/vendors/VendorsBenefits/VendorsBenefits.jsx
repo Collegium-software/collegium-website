@@ -45,7 +45,7 @@ const VendorsBenefits = () => {
             models to the supply chain. By automating communication processes
             and enhancing visibility across the network, businesses can
             anticipate a smoother transition towards a more integrated and
-            efficient system, laying the groundwork for future advancements.{" "}
+            efficient system, laying the groundwork for future advancements.
             <br />
             <br />
             Looking ahead, the future promises a digital collaboration
@@ -125,8 +125,8 @@ const VendorsBenefits = () => {
             <br /> Looking ahead, a future characterized by seamless digital
             collaboration promises to revolutionize the construction industry.
             With direct access to digital models, automated processes, and
-            optimized logistics, owners active in the commerical real estate
-            market can expect significant cost savings, reduced shedules and
+            optimized logistics, owners active in the commercial real estate
+            market can expect significant cost savings, reduced schedules and
             operational improvements. This emphasis on seamless connectivity
             across vendors will lead to a new era of innovation and growth for
             the future of making buildings.

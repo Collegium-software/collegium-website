@@ -51,7 +51,7 @@ const ProjectteamBenefits = () => {
             in faster project timelines and the creation of cutting-edge
             structures. This future ecosystem will be characterized by
             resourceful structures that epitomize design innovation, boasting
-            innovative systems, heightened eƯiciency, and unparalleled user
+            innovative systems, heightened efficiency, and unparalleled user
             satisfaction at a reduced cost.
           </p>
           <div className="ownersTeamPopout-button">
@@ -69,12 +69,12 @@ const ProjectteamBenefits = () => {
           <p>
             Professionals in architecture, engineering, and construction (AEC)
             are facing a myriad of challenges, including navigating increasing
-            project complexities and managing ever-expanding team compsition to
+            project complexities and managing ever-expanding team composition to
             meet the rapidly evolving industry demands. It's evident that
-            relying solely on archaic, siloed individual eƯorts is insuƯicient
-            to address these pressing issues eƯectively; instead, there is a
+            relying solely on archaic, siloed individual efforts is insufficient
+            to address these pressing issues effectively; instead, there is a
             crucial need for advanced solutions that promote greater
-            collaborative eƯorts.
+            collaborative efforts.
             <br />
             <br /> Collegium emerges as a pivotal player, emphasizing the
             transformative power of interdependence and collaborative excellence
@@ -84,22 +84,22 @@ const ProjectteamBenefits = () => {
             collaboration and innovation. By facilitating seamless communication
             and resource-sharing among stakeholders, Collegium accelerates the
             transition towards a more integrated and collaborative approach to
-            Making buildings (togethre) in the future. <br />
+            Making buildings (together) in the future. <br />
             <br />
             We can see opportunity in the future for rapid innovation and
             transformative change, with Collegium leading the way in driving
             progress. Collegium's emphasis on interdependence will serve as the
-            catalyst for fostering eƯective collaboration among all
+            catalyst for fostering effective collaboration among all
             stakeholders. This collaborative approach will result in the
             implementation of innovative methods to make buildings, leading to
             faster project timelines and the creation of high-quality
             structures. Moreover, Collegium's commitment to promoting
             collaboration will ensure that projects are executed with maximum
-            eƯiciency, benefiting both social equity and economic viability.
+            efficiency, benefiting both social equity and economic viability.
             Guided by Collegium's stewardship-centric approach, resourceful
-            structures will feature innovative systems, heightened eƯiciency,
+            structures will feature innovative systems, heightened efficiency,
             and enhanced user satisfaction, marking a significant leap forward
-            in the evolution ofa truly interdependent industry.
+            in the evolution of a truly interdependent industry.
           </p>
           <div className="ownersTeamPopout-button">
             <button onClick={onClose}>Close</button>
@@ -128,7 +128,7 @@ const ProjectteamBenefits = () => {
             primary focus on sustainability, Collegium fosters interdependent
             collaboration and innovation within the industry. Its integrated
             platform offers a comprehensive solutions to streamline processes
-            and overcome traditional project challenges eƯiciently. By
+            and overcome traditional project challenges efficiently. By
             facilitating seamless communication and resource-sharing among
             stakeholders, Collegium accelerates the transition towards a more
             sustainable and environmentally responsible approach to making
@@ -142,12 +142,12 @@ const ProjectteamBenefits = () => {
             as our guiding principle, Collegium is poised to revolutionize the
             industry. Our methods will yield high-quality structures while
             safeguarding the long-term health of humankind, including the right
-            to attainable and aƯordable housing. Through unwavering dedication
+            to attainable and affordable housing. Through unwavering dedication
             to sustainability, Collegium will pave the way for sustainable
             marvels, enriching social equity, ensuring economic viability, and
             enhancing environmental well-being. Guided by Collegium's
             stewardship-centric approach, our resourceful structures will set
-            new benchmarks for sustainability, eƯiciency, and environmental
+            new benchmarks for sustainability, efficiency, and environmental
             harmony, marking a profound advancement in the construction
             industry. Join us in redefining the future of making buildings (
             together) in the future.
